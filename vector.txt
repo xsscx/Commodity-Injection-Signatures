@@ -1,0 +1,10 @@
+_
+<script>_</script>
+<img src=_ onerror=_>
+<svg onload=_>
+<iframe src=javascript:_>
+javascript:_
+data:_
+font-family:_
+behavior:_
+@import:_
