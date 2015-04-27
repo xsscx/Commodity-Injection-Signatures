@@ -33,4 +33,6 @@ Refresh: 0; URL=http://example.com;URL=javascript:alert(1)
 %0d%0d
 %0
 %d
+%E5%98%8A
+%E5%98%8A%E5%98%8DSet-Cookie:%20test
 /* RFI STOP */
