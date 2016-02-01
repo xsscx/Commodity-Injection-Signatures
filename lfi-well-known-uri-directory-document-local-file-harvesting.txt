@@ -1,3 +1,4 @@
+/Inetpub/wwwroot/index.htm
 /[JBOSS]/server/default/conf/jboss-minimal.xml
 /[JBOSS]/server/default/conf/jboss-service.xml
 /[JBOSS]/server/default/conf/jndi.properties
