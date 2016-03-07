@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-7" ?>
+<!DOCTYPE data [
+<!ELEMENT data (#PCDATA)>
+<!ENTITY file SYSTEM "file:///sys/power/image_size">
+]>
+<data>&file;</data>
