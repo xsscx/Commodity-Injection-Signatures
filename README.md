@@ -1,5 +1,4 @@
-# xss
-XSS.Cx Public Repo
+#XSS.Cx Public Repo
 
 Commodity Injection Signatures
 
