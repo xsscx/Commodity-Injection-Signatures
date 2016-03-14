@@ -1,0 +1,5 @@
+<!ELEMENT data (#PCDATA)>
+<!ENTITY % start "<![CDATA[">
+<!ENTITY % goodies SYSTEM "file:///sys/power/image_size">
+<!ENTITY % end "]]>">
+<!ENTITY all '%start;%goodies;%end;'>

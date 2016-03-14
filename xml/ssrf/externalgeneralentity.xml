@@ -1,0 +1,6 @@
+<?xml version='1.0'?>
+<!DOCTYPE data [
+<!ELEMENT data (#ANY)>
+<!ENTITY remote SYSTEM "http://internalSystem.com/file.xml">
+]>
+<data>&remote;</data>

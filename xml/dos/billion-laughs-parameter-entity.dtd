@@ -1,0 +1,4 @@
+<!DOCTYPE data SYSTEM "http://127.0.0.1:5000/dos_indirections_parameterEntity_wfc.dtd" [
+<!ELEMENT data (#PCDATA)>
+]>
+<data>&g;</data>
