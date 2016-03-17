@@ -8,4 +8,4 @@ Suggested Use:
 
 	-Include with Burp Intruder or Custom Scripts
 	-Manual Injection Testing with Well-Known Signatures
-	-Automated Fuzzing with a Wide-Rage with Malicious Inputs
+	-Automated Fuzzing with a Wide-Range with Malicious Inputs
