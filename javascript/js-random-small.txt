@@ -217,3 +217,4 @@ new class extends class extends class extends class extends alert(1){}{}{}{}
 setInterval`alert\x28document.domain\x29`
 x=new class extends Function{}('alert(1)');x=new x;
 eval(Symbol(')-alert(1').toString())
+Function('){alert()//', '')();
