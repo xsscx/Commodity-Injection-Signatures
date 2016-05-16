@@ -221,3 +221,4 @@ Function('){alert()//', '')();
 delete []['__proto__']['toString'];[]['__proto__'][Symbol.toStringTag]='=alert(1)';eval([1,2,3]+'');
 ({' \'(){alert(1)}})[` \`]()
 -{valueOf(){alert`:D`}}
+(function({a,b,c}={a:1,b:2,c:3}){alert(`${a},${b},${c}`)})()
