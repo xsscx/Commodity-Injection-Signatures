@@ -279,3 +279,4 @@ navigator.vibrate(500)
 eval(URL.slice(-8))>#alert(1)
 eval(location.hash.slice(1)>#alert(1)
 innerHTML=location.hash>#<script>alert(1)</script>
+setInterval('location.hash="⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏"[i++%10]',i=99)
