@@ -282,3 +282,22 @@ innerHTML=location.hash>#<script>alert(1)</script>
 setInterval('location.hash="⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏"[i++%10]',i=99)
 (X,)=>1
 For([]o\u{66}!\u{61}\u{6c}\u{65}\u{72}\u{74}`1`)\u{66}
+try{'a' (alert(1)) in 'a'}catch(e){	'a' (alert(2)) instanceof 'a'}
+'te' ; alert(';') ; 'xt';
+'te' ? alert('?:') : 'xt';
+'text' [ alert('[]') ];
+'text' ( alert('()') );
+'te' * alert('*') * 'xt';
+'te' / alert('/') / 'xt';
+'te' % alert('%') % 'xt';
+'te' - alert('-') - 'xt';
+'te' + alert('+') + 'xt';
+'te' ^ alert('^') ^ 'xt';
+'te' > alert('>') > 'xt';
+'te' < alert('<') < 'xt';
+'te' == alert('==') == 'xt';
+'te' & alert('&') & 'xt';
+'te' , alert(',') , 'xt';
+'te' | alert('|') | 'xt';
+alert(1)
+/alert`2`/i
