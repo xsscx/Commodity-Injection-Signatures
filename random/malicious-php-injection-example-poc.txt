@@ -1,0 +1,4 @@
+O:9:"exception":1:{S:19:"\00Exception\00previous";r:1;}
+O:12:"DateInterval":1:{s:4:"days";O:3:"foo":0:{}}
+O:3:"foo":8:{i:0;i:0;i:1;i:1;i:2;i:2;i:3;i:3;i:4;i:4;i:5;i:5;i:6;i:6;i:7;i:7;}
+O:3:"foo":1:{s:1:"x";O:12:"DateInterval":1:{i:0;i:0;}}

