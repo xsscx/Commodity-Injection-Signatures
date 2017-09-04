@@ -28,3 +28,10 @@ Error: Parse Error An error occurred while parsing EntityNam
 Invalid character in the given encoding
 Cannot have multiple DTDs
 is an undeclared namespace
+a:DeserializationFailed
+The formatter threw an exception while trying to deserialize the message
+There was an error while trying to deserialize parameter
+The InnerException message was
+There was an error deserializing the object of type
+System.Collections.Generic.List
+Error in deserializing body of request message for operation 'ReadSettings
