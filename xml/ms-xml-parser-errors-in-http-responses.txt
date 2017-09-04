@@ -20,6 +20,10 @@ Error: Parse Error The UNC path should be of the form \\server\share
 Error: Parse Error FileStream was asked to open a device that was not a file. For support for devices like 'com1:' or 'lpt1:', call CreateFile, then use the FileStream constructors that take an OS handle as an IntPtr
 Error: Parse Error The process cannot access the file 'c:\windows\WindowsUpdate.log' because it is being used by another process
 Error: Parse Error There are multiple root elements
+Error: Parse Error Version number '' is invalid
+Error: Parse Error Data at the root level is invalid
 Error: Parse Error Name cannot begin with the '-' character, hexadecimal value 0x2D
 Error: Parse Error Invalid URI: A Dos path must be rooted, for example, 'c:\'
 Invalid character in the given encoding
+Cannot have multiple DTDs
+is an undeclared namespace
