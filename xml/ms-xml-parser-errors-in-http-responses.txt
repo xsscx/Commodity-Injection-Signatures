@@ -1,0 +1,24 @@
+'ENTITY' is an unexpected token 
+The expected token is 'DOCTYPE'
+A parameter entity reference is not allowed in internal markup
+Expected DTD markup was not found
+Expecting external ID, '[' or '>'
+Could not find a part of the path
+Reference to undeclared entity
+Unexpected DTD declaration
+Could not find file
+Unable to connect to the remote server
+The expected token is '<!--' or '<[CDATA['
+Error: Parse Error
+Access to the path '\\localhost\c$' is denied
+Unexpected XML declaration. The XML declaration must be the first node in the document, and no white space characters are allowed to appear before it
+Error: Parse Error The network path was not found
+Error: Parse Error Access to the path '\\127.0.0.1\ADMIN$' is denied
+Error: Parse Error Unexpected XML declaration. The XML declaration must be the first node in the document, and no white space characters are allowed to appear before it
+Error: Parse Error '&' is an unexpected token. The expected token is ';'
+Error: Parse Error The UNC path should be of the form \\server\share
+Error: Parse Error FileStream was asked to open a device that was not a file. For support for devices like 'com1:' or 'lpt1:', call CreateFile, then use the FileStream constructors that take an OS handle as an IntPtr
+Error: Parse Error The process cannot access the file 'c:\windows\WindowsUpdate.log' because it is being used by another process
+Error: Parse Error There are multiple root elements
+Error: Parse Error Name cannot begin with the '-' character, hexadecimal value 0x2D
+Error: Parse Error Invalid URI: A Dos path must be rooted, for example, 'c:\'
