@@ -20,6 +20,7 @@ Error: Parse Error FileStream was asked to open a device that was not a file. Fo
 Error: Parse Error The process cannot access the file 'c:\windows\WindowsUpdate.log' because it is being used by another process
 Error: Parse Error There are multiple root elements
 Error: Parse Error Version number '' is invalid
+Error: Parse Error The remote server returned an error: (404) Not Found
 Error: Parse Error Data at the root level is invalid
 Error: Parse Error Name cannot begin with the '-' character, hexadecimal value 0x2D
 Error: Parse Error Invalid URI: A Dos path must be rooted, for example, 'c:\'
