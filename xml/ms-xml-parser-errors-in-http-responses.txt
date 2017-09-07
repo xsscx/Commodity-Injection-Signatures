@@ -23,9 +23,11 @@ Error: Parse Error Version number '' is invalid
 Error: Parse Error Data at the root level is invalid
 Error: Parse Error Name cannot begin with the '-' character, hexadecimal value 0x2D
 Error: Parse Error Invalid URI: A Dos path must be rooted, for example, 'c:\'
-Error: Parse Error An error occurred while parsing EntityNam
+Error: Parse Error An error occurred while parsing EntityName
+Error: Parse Error Illegal characters in path
 Error: Parse Error Fragment identifier
 Error: Parse Error The filename, directory name, or volume label syntax is incorrect
+Error: Parse Error The given path's format is not supported
 Invalid character in the given encoding
 Cannot have multiple DTDs
 is an undeclared namespace
@@ -38,5 +40,6 @@ System.Collections.Generic.List
 Error in deserializing body of request message for operation 'ReadSettings
 There was an error deserializing the object of type System.UInt32
 cannot be parsed as the type 'Int64'
+cannot be parsed as the type 'Int32'
 cannot be parsed as the type 'Boolean'
 For more information about the error, either turn on IncludeExceptionDetailInFaults
