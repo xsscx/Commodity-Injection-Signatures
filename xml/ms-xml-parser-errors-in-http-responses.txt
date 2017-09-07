@@ -28,6 +28,7 @@ Error: Parse Error Illegal characters in path
 Error: Parse Error Fragment identifier
 Error: Parse Error The filename, directory name, or volume label syntax is incorrect
 Error: Parse Error The given path's format is not supported
+Error: Parse Error Cannot have multiple DTDs
 Invalid character in the given encoding
 Cannot have multiple DTDs
 is an undeclared namespace
