@@ -10,6 +10,7 @@ Could not find file
 Unable to connect to the remote server
 The expected token is '<!--' or '<[CDATA['
 Unexpected XML declaration. The XML declaration must be the first node in the document, and no white space characters are allowed to appear before it
+Error: Parse Error Unexpected end of file while parsing CDATA has occurred
 Error: Parse Error Access to the path '\\localhost\c$' is denied
 Error: Parse Error The network path was not found
 Error: Parse Error Access to the path '\\127.0.0.1\ADMIN$' is denied
