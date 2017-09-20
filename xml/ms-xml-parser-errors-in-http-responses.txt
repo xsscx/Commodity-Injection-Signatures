@@ -47,3 +47,5 @@ cannot be parsed as the type 'Int64'
 cannot be parsed as the type 'Int32'
 cannot be parsed as the type 'Boolean'
 For more information about the error, either turn on IncludeExceptionDetailInFaults
+The state information is invalid for this page and might be corrupted
+Validation of viewstate MAC failed
