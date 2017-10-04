@@ -7,4 +7,5 @@ $ex.waitFor()
 set($out=$ex.getInputStream())
 foreach($i in [1..$out.available()])
 $str.valueOf($chr.toChars($out.read()))
+<% out.println("hello");%>
 end
