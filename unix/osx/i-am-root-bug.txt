@@ -1,0 +1,1 @@
+/usr/bin/osascript -e 'do shell script "whoami" user name "root" password "" with administrator privileges'
