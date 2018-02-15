@@ -49,3 +49,4 @@ cannot be parsed as the type 'Boolean'
 For more information about the error, either turn on IncludeExceptionDetailInFaults
 The state information is invalid for this page and might be corrupted
 Validation of viewstate MAC failed
+'FOO' is an invalid name for processing instructions
