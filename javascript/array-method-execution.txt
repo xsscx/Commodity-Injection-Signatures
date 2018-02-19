@@ -1,0 +1,5 @@
+[1].map(alert)
+[1].find(alert)
+[1].every(alert)
+[1].filter(alert)
+[1].findIndex(alert)
