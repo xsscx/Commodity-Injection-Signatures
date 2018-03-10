@@ -55,3 +55,4 @@ No connection could be made because the target machine actively refused it 127.0
 The remote server returned an error: (403) Forbidden
 Unexpected end of file has occurred. The following elements are not closed
 The handshake failed due to an unexpected packet format
+A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
