@@ -54,3 +54,4 @@ An existing connection was forcibly closed by the remote host
 No connection could be made because the target machine actively refused it 127.0.0.1:80
 The remote server returned an error: (403) Forbidden
 Unexpected end of file has occurred. The following elements are not closed
+The handshake failed due to an unexpected packet format
