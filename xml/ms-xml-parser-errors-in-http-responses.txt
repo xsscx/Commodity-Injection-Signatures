@@ -58,3 +58,4 @@ The handshake failed due to an unexpected packet format
 A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
 A socket operation was attempted to an unreachable network
 Invalid content model
+Paths that begin with \\?\GlobalRoot are internal to the kernel and should not be opened by managed applications
