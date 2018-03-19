@@ -59,3 +59,5 @@ A connection attempt failed because the connected party did not properly respond
 A socket operation was attempted to an unreachable network
 Invalid content model
 Paths that begin with \\?\GlobalRoot are internal to the kernel and should not be opened by managed applications
+ASP.NET is not authorized to access the requested resource.
+ASP.NET has a base process identity (typically {MACHINE}\ASPNET on IIS 5 or Network Service on IIS 6) that is used if the application is not impersonating
