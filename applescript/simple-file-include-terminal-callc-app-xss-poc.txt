@@ -1,0 +1,6 @@
+tell application "Terminal"
+    do script "cat /etc/hosts"
+    display dialog "XSS"
+end tell
+
+do shell script "open -a Calculator"
