@@ -2,7 +2,7 @@
 
 Commodity Injection Signatures
 
-Scraped from the Internet
+Scraped from the Internet since 2015 and is not a ripoff of https://portswigger.net/research/one-xss-cheatsheet-to-rule-them-all which you should be using anyway.
 
 Suggested Use: 
 
