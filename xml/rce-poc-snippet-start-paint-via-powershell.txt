@@ -1,0 +1,1 @@
+<![CDATA[ $i=New-object System.Diagnostics.ProcessStartInfo;$i.UseShellExecute=$true;$i.FileName="cmd";$i.Arguments="/c mspaint";$r=New-Object System.Diagnostics.Process;$r.StartInfo=$i;$r.Start() ]]>
