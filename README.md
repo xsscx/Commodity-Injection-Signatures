@@ -14,6 +14,6 @@ Send Pull Requests if you have unique inputs that should be included for distrib
 
 This Repo is frequently cloned and included into upstream distrbutions based on recent traffic in January 2021.
 
-if anyone wouldmlike to see other changes, please open an Issue.
+if anyone would like to see other changes, please open an Issue.
 
 This Repo will soon get new fresh data from iPhone and Android Fuzzing using Corellium.
