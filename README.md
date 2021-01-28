@@ -9,3 +9,11 @@ Suggested Use:
 	-Include with Burp Intruder or Custom Scripts
 	-Manual Injection Testing with Well-Known Signatures
 	-Automated Fuzzing with a Wide-Range with Malicious Inputs
+
+Send Pull Requests if you have unique inputs that should be included for distribution. 
+
+This Repo is frequently cloned and included into upstream distrbutions based on recent traffic in January 2021.
+
+if anyone wouldmlike to see other changes, please open an Issue.
+
+This Repo will soon get new fresh data from iPhone and Android Fuzzing using Corellium.
