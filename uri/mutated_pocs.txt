@@ -1,0 +1,100 @@
+<style>*{ rotate: 150deg 1 2 3; filter: invert(75%)35; }</style>
+<style>*{ rotate: 120deg 3 1 083; filter: hue-rotate(90deg); }</style>
+<style>*{ rotate: 195deg 0 2 0; filter: opacity(65%) saturate(120%); }</style>19
+<style>*{ rotate: 135deg 2 1 1; filter: contrast(110%) hue-rotate(60deg); }</style>2
+<style>*{ rotate: 225deg 2 3 1; filter: sepia(40%) blur(3px)3; }</style>
+<style>*{ rotate: 105deg 1 1 3; filter: brightness(70%) drop-shadow(2px 2px 1px black)84; }</style>
+<style>*{ rotate: 120deg 3 1 0; filter: hue-rotate(90deg); }</style>11
+<style>*{ rotate: 210deg 1 1 1; filter: saturate(150%)88; }</style>
+<style>*{ rotate: 330deg 1 1 073; filter: brightness(120%) blur(2px); }</style>
+<style>*{ rotate: 180deg 0 1 0; filter: opacity(50%); }</style>96
+<style>*{ rotate: 270deg 0 0 1; filter: blur(5px); }</style>99
+<style>*{ rotate: 135deg 2 1 113; filter: contrast(110%) hue-rotate(60deg); }</style>
+<style>*{ rotate: 270deg 0 0 1; filter: blur(5px); }</style>34
+<style>*{ rotate: 45deg 2 1 0.531; filter: drop-shadow(10px 10px 5px black); }</style>
+<style>*{ rotate: 60deg 2 2 196; filter: contrast(120%); }</style>
+<style>*{ rotate: 360deg 1 2 1; filter: contrast(90%) hue-rotate(45deg)60; }</style>
+<style>*{ rotate: 300deg 2 1 228; filter: drop-shadow(5px 5px 3px grey); }</style>
+<style>*{ rotate: 300deg 2 1 2; filter: drop-shadow(5px 5px 3px grey); }</style>92
+<style>*{ rotate: 360deg 1 2 1; filter: contrast(90%) hue-rotate(45deg); }</style>61
+<style>*{ rotate: 330deg 1 1 067; filter: brightness(120%) blur(2px); }</style>
+<style>*{ rotate: 75deg 0 3 2; filter: sepia(30%) blur(1px)41; }</style>
+<style>*{ rotate: 165deg 1 0 2; filter: grayscale(75%) invert(25%); }</style>49
+<style>*{ rotate: 300deg 2 1 267; filter: drop-shadow(5px 5px 3px grey); }</style>
+<style>*{ rotate: 75deg 0 3 2; filter: sepia(30%) blur(1px)29; }</style>
+<style>*{ rotate: 105deg 1 1 3; filter: brightness(70%) drop-shadow(2px 2px 1px black)8; }</style>
+<style>*{ rotate: 240deg 2 0 2; filter: sepia(60%); }</style>6
+<style>*{ rotate: 150deg 1 2 355; filter: invert(75%); }</style>
+<style>*{ rotate: 300deg 2 1 2; filter: drop-shadow(5px 5px 3px grey)93; }</style>
+<style>*{ rotate: 45deg 2 1 0.580; filter: drop-shadow(10px 10px 5px black); }</style>
+<style>*{ rotate: 360deg 1 2 1; filter: contrast(90%) hue-rotate(45deg); }</style>48
+<style>*{ rotate: 30deg 1 0 079; filter: brightness(80%); }</style>
+<style>*{ rotate: 195deg 0 2 0; filter: opacity(65%) saturate(120%)9; }</style>
+<style>*{ rotate: 270deg 0 0 1; filter: blur(5px); }</style>84
+<style>*{ rotate: 135deg 2 1 1; filter: contrast(110%) hue-rotate(60deg)76; }</style>
+<style>*{ rotate: 180deg 0 1 048; filter: opacity(50%); }</style>
+<style>*{ rotate: 165deg 1 0 2; filter: grayscale(75%) invert(25%)1; }</style>
+<style>*{ rotate: 195deg 0 2 0; filter: opacity(65%) saturate(120%); }</style>58
+<style>*{ rotate: 75deg 0 3 2; filter: sepia(30%) blur(1px)59; }</style>
+<style>*{ rotate: 60deg 2 2 19; filter: contrast(120%); }</style>
+<style>*{ rotate: 225deg 2 3 1; filter: sepia(40%) blur(3px)10; }</style>
+<style>*{ rotate: 210deg 1 1 1; filter: saturate(150%)87; }</style>
+<style>*{ rotate: 210deg 1 1 138; filter: saturate(150%); }</style>
+<style>*{ rotate: 75deg 0 3 231; filter: sepia(30%) blur(1px); }</style>
+<style>*{ rotate: 135deg 2 1 1; filter: contrast(110%) hue-rotate(60deg); }</style>58
+<style>*{ rotate: 135deg 2 1 156; filter: contrast(110%) hue-rotate(60deg); }</style>
+<style>*{ rotate: 135deg 2 1 194; filter: contrast(110%) hue-rotate(60deg); }</style>
+<style>*{ rotate: 180deg 0 1 0; filter: opacity(50%)55; }</style>
+<style>*{ rotate: 60deg 2 2 1; filter: contrast(120%); }</style>30
+<style>*{ rotate: 60deg 2 2 1; filter: contrast(120%); }</style>91
+<style>*{ rotate: 150deg 1 2 322; filter: invert(75%); }</style>
+<style>*{ rotate: 225deg 2 3 172; filter: sepia(40%) blur(3px); }</style>
+<style>*{ rotate: 75deg 0 3 2; filter: sepia(30%) blur(1px); }</style>66
+<style>*{ rotate: 90deg 0.5 1.5 2; filter: grayscale(100%)9; }</style>
+<style>*{ rotate: 135deg 2 1 1; filter: contrast(110%) hue-rotate(60deg); }</style>34
+<style>*{ rotate: 300deg 2 1 223; filter: drop-shadow(5px 5px 3px grey); }</style>
+<style>*{ rotate: 60deg 2 2 1; filter: contrast(120%)11; }</style>
+<style>*{ rotate: 225deg 2 3 1; filter: sepia(40%) blur(3px)94; }</style>
+<style>*{ rotate: 360deg 1 2 1; filter: contrast(90%) hue-rotate(45deg); }</style>31
+<style>*{ rotate: 360deg 1 2 1; filter: contrast(90%) hue-rotate(45deg)96; }</style>
+<style>*{ rotate: 30deg 1 0 0; filter: brightness(80%); }</style>76
+<style>*{ rotate: 120deg 3 1 015; filter: hue-rotate(90deg); }</style>
+<style>*{ rotate: 330deg 1 1 039; filter: brightness(120%) blur(2px); }</style>
+<style>*{ rotate: 90deg 0.5 1.5 2; filter: grayscale(100%); }</style>78
+<style>*{ rotate: 30deg 1 0 063; filter: brightness(80%); }</style>
+<style>*{ rotate: 195deg 0 2 090; filter: opacity(65%) saturate(120%); }</style>
+<style>*{ rotate: 240deg 2 0 226; filter: sepia(60%); }</style>
+<style>*{ rotate: 90deg 0.5 1.5 2; filter: grayscale(100%); }</style>7
+<style>*{ rotate: 75deg 0 3 21; filter: sepia(30%) blur(1px); }</style>
+<style>*{ rotate: 30deg 1 0 0; filter: brightness(80%); }</style>68
+<style>*{ rotate: 90deg 0.5 1.5 2; filter: grayscale(100%); }</style>16
+<style>*{ rotate: 225deg 2 3 114; filter: sepia(40%) blur(3px); }</style>
+<style>*{ rotate: 165deg 1 0 2; filter: grayscale(75%) invert(25%); }</style>43
+<style>*{ rotate: 105deg 1 1 3; filter: brightness(70%) drop-shadow(2px 2px 1px black)64; }</style>
+<style>*{ rotate: 45deg 2 1 0.545; filter: drop-shadow(10px 10px 5px black); }</style>
+<style>*{ rotate: 270deg 0 0 1; filter: blur(5px)27; }</style>
+<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)19; }</style>
+<style>*{ rotate: 225deg 2 3 1; filter: sepia(40%) blur(3px); }</style>16
+<style>*{ rotate: 60deg 2 2 1; filter: contrast(120%); }</style>38
+<style>*{ rotate: 120deg 3 1 0; filter: hue-rotate(90deg); }</style>81
+<style>*{ rotate: 15deg 2 2 0; filter: grayscale(50%) invert(50%); }</style>38
+<style>*{ rotate: 360deg 1 2 1; filter: contrast(90%) hue-rotate(45deg)23; }</style>
+<style>*{ rotate: 75deg 0 3 2; filter: sepia(30%) blur(1px); }</style>13
+<style>*{ rotate: 75deg 0 3 2; filter: sepia(30%) blur(1px)28; }</style>
+<style>*{ rotate: 240deg 2 0 2; filter: sepia(60%)72; }</style>
+<style>*{ rotate: 180deg 0 1 0; filter: opacity(50%)23; }</style>
+<style>*{ rotate: 120deg 3 1 0; filter: hue-rotate(90deg); }</style>33
+<style>*{ rotate: 180deg 0 1 0; filter: opacity(50%); }</style>23
+<style>*{ rotate: 210deg 1 1 1; filter: saturate(150%); }</style>21
+<style>*{ rotate: 195deg 0 2 0; filter: opacity(65%) saturate(120%)53; }</style>
+<style>*{ rotate: 330deg 1 1 0; filter: brightness(120%) blur(2px)18; }</style>
+<style>*{ rotate: 165deg 1 0 2; filter: grayscale(75%) invert(25%); }</style>92
+<style>*{ rotate: 75deg 0 3 2; filter: sepia(30%) blur(1px)36; }</style>
+<style>*{ rotate: 120deg 3 1 0; filter: hue-rotate(90deg); }</style>59
+<style>*{ rotate: 330deg 1 1 079; filter: brightness(120%) blur(2px); }</style>
+<style>*{ rotate: 195deg 0 2 098; filter: opacity(65%) saturate(120%); }</style>
+<style>*{ rotate: 75deg 0 3 2; filter: sepia(30%) blur(1px); }</style>49
+<style>*{ rotate: 60deg 2 2 1; filter: contrast(120%)75; }</style>
+<style>*{ rotate: 360deg 1 2 1; filter: contrast(90%) hue-rotate(45deg)19; }</style>
+<style>*{ rotate: 150deg 1 2 3; filter: invert(75%)4; }</style>
+<style>*{ rotate: 180deg 0 1 0; filter: opacity(50%)6; }</style>

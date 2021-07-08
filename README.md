@@ -1,19 +1,38 @@
-#XSS.Cx Public Repo
+# XSS.Cx Public Repo
+<img src="https://xss.cx/2024/05/20/img/xnu-videotoolbox-fuzzer-objective-c-code-project-example.webp" alt="XNU VideoToolbox Fuzzer OSS Project" style="height:1024px; width:1024px;"/>
 
-Commodity Injection Signatures
+## whoami
+I am David Hoyt.
+  - https://hoyt.net
+  - https://srd.cx
+  - https://xss.cx
+    
+## Last Update: 20 MAY2024
+- Added CVE-2022-26730 ICC Color Profile Sample PoC's
+- Added CVE Color Profile samples known to Crash many OS 
+- https://srd.cx/cve-2022-26730/
+- https://srd.cx/cve-2023-32443/
+- Added PoC's from my CVE's in DemoMaxICC Reference Implementation [https://github.com/InternationalColorConsortium/DemoIccMAX]
+  - Functionality in Skia, WebKit, Windows etc....
+  - The color() function and custom color profiles are part of the CSS Colors Module Level 4, which is still a draft and not widely supported.
 
-Scraped from the Internet since 2015 and is not a ripoff of https://portswigger.net/research/one-xss-cheatsheet-to-rule-them-all which you should be using anyway.
+## About
+- Commodity Injection Signatures
+- Scraped Fresh from the Internet since 2015
+- My PoC's from CVE's & Crashes 
 
-Suggested Use: 
+## Suggested Use 
+- Include with Burp Intruder or Custom Scripts
+- Manual Injection Testing with Well-Known Signatures
+- Automated Fuzzing with a Wide-Range with Malicious Inputs
+- Abusing XNU, Windows or Linux   
 
-	-Include with Burp Intruder or Custom Scripts
-	-Manual Injection Testing with Well-Known Signatures
-	-Automated Fuzzing with a Wide-Range with Malicious Inputs
+### Recent Additions
+- regex files to aid with apple security research device log analysis
+- RBL focused on AD CDN's
+- RBL focused on App Titles 
+- XNU Crash Helpers for Apple Security Research Device circa 2023
 
-Send Pull Requests if you have unique inputs that should be included for distribution. 
+### Pull Requests Welcome
 
-This Repo is frequently cloned and included into upstream distrbutions based on recent traffic in January 2021.
-
-if anyone would like to see other changes, please open an Issue.
-
-This Repo will soon get new fresh data from iPhone and Android Fuzzing using Corellium.
+__Happy Hunting!!__

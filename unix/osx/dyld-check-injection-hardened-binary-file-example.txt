@@ -1,0 +1,51 @@
+ /usr/lib/dyld | grep ^DYLD_ | sed -e 's/^/note to self: try exploiting /'
+note to self: try exploiting DYLD_FRAMEWORK_PATH
+note to self: try exploiting DYLD_FALLBACK_FRAMEWORK_PATH
+note to self: try exploiting DYLD_LIBRARY_PATH
+note to self: try exploiting DYLD_FALLBACK_LIBRARY_PATH
+note to self: try exploiting DYLD_ROOT_PATH
+note to self: try exploiting DYLD_PATHS_ROOT
+note to self: try exploiting DYLD_ROOT_PATH not used because it contains a non-absolute path
+note to self: try exploiting DYLD_IMAGE_SUFFIX
+note to self: try exploiting DYLD_INSERT_LIBRARIES
+note to self: try exploiting DYLD_PRINT_OPTS
+note to self: try exploiting DYLD_PRINT_ENV
+note to self: try exploiting DYLD_DISABLE_DOFS
+note to self: try exploiting DYLD_PRINT_LIBRARIES
+note to self: try exploiting DYLD_PRINT_LIBRARIES_POST_LAUNCH
+note to self: try exploiting DYLD_BIND_AT_LAUNCH
+note to self: try exploiting DYLD_FORCE_FLAT_NAMESPACE
+note to self: try exploiting DYLD_NEW_LOCAL_SHARED_REGIONS
+note to self: try exploiting DYLD_NO_FIX_PREBINDING
+note to self: try exploiting DYLD_PREBIND_DEBUG
+note to self: try exploiting DYLD_PRINT_INITIALIZERS
+note to self: try exploiting DYLD_PRINT_DOFS
+note to self: try exploiting DYLD_PRINT_STATISTICS
+note to self: try exploiting DYLD_PRINT_TO_STDERR
+note to self: try exploiting DYLD_PRINT_STATISTICS_DETAILS
+note to self: try exploiting DYLD_PRINT_SEGMENTS
+note to self: try exploiting DYLD_PRINT_BINDINGS
+note to self: try exploiting DYLD_PRINT_WEAK_BINDINGS
+note to self: try exploiting DYLD_PRINT_REBASINGS
+note to self: try exploiting DYLD_PRINT_APIS
+note to self: try exploiting DYLD_PRINT_WARNINGS
+note to self: try exploiting DYLD_PRINT_RPATHS
+note to self: try exploiting DYLD_PRINT_INTERPOSING
+note to self: try exploiting DYLD_PRINT_CODE_SIGNATURES
+note to self: try exploiting DYLD_SHARED_REGION
+note to self: try exploiting DYLD_SHARED_CACHE_DIR
+note to self: try exploiting DYLD_USE_CLOSURES
+note to self: try exploiting DYLD_SHARED_REGION_DATA_CONST
+note to self: try exploiting DYLD_FORCE_INVALID_CACHE_CLOSURES
+note to self: try exploiting DYLD_IGNORE_PREBINDING
+note to self: try exploiting DYLD_VERSIONED_LIBRARY_PATH
+note to self: try exploiting DYLD_VERSIONED_FRAMEWORK_PATH
+note to self: try exploiting DYLD_PRINT_TO_FILE
+note to self: try exploiting DYLD_SKIP_MAIN
+note to self: try exploiting DYLD_JUST_BUILD_CLOSURE
+note to self: try exploiting DYLD_FORCE_PLATFORM
+note to self: try exploiting DYLD_AMFI_FAKE
+note to self: try exploiting DYLD_FORCE_PLATFORM is only supported for platform 2 or 6.
+note to self: try exploiting DYLD_
+note to self: try exploiting DYLD_PRINT_
+note to self: try exploiting DYLD_ setting caused circular dependency in %s

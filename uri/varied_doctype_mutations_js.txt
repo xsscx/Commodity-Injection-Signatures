@@ -1,0 +1,123 @@
+const pocs = [
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ transform: scale(72); filter: contrast(90%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ transform: rotate(72deg); filter: blur(34px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"><!DOCTYPE html><html><head><style>*{ transform: translate(54px, 21px) rotate(66deg); filter: brightness(79%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"><!DOCTYPE html><html><head><style>*{ transform: translate(76px, 59px) rotate(90deg); filter: brightness(44%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: grayscale(24%); transform: perspective(95px) rotateX(25deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ transform: scale(67); filter: contrast(81%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: drop-shadow(50px 71px 18px black); transform: rotate3d(85, 22, 28, 78deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ filter: invert(55%); transform: perspective(67px) rotateY(63deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(62px); transform: skew(35deg, 31deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\"><!DOCTYPE html><html><head><style>*{ filter: drop-shadow(30px 17px 23px black); transform: rotate3d(82, 70, 68, 54deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: rotate(100deg); filter: blur(43px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ filter: grayscale(25%); transform: perspective(14px) rotateX(92deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(17px); transform: skew(86deg, 97deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ transform: translate(84px, 30px) rotate(8deg); filter: brightness(44%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ filter: grayscale(35%); transform: perspective(16px) rotateX(2deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\"><!DOCTYPE html><html><head><style>*{ transform: rotate(33deg); filter: blur(61px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ transform: rotate(50deg); filter: blur(31px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(44px); transform: skew(81deg, 90deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ transform: rotate(27deg); filter: blur(45px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ transform: scale(11); filter: contrast(72%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\"><!DOCTYPE html><html><head><style>*{ transform: scale(47); filter: contrast(75%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(15px); transform: skew(9deg, 54deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ filter: drop-shadow(90px 5px 24px black); transform: rotate3d(68, 32, 30, 27deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\"><!DOCTYPE html><html><head><style>*{ transform: translate(47px, 99px) rotate(7deg); filter: brightness(75%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ filter: grayscale(23%); transform: perspective(4px) rotateX(17deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"><!DOCTYPE html><html><head><style>*{ transform: rotate(24deg); filter: blur(75px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(2px); transform: skew(53deg, 7deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ filter: invert(18%); transform: perspective(71px) rotateY(50deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ transform: translate(4px, 97px) rotate(25deg); filter: brightness(25%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(83px, 56px) rotate(76deg); filter: brightness(79%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ filter: grayscale(91%); transform: perspective(21px) rotateX(3deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: grayscale(78%); transform: perspective(53px) rotateX(98deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ transform: scale(100); filter: contrast(34%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ filter: invert(29%); transform: perspective(37px) rotateY(97deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: invert(57%); transform: perspective(29px) rotateY(58deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"><!DOCTYPE html><html><head><style>*{ transform: rotate(19deg); filter: blur(58px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(21px); transform: skew(19deg, 51deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: grayscale(55%); transform: perspective(40px) rotateX(100deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ transform: translate(1px, 30px) rotate(87deg); filter: brightness(17%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ filter: grayscale(69%); transform: perspective(42px) rotateX(42deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ transform: rotate(43deg); filter: blur(37px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ transform: scale(69); filter: contrast(90%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ filter: grayscale(8%); transform: perspective(64px) rotateX(81deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(42px); transform: skew(53deg, 39deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"><!DOCTYPE html><html><head><style>*{ filter: grayscale(14%); transform: perspective(27px) rotateX(91deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"><!DOCTYPE html><html><head><style>*{ transform: rotate(82deg); filter: blur(97px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ filter: drop-shadow(11px 58px 89px black); transform: rotate3d(91, 58, 81, 63deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ transform: scale(48); filter: contrast(12%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\"><!DOCTYPE html><html><head><style>*{ filter: grayscale(77%); transform: perspective(85px) rotateX(10deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\"><!DOCTYPE html><html><head><style>*{ filter: grayscale(2%); transform: perspective(86px) rotateX(24deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: invert(92%); transform: perspective(50px) rotateY(67deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\"><!DOCTYPE html><html><head><style>*{ transform: rotate(54deg); filter: blur(82px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(34px); transform: skew(67deg, 79deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: grayscale(85%); transform: perspective(80px) rotateX(20deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ transform: scale(30); filter: contrast(36%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"><!DOCTYPE html><html><head><style>*{ filter: invert(14%); transform: perspective(64px) rotateY(70deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ transform: translate(47px, 20px) rotate(68deg); filter: brightness(7%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"><!DOCTYPE html><html><head><style>*{ filter: drop-shadow(81px 74px 57px black); transform: rotate3d(90, 4, 76, 94deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(52px, 54px) rotate(69deg); filter: brightness(2%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\"><!DOCTYPE html><html><head><style>*{ filter: invert(32%); transform: perspective(76px) rotateY(75deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ filter: drop-shadow(23px 70px 33px black); transform: rotate3d(32, 67, 34, 53deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\"><!DOCTYPE html><html><head><style>*{ transform: rotate(61deg); filter: blur(87px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: rotate(43deg); filter: blur(27px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ filter: invert(70%); transform: perspective(60px) rotateY(47deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ transform: rotate(22deg); filter: blur(1px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"><!DOCTYPE html><html><head><style>*{ transform: scale(15); filter: contrast(42%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ filter: invert(81%); transform: perspective(4px) rotateY(92deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ transform: translate(92px, 64px) rotate(77deg); filter: brightness(28%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"><!DOCTYPE html><html><head><style>*{ filter: invert(79%); transform: perspective(99px) rotateY(43deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ transform: translate(65px, 95px) rotate(36deg); filter: brightness(47%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ filter: drop-shadow(14px 26px 1px black); transform: rotate3d(41, 87, 5, 39deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: drop-shadow(77px 95px 55px black); transform: rotate3d(17, 36, 17, 75deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ transform: scale(83); filter: contrast(87%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"><!DOCTYPE html><html><head><style>*{ filter: invert(33%); transform: perspective(67px) rotateY(37deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ filter: grayscale(12%); transform: perspective(16px) rotateX(8deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ transform: rotate(100deg); filter: blur(3px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ filter: grayscale(56%); transform: perspective(60px) rotateX(6deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ filter: invert(19%); transform: perspective(53px) rotateY(20deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\"><!DOCTYPE html><html><head><style>*{ filter: drop-shadow(69px 76px 38px black); transform: rotate3d(33, 79, 94, 28deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ transform: rotate(89deg); filter: blur(25px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"><!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(64px); transform: skew(46deg, 76deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(32px); transform: skew(33deg, 63deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ transform: translate(74px, 4px) rotate(6deg); filter: brightness(43%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ filter: grayscale(24%); transform: perspective(46px) rotateX(44deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ transform: scale(20); filter: contrast(17%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\"><!DOCTYPE html><html><head><style>*{ filter: invert(99%); transform: perspective(14px) rotateY(33deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ transform: rotate(9deg); filter: blur(98px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\"><!DOCTYPE html><html><head><style>*{ filter: grayscale(7%); transform: perspective(55px) rotateX(74deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"><!DOCTYPE html><html><head><style>*{ filter: invert(51%); transform: perspective(8px) rotateY(22deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ filter: invert(69%); transform: perspective(29px) rotateY(64deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><!DOCTYPE html><html><head><style>*{ filter: grayscale(97%); transform: perspective(83px) rotateX(96deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"><!DOCTYPE html><html><head><style>*{ transform: rotate(45deg); filter: blur(15px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: scale(10); filter: contrast(80%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(18px); transform: skew(57deg, 88deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\"><!DOCTYPE html><html><head><style>*{ filter: invert(28%); transform: perspective(23px) rotateY(61deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(52px, 90px) rotate(90deg); filter: brightness(42%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\"><!DOCTYPE html><html><head><style>*{ transform: translate(66px, 20px) rotate(76deg); filter: brightness(76%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><!DOCTYPE html><html><head><style>*{ transform: translate(32px, 75px) rotate(25deg); filter: brightness(35%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: grayscale(93%); transform: perspective(42px) rotateX(68deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><!DOCTYPE html><html><head><style>*{ transform: translate(66px, 63px) rotate(62deg); filter: brightness(42%); }</style></head></html>"
+];
+
+
+const pocs = [
+    {}
+];
+
+let currentIndex = 0;
+let fuzzingInterval = 1000; // Default to 1 second
+
+const loadPoC = () => {
+    if (currentIndex < pocs.length) {
+        const currentPoC = pocs[currentIndex];
+        // Implement the logic to use the current PoC
+        console.log(`Loading PoC ${currentIndex}: ${currentPoC}`);
+        currentIndex++;
+        setTimeout(loadPoC, fuzzingInterval);
+    }
+};
+
+// Start the process
+loadPoC();

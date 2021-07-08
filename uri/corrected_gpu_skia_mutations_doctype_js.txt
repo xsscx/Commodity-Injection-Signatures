@@ -1,0 +1,123 @@
+const pocs = [
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: grayscale(43%); transform: perspective(63px) rotateX(66deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: scale(43); filter: contrast(96%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: drop-shadow(84px 65px 88px black); transform: rotate3d(56, 71, 24, 20deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(16px); transform: skew(6deg, 45deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: rotate(26deg); filter: blur(7px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: scale(4); filter: contrast(7%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: invert(79%); transform: perspective(77px) rotateY(45deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: drop-shadow(60px 51px 82px black); transform: rotate3d(86, 77, 56, 74deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(8px); transform: skew(69deg, 24deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: invert(13%); transform: perspective(84px) rotateY(33deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: invert(22%); transform: perspective(11px) rotateY(78deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: drop-shadow(71px 92px 8px black); transform: rotate3d(92, 47, 92, 59deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: rotate(2deg); filter: blur(34px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: scale(61); filter: contrast(50%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: rotate(49deg); filter: blur(66px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: scale(66); filter: contrast(82%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: rotate(44deg); filter: blur(83px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: scale(59); filter: contrast(24%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: scale(62); filter: contrast(94%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: scale(38); filter: contrast(44%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: rotate(50deg); filter: blur(35px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: invert(82%); transform: perspective(11px) rotateY(40deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(19px, 62px) rotate(75deg); filter: brightness(53%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(63px); transform: skew(36deg, 86deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: rotate(84deg); filter: blur(85px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: rotate(83deg); filter: blur(14px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: rotate(87deg); filter: blur(71px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: grayscale(50%); transform: perspective(62px) rotateX(27deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: rotate(93deg); filter: blur(99px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: grayscale(39%); transform: perspective(31px) rotateX(1deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: drop-shadow(25px 16px 99px black); transform: rotate3d(40, 75, 74, 16deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(34px, 54px) rotate(46deg); filter: brightness(21%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: grayscale(27%); transform: perspective(28px) rotateX(2deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(5px); transform: skew(44deg, 55deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(29px, 38px) rotate(89deg); filter: brightness(18%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(28px, 63px) rotate(67deg); filter: brightness(60%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: invert(80%); transform: perspective(62px) rotateY(49deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: rotate(51deg); filter: blur(1px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(19px); transform: skew(74deg, 34deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: scale(61); filter: contrast(14%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(13px); transform: skew(32deg, 42deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(93px); transform: skew(52deg, 23deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(67px); transform: skew(47deg, 92deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(87px, 27px) rotate(58deg); filter: brightness(69%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: drop-shadow(60px 88px 14px black); transform: rotate3d(28, 33, 29, 36deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(59px, 5px) rotate(23deg); filter: brightness(49%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: invert(90%); transform: perspective(17px) rotateY(94deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: drop-shadow(52px 58px 32px black); transform: rotate3d(48, 79, 1, 29deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: invert(99%); transform: perspective(100px) rotateY(19deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: drop-shadow(4px 81px 16px black); transform: rotate3d(5, 5, 100, 54deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: scale(19); filter: contrast(75%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: drop-shadow(25px 73px 76px black); transform: rotate3d(21, 57, 3, 52deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: scale(88); filter: contrast(51%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(54px); transform: skew(33deg, 14deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: invert(99%); transform: perspective(63px) rotateY(22deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: grayscale(51%); transform: perspective(19px) rotateX(30deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(43px); transform: skew(11deg, 8deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(6px, 45px) rotate(77deg); filter: brightness(37%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: scale(36); filter: contrast(3%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: drop-shadow(29px 56px 52px black); transform: rotate3d(63, 75, 8, 30deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: invert(26%); transform: perspective(1px) rotateY(28deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(40px, 84px) rotate(41deg); filter: brightness(40%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: invert(59%); transform: perspective(22px) rotateY(23deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: grayscale(1%); transform: perspective(40px) rotateX(88deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(51px); transform: skew(81deg, 35deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: scale(13); filter: contrast(19%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: drop-shadow(97px 2px 87px black); transform: rotate3d(82, 51, 71, 70deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: scale(37); filter: contrast(91%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: invert(52%); transform: perspective(52px) rotateY(30deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: scale(16); filter: contrast(16%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(17px); transform: skew(93deg, 67deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(9px); transform: skew(70deg, 75deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(83px); transform: skew(53deg, 56deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(90px); transform: skew(66deg, 51deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: grayscale(83%); transform: perspective(96px) rotateX(76deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(59px, 12px) rotate(51deg); filter: brightness(67%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(81px, 61px) rotate(88deg); filter: brightness(41%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: scale(51); filter: contrast(66%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: rotate(89deg); filter: blur(14px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: drop-shadow(62px 1px 68px black); transform: rotate3d(52, 15, 58, 70deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(7px); transform: skew(51deg, 45deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(10px, 12px) rotate(93deg); filter: brightness(40%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(44px, 30px) rotate(6deg); filter: brightness(5%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: grayscale(96%); transform: perspective(100px) rotateX(21deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: grayscale(53%); transform: perspective(70px) rotateX(17deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: drop-shadow(68px 62px 64px black); transform: rotate3d(37, 57, 30, 24deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: grayscale(12%); transform: perspective(66px) rotateX(86deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: grayscale(38%); transform: perspective(93px) rotateX(46deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: drop-shadow(55px 100px 66px black); transform: rotate3d(78, 16, 33, 53deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(76px, 34px) rotate(4deg); filter: brightness(52%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(84px, 52px) rotate(70deg); filter: brightness(22%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(4px); transform: skew(73deg, 8deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: rotate(82deg); filter: blur(10px); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(51px, 86px) rotate(67deg); filter: brightness(42%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: translate(3px, 91px) rotate(60deg); filter: brightness(96%); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: invert(68%); transform: perspective(91px) rotateY(83deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: invert(58%); transform: perspective(87px) rotateY(31deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ filter: drop-shadow(49px 66px 43px black); transform: rotate3d(71, 100, 93, 53deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ backdrop-filter: blur(33px); transform: skew(23deg, 87deg); }</style></head></html>",
+    "data:text/html,<!DOCTYPE html><html><head><style>*{ transform: rotate(99deg); filter: blur(73px); }</style></head></html>"
+];
+
+
+const pocs = [
+    {}
+];
+
+let currentIndex = 0;
+let fuzzingInterval = 1000; // Default to 1 second
+
+const loadPoC = () => {
+    if (currentIndex < pocs.length) {
+        const currentPoC = pocs[currentIndex];
+        // Implement the logic to use the current PoC
+        console.log(`Loading PoC ${currentIndex}: ${currentPoC}`);
+        currentIndex++;
+        setTimeout(loadPoC, fuzzingInterval);
+    }
+};
+
+// Start the process
+loadPoC();

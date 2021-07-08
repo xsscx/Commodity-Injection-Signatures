@@ -31,3 +31,7 @@ Refresh: 0; URL=http://example.com;URL=javascript:alert(1)
 POSIX;eval($ENV{HTTP_USER_AGENT});exit;
 &amp;#109;s-its:mhtml:file://C:\foo.mht!${PATH}/EXPLOIT.CHM::/exploit.htm
 GET / HTTP/1.1\nHost:localhost\n\n
+Content-Length : 0
+Content-Length abcd: 0
+Content_Length: 0
+[\r]Content-Length: 0

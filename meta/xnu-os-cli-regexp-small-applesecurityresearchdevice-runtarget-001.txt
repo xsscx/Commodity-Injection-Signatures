@@ -1,0 +1,399 @@
+(AppleMobileFileIntegrity_research) Invalid denylist
+(os/kern)
+(os/kern) failure (0x5)
+/private/var/
+/private/var/root
+0.0.0.0
+17.
+==> debugserver
+@rpath
+AMFI
+AMSupportPlatformCreateBufferFromNativeFilePath
+ASI found
+ASLR:
+ASLRsec:
+ASSERT
+About to ptrace
+Age verification state
+AppleImage4
+AppleMobileFileIntegrity_research
+Assert
+Attempting excessively
+Attempting to write dictionary
+Attempting to write jetsam report
+authentication
+authentication failed
+BAD mmap base metadata
+BREAK
+BSD Name
+BUG IN CLIENT
+Bad file descriptor
+Bundle info cannot be fetched
+CFOpenDirectory
+CFSM dynamic blacklist
+CMPOSIXUser
+CSSymbolOwnerForEachStackFrameAtAddress
+CSSymbolicatorCreateWithTaskFlagsAndNotification
+c411
+c411 authentication
+Cache
+Client has neither
+_codex_import_core_continue
+Committing user settings
+Completed ptrace
+Compressor failed 
+Compressor failed a blocking pager_get
+Conflicting
+Corpse allowed
+Corpse released
+Could not find system user settings
+Could not read data from path
+Could not set F_SETSTATICCONTENT
+Couldn't open parent path
+cpxd
+cpxd authentication
+Created new POSIX user
+cx.srd
+DARWIN
+DATA
+DMA error:
+DTFetchSymbols
+Darwin Image4 Validator Version
+Decode HEIC request
+Details:
+Device connection interrupted
+Dispatch continuations
+EXC_
+EXC_BAD_ACCESS
+EXC_BAD_ACCESSSIGBUSKERN_MEMORY_ERROR
+EXC_RESOURCE
+EXITED
+Enabling Probabilistic Guard Malloc
+Encountered an invalid header
+Error Domain
+Error while reading
+Error while writing verifier file
+Explicitly trapping into debugger
+Fail
+Failed
+Failed to convert signature from
+Failed to install cryptex
+Failed to fetch
+Failed to mount
+Failed to resolve
+Falling back to regular open()
+Fault hit memory shortage
+File system sandbox blocked
+firmware execution failed
+Formulating
+Formulating fatal
+Full mode capture 0 0 d 0 t 1 f_f 0 f_r 0
+GAP
+Got xpc error message
+HEAP Stats
+Hit the server for a process handle
+Host connection
+IDENTITY_ATTRIBUTION
+IMG4
+IODeviceTree
+IPConfiguration
+ISP FD netorks remmapped surface
+If this is expected behavior
+If you run under the debugger
+InactiveHard
+installation failed
+Invalid
+Invalid argument
+Invalid denylist
+ipc failure
+Is this a developer issue? Please file a radar...
+JETSAM_REASON_MEMORY_PERPROCESSLIMIT
+Kernel Triage
+LOAD
+Library not loaded:
+Log limit exceeded
+manifest constraint violated
+MALLOC_LARGE
+MIDeveloperDiskImageTracker
+MSupportPlatformCreateBufferFromNativeFilePath
+Method
+Missing Description
+MissingIntermediate
+NASM
+NBSM entry
+NSThread
+NVRAM
+NVRAM variable
+No match
+NonEmptySubject
+ON_STATE
+ON_STATE->ON_STATE
+OS_REASON
+OS_REASON_DYLD
+OS_REASON_EXEC
+Object
+Object is not alive
+PETRIFIED
+PMRD:
+PROGRAM:
+PROJECT:
+PT_ATTACHEXC
+Permanent update volume present
+Permission denied
+Please file a bug for
+Please file a radar
+Please migrate to
+Please specify the bundleID
+rpc_init_local
+Reason
+Refusing executable path
+Removing all cached process handles
+Removing nag
+Report Crash
+Report of type
+ReportMemoryException
+ReportMemoryException client connection
+Runtime violation
+SDK
+SFP Assert
+SIGBUS
+SIGBUSKERN_MEMORY_ERROR
+SIGKILLed
+SIGRTMEM:
+SIGTERM
+SIGTERMed
+SOURCE_ATTACH
+SPAWNED
+SUBMITTING
+Sandbox
+SecKeyVerifySignature failed
+Secure area is not present
+Sending response
+StabilityCrash
+Starting OTACrashCopier
+Successfully loaded a new image4 v1 trust cache
+SystemCache
+TARGETED_DEVICE_FAMILY
+Terminated
+The optional requiredEntitlements method was implemented, but no entitlements were provided.
+Trying to create CR directory structure as root
+Unable to get short BSD proc info
+Unable to obtain
+Unable to obtain a task name port right for
+Unable to resolve candidate path based on calling process entitlement
+Using fixed (injected) offsets
+VM
+VOC
+VREF
+ValidityPeriodMaximums
+Variant
+WILL_SPAWN
+Waiting for a client to connect
+Warning Denying process assertion
+We had an entry for
+XPC_ERROR_CONNECTION_INVALID
+Xcode
+[CoreSymbolication] (sensitive)
+[dyld] (sensitive)
+__opaque__
+_cryptex_bundle_find_cryptex_elm
+a blocking pager_get
+about to
+about to task_for_pid
+adhoc signed
+application-identifier
+apply-protobox
+appsandbox.cold
+aslr_offset
+asm
+assert
+bad base
+bad file
+because incomplete work
+because inefficient
+bind
+break
+bt all
+build
+bundleID is invalid
+but it had no actions
+but never started
+cached-account-with-identifier
+caller not entitled
+code signature validation failed
+com.apple.private
+com.apple.private.security
+com.apple.secinitd
+com.apple.security.cryptexd
+com.example.cryptex
+complies with restrictions
+copy_parent_certificates
+core:
+create_symbol_owner_data
+crypt:
+cryptex mount point
+debugserver
+definition
+deny(1) file-map-executable
+deny(1) file-read-metadata
+denying
+denying executable
+descriptor
+disabled
+dstroot
+due to failed file-read-data check
+duplicate report for Sandbox:
+dyld
+dyld_shared_cache_arm64e
+dyld_shared_cache_arm64e.symbols
+elided platform fast path
+entitlements
+error:
+esr
+exceeded
+exceeded mem limit
+exception
+exited
+exited due to
+exited due to SIGBUS
+exited with exit reason
+failed necp_set_socket_domain_attributes
+failed to
+failed to assign builtin profile
+failed to find research
+failed to frob plist
+failed to read nvram property
+failed to warn
+failed to warn the current task
+failed to pass date test
+failed with resource shortage
+failure
+failure in
+falling back on naive access() check
+far
+fatal
+file
+file-map-executable
+file-read-data
+file-read-metadata
+for pid
+fp
+hfs
+hfs:
+homeDirectoryURL
+hook..execve()
+iBoot version
+img4
+implicit endpoint
+incomplete work
+input buffer bad size
+internal event
+internal event: PETRIFIED, code = 0
+is adhoc signed
+kIOMessageSystemCapabilityChange
+kauth_membership_check
+kernel
+kernel(Sandbox)
+kernel: 
+kernel: (AppleMobileFileIntegrity_research) Invalid denylist
+key
+keychain-access-groups
+killed by jetsam reason per-process-limit
+killing
+killing_specific_process
+launch your executable with the environment variable MALLOC_PERMIT_INSANE_REQUESTS set to any value to circumvent this check
+libsystem_malloc.dylib`free
+libsystem_secinit.dylib
+listen
+lr
+mach
+mach-lookup
+mach_msg_server_once
+main_block_invoke
+mapped_file
+mask.hash
+memcpy_s:
+memorystatus_available_pages
+memorystatus_on_ledger_footprint_exceeded
+missing bundleID
+mmap buffer
+mmap failed
+mmap()
+mmap-ing base metadata
+mount point
+namespace
+ncmhost
+necp_set_socket_domain_attributes
+no match
+no-op
+numberOfErrorsDeep
+open failed
+os/kern
+passcode
+pc
+platf:
+platform/device
+pmap_enter 
+pmap_enter failed with resource shortage
+port right
+pow:
+power event
+process exited in a dirty state
+psi:
+radr:
+rdar://
+re re --all
+reading plist directly
+recording malloc
+rejecting signature
+removing service
+replacing non ev reject score
+resolves to factor pack set
+result FAILED
+sdk
+sec:
+send failed
+sensitive
+sensor:
+service has crashed
+service state
+servicePublished done
+signaled service
+sp
+spawn_xpc_service_block_invoke
+stop reason
+strncpy_s:
+subsystem
+successfully task_for_pid
+sweeping
+system-wide
+target-id
+task name
+task_for_pid
+terminationReasonExceptionCode
+terminationReasonNamespace
+times in a row
+trace:
+tss request
+uncorking domain
+uncorking exec source upfront
+unmount failed
+unrestricted anchor source
+unsuitable CT policy
+unsuitable CT policy 0
+updated with invalid process
+variant
+verification failed
+which is not a bundle
+will be removed in this release
+will use ASL
+x16
+x17
+x18
+x25
+x26
+x27
+x28
+x8
+xpcproxy
+12345__2021-SRD-COHORT__67890

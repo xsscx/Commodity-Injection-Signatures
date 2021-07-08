@@ -1,0 +1,123 @@
+const pocs = [
+    "data:image/png;base64,SjoNdNGb9Q/rIaN5CpzdoR4tpR8rlf",
+    "data:image/svg+xml;base64,IKKQ8mZSjoBlqFdvT1kl4w3ojrAZ7H",
+    "data:image/jpeg;base64,qbivZPewloaLApSC6XKeo8mQATKgSH",
+    "data:image/png;base64,8ZzrPLSM90UMOBsqgTXw3+A8VECafj",
+    "data:image/jpeg;base64,PDkWfXBkfjDmAt725upQsYksCHYWJQ",
+    "data:image/png;base64,wwkr6f4dEnBHSu19BP9WpDtKjKMKtV",
+    "data:image/png;base64,Po0xcQkddhQgqpUH2VJXXb+yRc6GFm",
+    "data:image/svg+xml;base64,A/SzOQRw6YJ+QcaZuXeQrQWeUMDfHZ",
+    "data:image/jpeg;base64,osN38Kvk0Ei6zxWk1T+CqamzEJfnAX",
+    "data:image/jpeg;base64,9o0LVlld1Jd2xEs/oA0XDh/FKlQNHA",
+    "data:image/jpeg;base64,2U0D6Qfy9qbjv78hBGmONlz8qJUudg",
+    "data:image/png;base64,CecO4D0uUylO802z/lMd4ODrc81Imi",
+    "data:image/svg+xml;base64,TyIzAIFWh3eeR7FDNn7KeVU/ojXonh",
+    "data:image/svg+xml;base64,p4ml6y9HNNj5JTVlFNMnkR2cfoQ3K2",
+    "data:image/jpeg;base64,8p/RjHAG3BhFCw2ytWxvcri3DXI23a",
+    "data:image/jpeg;base64,4CqPkpMnmlmMiZbMxHA+K3iOMLUqxz",
+    "data:image/svg+xml;base64,sn7fKRk/ozCCgo/VYBOPZXYpYWn2I/",
+    "data:image/jpeg;base64,RJJm6LjPQOySjfRybifsXEsfBvAwcz",
+    "data:image/png;base64,ZPovwFNxknKbD3p7VajhHybDSk467a",
+    "data:image/png;base64,WjSkU8EPCW8ssWBXumo0pbzn/i9eO4",
+    "data:image/png;base64,WmS8cVvP+qeedlArqaG9j7tocCUki8",
+    "data:image/png;base64,rnzJJ7gp0OQjQfqkCqsd1cJ/FET7xT",
+    "data:image/png;base64,pHjBxPSnid1EBX4Y3eHJGNYIdHWK0U",
+    "data:image/jpeg;base64,gfjnoSJLunAEb2S5+ogFHE3ITBR0Xa",
+    "data:image/jpeg;base64,3TCYAfJOnxMb1akRu5YDLeX6WqWzYe",
+    "data:image/png;base64,vIkHtVgLElVINwEYcCdQEK15B9A8Xf",
+    "data:image/jpeg;base64,HVfhDZA+4YQyCyIwPykINHhG7bMFPk",
+    "data:image/jpeg;base64,SXToukZ8OGGU7Xd/Lo4RxVqpVCNCuX",
+    "data:image/png;base64,vIo3I84lBHJBlUeZUGkeEuSaQ8SVfs",
+    "data:image/svg+xml;base64,WTIl4Z0/9sCP769FUhrvCQ+Leo9JAC",
+    "data:image/png;base64,kTUuHCrXstBQkJCP135Z12X9C8FHcn",
+    "data:image/png;base64,zvU1gCd8q/F/Dt7ek3GpJZz9t9idUw",
+    "data:image/png;base64,upWVpH/+RrNeRbFtvvq9uoAkiwvGJ4",
+    "data:image/jpeg;base64,lL7gSm/u2+3Gqj3cKykgAyXa7Mi7bQ",
+    "data:image/png;base64,LoNP0qVnl+dW+dH5/1cs8cSaybfQlm",
+    "data:image/png;base64,GZLDNFDxiJFF4oIh8XqBz9Od8fRy81",
+    "data:image/jpeg;base64,KLmE5wMmgsx90PusOGSwz340UKlB74",
+    "data:image/svg+xml;base64,Z9lXF22ehajnYLasVMu7t2ELCQ8dIP",
+    "data:image/svg+xml;base64,iKHe075s9/snjj1qWRQdiwbuDHCQfW",
+    "data:image/png;base64,6ba2LSMxYyvF6ZND8JGapy67eh+koj",
+    "data:image/svg+xml;base64,G1AP44UpLu/CvRJe/S9KKAYcKYGqEZ",
+    "data:image/jpeg;base64,KNxFT6b00R1ydqt6pZW81PbxLJUQNP",
+    "data:image/svg+xml;base64,mOYqquXwFPlXj6Wb48ttf/985XQGxi",
+    "data:image/png;base64,uH/MdGEfjlvODRHZfQGZ9pWShgP9Zo",
+    "data:image/png;base64,nWz2GeqfTZx+oCMZyhFMdzTvfWsuj+",
+    "data:image/jpeg;base64,M8NhY7Ahxs9wediZMRLyXBBr4vAVvw",
+    "data:image/svg+xml;base64,A2PJqvuY2Jb3hFn8c2LShZBhSDMolT",
+    "data:image/png;base64,0FNWgE/MvF2G7PWobKuZ7QH2MYiJHi",
+    "data:image/svg+xml;base64,pju+LV1/7cEeH2TDAEMRgE77RLQLEN",
+    "data:image/png;base64,Y3+s4w4c5FCeA4OQK7Y977zUWrC1qm",
+    "data:image/svg+xml;base64,S7/dSjrU2ll5YlKio5H6wl8UO+zEIi",
+    "data:image/svg+xml;base64,Qyzj8ysMT9ux8Bval8hwRZrxBJnHpU",
+    "data:image/jpeg;base64,XnbFILWtBX1d4wu4t4PF/VXE5VuZKO",
+    "data:image/png;base64,UzO+Py2asJesgh3criupJheD8eeD5i",
+    "data:image/svg+xml;base64,gxoiBr5TXtO0A5L5D7goqZhp/WYNm0",
+    "data:image/svg+xml;base64,9HcHK/gOgJVdL4HM31KLExP2W2oCj8",
+    "data:image/jpeg;base64,iNnuzqzjK2d9GNt343DAfAjezGY8CW",
+    "data:image/jpeg;base64,SUB9pwUuEXdrr3ZaVXJ4zIEoYUXgn5",
+    "data:image/svg+xml;base64,z+Go3JDUBUXdQMTKc7kPc27coHZVrA",
+    "data:image/jpeg;base64,BmKus7/eOFBJ8RRAeB73IR7QWYAfaQ",
+    "data:image/jpeg;base64,chvz9/bqbdFaNH532hjGSc2drlEhTX",
+    "data:image/jpeg;base64,cC8YFlxrGhvK/eE4RQYPdnh3lGM7Br",
+    "data:image/jpeg;base64,K0fcCd0DTs4d7fN3kiE1Ehsp8d46ml",
+    "data:image/svg+xml;base64,0Knm/W5rajiJp19JXp1zjFkie36Hcy",
+    "data:image/jpeg;base64,sNtLf/oQ4lW9Wmm2DT/zBDQMYFmosQ",
+    "data:image/svg+xml;base64,CP83QgPIKXM8clMM5dipX5qz5Q83Xn",
+    "data:image/svg+xml;base64,6PrbimgRexFwJwqp65CjJAOVaPF5yy",
+    "data:image/svg+xml;base64,kqZRdkj0grneaSh7Ia2JYcpCVESbXs",
+    "data:image/png;base64,mYr+KQ97MxKahaotABE1LdObek4/A2",
+    "data:image/svg+xml;base64,V9dRoU1Je60MEjGU6OWHp7C9BDZDMR",
+    "data:image/png;base64,j2Tt5eYiMo3+5ak2t1sWJLkA84cOW0",
+    "data:image/svg+xml;base64,9QqS7B/t0aku11JDnSK/wwiZV49ThD",
+    "data:image/svg+xml;base64,/Q9RL2j55hpmEMgbadoptLyFYQTLh/",
+    "data:image/jpeg;base64,FRSGqlhq1kK3+Ji/qS0mcChmWBWE5b",
+    "data:image/png;base64,tpj4hLTV8SSe/vG+gwuOOx/P5QOC1b",
+    "data:image/png;base64,TMIkIKw1kfcOiXW6Ypl/kaYWVphmzM",
+    "data:image/svg+xml;base64,IztGS71wKBiiqrD9GHfTEQlnFcDhe9",
+    "data:image/png;base64,/gpVwIqTdT+TvTIu38Tn+J0DEDEy7k",
+    "data:image/jpeg;base64,nKskg/odUIDWIA/p1HTmNiOG6OGt26",
+    "data:image/svg+xml;base64,ykIYuE0HhKslI6JORCYb+TwHoI5rE7",
+    "data:image/png;base64,nQN99T9RI2JhnJDzZUID6a2Zzk8mog",
+    "data:image/png;base64,KTT7wjURLuUb2CODMsBiINmZAZmAJ2",
+    "data:image/png;base64,R4O0sZatrVIFA20qxonnQ5hQcz4Z6p",
+    "data:image/svg+xml;base64,ClBkLP513BKl7PLoROLVyJRQaRMR9h",
+    "data:image/png;base64,l6BqS7qAQ8DaGDdlNdVHi0bC8L86ln",
+    "data:image/png;base64,e7xSn9pV0/ZTkKcHdUPGzJrrjL1QCb",
+    "data:image/png;base64,xjhfBqsj9pvFflbJ4Ho5ZBpbCCihIw",
+    "data:image/jpeg;base64,Q7ctSgpr04QnpfUra7Exj/iIrVgcnB",
+    "data:image/jpeg;base64,g4gH8Hxh+gIlH+NIirvbtgXFjjaGlQ",
+    "data:image/jpeg;base64,O1Z8s/izgg6yZS3EfWQ1pr5Xh5TGnN",
+    "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><circle cx='50' cy='50' r='40' stroke='black' stroke-width='3' fill='red' /></svg>",
+    "data:image/svg+xml;base64,MpPKfZeetr0oiOH8c3xViGn5TblIrJ",
+    "data:image/jpeg;base64,uVcx+gyWtFHGjfXVRS/gaKLXQ2VvWU",
+    "data:image/jpeg;base64,nfPLBf02L6WNKM11NFkZVuKn6Sanro",
+    "data:image/png;base64,HWG3y6CcKmKnZPU0dA7VPvoQ3W6BtB",
+    "data:image/jpeg;base64,bTZbJV+40+gW+mkuCEI7Tex+/xz/Wh",
+    "data:image/svg+xml;base64,GnBSNxx57pFLNeSOH5xn6S7t6yKy3u",
+    "data:image/svg+xml;base64,lH3poKthHCD/KEP3np2H1bhOrns99V",
+    "data:image/svg+xml;base64,3hvy9Fhzw4a1UVBF0QR7rKgLko7Vzr",
+    "data:image/png;base64,dkCaR+9o/J/hT1eq/SFVwuNgS4s45V"
+];
+
+
+const pocs = [
+    {}
+];
+
+let currentIndex = 0;
+let fuzzingInterval = 1000; // Default to 1 second
+
+const loadPoC = () => {
+    if (currentIndex < pocs.length) {
+        const currentPoC = pocs[currentIndex];
+        // Implement the logic to use the current PoC
+        console.log(`Loading PoC ${currentIndex}: ${currentPoC}`);
+        currentIndex++;
+        setTimeout(loadPoC, fuzzingInterval);
+    }
+};
+
+// Start the process
+loadPoC();

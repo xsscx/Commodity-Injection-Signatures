@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuzzing with IFrame and Logging</title>
+    <script>
+  const pocs = [
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>89",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)94; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)39; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>36",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.591; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>46",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>50",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>39",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.598; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.526; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.574; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)57; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.530; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)52; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.572; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>76",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>76",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5100; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>41",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>66",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)20; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.592; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>54",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.566; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>67",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.531; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.565; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.538; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>46",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>5",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.539; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)70; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.571; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>86",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)73; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>90",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)95; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>25",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)20; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.567; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.545; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.562; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.569; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)87; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)87; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.523; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.554; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>68",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>98",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.575; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>35",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.53; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>83",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)90; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)59; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)90; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.566; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>78",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.569; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.538; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>36",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.516; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.513; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>90",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>88",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)12; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>32",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>17",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.528; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)86; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)3; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.593; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)80; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)27; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>5",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.568; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)14; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)29; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)67; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)57; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.560; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.565; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)24; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.520; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.520; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)10; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)59; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>14",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>20",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)66; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>22",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)65; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)100; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)46; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black); }</style>52",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)23; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)29; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.576; filter: drop-shadow(10px 10px 5px black); }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.5; filter: drop-shadow(10px 10px 5px black)65; }</style>",
+    "data:text/html,<style>*{ rotate: 45deg 2 1 0.57; filter: drop-shadow(10px 10px 5px black); }</style>"
+];
+
+        let currentIndex = 0;
+        let fuzzingInterval = 1000; // Default to 5 seconds
+
+        const logInfo = (message) => {
+            console.log(`[INFO] ${message}`);
+        };
+
+        const logError = (error) => {
+            console.error(`[ERROR] ${error}`);
+        };
+
+        const loadPoC = () => {
+            try {
+                if (currentIndex < pocs.length) {
+                    const currentPoC = pocs[currentIndex];
+                    document.getElementById('fuzzFrame').src = currentPoC;
+                    logInfo(`Loading PoC ${currentIndex + 1}: ${currentPoC}`);
+                    currentIndex++;
+                    setTimeout(loadPoC, fuzzingInterval);
+                } else {
+                    logInfo('Completed all PoCs');
+                }
+            } catch (error) {
+                logError(error);
+            }
+        };
+
+        const adjustInterval = (newInterval) => {
+            if (newInterval > 0 && newInterval <= 6000) {
+                fuzzingInterval = newInterval;
+                logInfo(`Fuzzing interval adjusted to ${newInterval} ms`);
+            }
+        };
+
+        window.onload = () => {
+            logInfo('Starting fuzzing process...');
+            loadPoC();
+        };
+    </script>
+</head>
+<body>
+    <h1>Fuzzing Test with IFrame and Logging</h1>
+    <p>Use this page to test various PoCs for iframe src manipulation with logging.</p>
+    <button onclick="adjustInterval(10000)">Set Interval to 1 Seconds</button>
+    <button onclick="adjustInterval(30000)">Set Interval to 3 Seconds</button>
+    <button onclick="adjustInterval(60000)">Set Interval to 6 Seconds</button>
+    <iframe id="fuzzFrame" style="width: 100%; height: 500px;"></iframe>
+</body>
+</html>

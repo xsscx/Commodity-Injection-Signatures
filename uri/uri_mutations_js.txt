@@ -1,0 +1,12 @@
+const pocs = [
+    "data:text/html,%3Chtml%3E%3Cbody%3EHello%20World%3C/body%3E%3C/html%3E42",
+    "data:text/html,%3Chtml%3E%3Cbody%3EHello%20World%3C/body%3E%3C/html%3E28",
+    "data:text/html,%3Chtml%3E%3Cbody%3EHello%20World%3C/body%3E%3C/html%3E91",
+    "data:text/html,%3Chtml%3E%3Cbody%3EHello%20World%3C/body%3E%3C/html%3E92",
+    "data:text/html,%3Chtml%3E%3Cbody%3EHello%20World%3C/body%3E%3C/html%3E37",
+    "data:text/html35,%3Chtml%3E%3Cbody%3EHello%20World%3C/body%3E%3C/html%3E",
+    "data:text/html85,%3Chtml%3E%3Cbody%3EHello%20World%3C/body%3E%3C/html%3E",
+    "data:text/html67,%3Chtml%3E%3Cbody%3EHello%20World%3C/body%3E%3C/html%3E",
+    "data:text/html19,%3Chtml%3E%3Cbody%3EHello%20World%3C/body%3E%3C/html%3E",
+    "data:text/html4,%3Chtml%3E%3Cbody%3EHello%20World%3C/body%3E%3C/html%3E"
+];

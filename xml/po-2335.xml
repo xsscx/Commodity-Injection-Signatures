@@ -1,0 +1,10 @@
+<!DOCTYPE A SYSTEM ""
+[
+    <!ENTITY ENT_A SYSTEM "" NDATA A>
+    <!ENTITY ENT_B "&ENT_A;&ENT_B;">
+    <!ATTLIST A C CDATA "">
+    <!ATTLIST A D CDATA "">
+    <!ATTLIST A E CDATA "">
+    <!ATTLIST A F CDATA "">
+    <!ATTLIST A G CDATA "&ENT_B;">
+]>
