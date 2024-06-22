@@ -7,7 +7,8 @@ I am David Hoyt.
   - https://srd.cx
   - https://xss.cx
     
-## Last Update: 20 MAY 2024
+## Last Update: 22 JUNE 2024
+- Added CVE-2024-38427 ICC Color Profile Sample PoC's
 - Added CVE-2022-26730 ICC Color Profile Sample PoC's
 - Added CVE Color Profile samples known to Crash many OS 
 - https://srd.cx/cve-2022-26730/
