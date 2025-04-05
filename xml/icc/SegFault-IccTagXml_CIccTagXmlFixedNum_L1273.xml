@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IccProfile>
+  <Header>
+    <PreferredCMMType>hoyt</PreferredCMMType>
+    <ProfileVersion>5.0</ProfileVersion>
+    <ProfileDeviceClass>mntr</ProfileDeviceClass>
+    <DataColourSpace>RGB </DataColourSpace>
+    <PCS>XYZ </PCS>
+    <CreationDateTime>now</CreationDateTime>
+    <RenderingIntent>Perceptual</RenderingIntent>
+    <PCSIlluminant>
+      <XYZNumber X="0.9642" Y="1.0000" Z="0.8249"/>
+    </PCSIlluminant>
+    <ProfileCreator>David H Hoyt LLC Copyright (c) 2022-2025</ProfileCreator>
+  </Header>
+
+  <Tags>
+    <!-- Profile description -->
+    <multiLocalizedUnicodeType>
+      <TagSignature>desc</TagSignature>
+      <LocalizedText LanguageCountry="enUS"><![CDATA[Display Profile XNU Full]]></LocalizedText>
+    </multiLocalizedUnicodeType>
+
+    <!-- Display primaries -->
+    <XYZType><TagSignature>rXYZ</TagSignature><XYZNumber X="0.4361" Y="0.2225" Z="0.0139"/></XYZType>
+    <XYZType><TagSignature>gXYZ</TagSignature><XYZNumber X="0.3851" Y="0.7169" Z="0.0971"/></XYZType>
+    <XYZType><TagSignature>bXYZ</TagSignature><XYZNumber X="0.1431" Y="0.0606" Z="0.7141"/></XYZType>
+
+    <!-- Media white point -->
+    <XYZType><TagSignature>wtpt</TagSignature><XYZNumber X="0.9642" Y="1.0000" Z="0.8249"/></XYZType>
+
+    <!-- Chromatic adaptation (identity) -->
+    <s15Fixed16ArrayType>
+      <TagSignature>chad</TagSignature>
+      <ArrayValues>1 0 0 0 1 0 0 0 1</ArrayValues>
+    </s15Fixed16ArrayType>
+
+    <!-- TRCs -->
+    <curveType><TagSignature>rTRC</TagSignature><Curve><ParametricCurveType>0</ParametricCurveType><Gamma>2.2</Gamma></Curve></curveType>
+    <curveType><TagSignature>gTRC</TagSignature><Curve><ParametricCurveType>0</ParametricCurveType><Gamma>2.2</Gamma></Curve></curveType>
+    <curveType><TagSignature>bTRC</TagSignature><Curve><ParametricCurveType>0</ParametricCurveType><Gamma>2.2</Gamma></Curve></curveType>
+
+    <!-- A2B0: CurveSet + Identity matrix -->
+    <multiProcessElementType>
+      <TagSignature>A2B0</TagSignature>
+      <MultiProcessElements InputChannels="3" OutputChannels="3">
+        <CurveSetElement InputChannels="3" OutputChannels="3">
+          <SegmentedCurve>
+            <FormulaSegment Start="-infinity" End="+infinity" FunctionType="0">
+              1.0 2.2 0.0 0.0
+            </FormulaSegment>
+          </SegmentedCurve>
+          <SegmentedCurve>
+            <FormulaSegment Start="-infinity" End="+infinity" FunctionType="0">
+              1.0 2.2 0.0 0.0
+            </FormulaSegment>
+          </SegmentedCurve>
+          <SegmentedCurve>
+            <FormulaSegment Start="-infinity" End="+infinity" FunctionType="0">
+              1.0 2.2 0.0 0.0
+            </FormulaSegment>
+          </SegmentedCurve>
+        </CurveSetElement>
+        <MatrixElement InputChannels="3" OutputChannels="3">
+          <Matrix>
+            <Row0>1 0 0</Row0>
+            <Row1>0 1 0</Row1>
+            <Row2>0 0 1</Row2>
+          </Matrix>
+          <Offset>0 0 0</Offset>
+        </MatrixElement>
+      </MultiProcessElements>
+    </multiProcessElementType>
+
+    <!-- B2A0: Identity Matrix + CurveSet -->
+    <multiProcessElementType>
+      <TagSignature>B2A0</TagSignature>
+      <MultiProcessElements InputChannels="3" OutputChannels="3">
+        <MatrixElement InputChannels="3" OutputChannels="3">
+          <Matrix>
+            <Row0>1 0 0</Row0>
+            <Row1>0 1 0</Row1>
+            <Row2>0 0 1</Row2>
+          </Matrix>
+          <Offset>0 0 0</Offset>
+        </MatrixElement>
+        <CurveSetElement InputChannels="3" OutputChannels="3">
+          <SegmentedCurve>
+            <FormulaSegment Start="-infinity" End="+infinity" FunctionType="0">
+              1.0 0.454545 0.0 0.0
+            </FormulaSegment>
+          </SegmentedCurve>
+          <SegmentedCurve>
+            <FormulaSegment Start="-infinity" End="+infinity" FunctionType="0">
+              1.0 0.454545 0.0 0.0
+            </FormulaSegment>
+          </SegmentedCurve>
+          <SegmentedCurve>
+            <FormulaSegment Start="-infinity" End="+infinity" FunctionType="0">
+              1.0 0.454545 0.0 0.0
+            </FormulaSegment>
+          </SegmentedCurve>
+        </CurveSetElement>
+      </MultiProcessElements>
+    </multiProcessElementType>
+  </Tags>
+</IccProfile>
