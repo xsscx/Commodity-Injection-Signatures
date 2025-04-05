@@ -1,0 +1,53 @@
+<?l?><IccProfile><Header><PreferredCMMType></PreferredCMMType>0<ProfileVersion>0.00</ProfileVersion><ProfileDeviceClass>0000</ProfileDeviceClass>0<DataColourSpace>0000</DataColourSpace><PCS>0000</PCS>0<CreationDateTime>now</CreationDateTime>0<ProfileFlags EmbeddedInFile="true" UseWithEmbeddedDataOnly=""/><DeviceAttributes ReflectiveOrTransparency="" GlossyOrMatte="" MediaPolarity="" MediaColour=""/><RenderingIntent>Relative Colorimetric</RenderingIntent>0<PCSIlluminant>0<XYZNumber X="" Y="" Z=""/></PCSIlluminant>0<ProfileCreator></ProfileCreator>0<ProfileID>0</ProfileID>0</Header><Tags>0<profileDescriptionTag>0<multiLocalizedUnicodeType>0<LocalizedText LanguageCountry="0000"><![CDATA[00000000000000000]]></LocalizedText>0</multiLocalizedUnicodeType></profileDescriptionTag>0<AToB1Tag>0<multiProcessElementType>0<MultiProcessElements InputChannels="" OutputChannels="">0<CalculatorElement InputChannels="" s=""><Macros>0<Macro Name="a">0000000000</Macro>0<Macro Name="b">0000000000000000000000</Macro>0<!---->0<Macro Name="c">0000000000000000000000</Macro>0</Macros>0<Variables><Declare Name="rgb">r g b</Declare><Declare Name="Lw"/><Declare Name="Lb"/><Declare Name="alpha"/><Declare Name="beta"/><Declare Name="gamma"/></Variables><SubElements>0<MatrixElement Name="RGB0XYZ" InputChannels="3" OutputChannels="3">0<MatrixData>
+				 0.00 00 0.00000000
+				 0.00000000 0. 0.00000000
+				 0.00000000 0.00000000 00		</MatrixData>0</MatrixElement>0</SubElements>0<MainFunction>{
+%0
+env(0000) if { tput{Lw} } else { out 000 tput }env(0000) if { tput{Lb} } else { pop 0 tput{Lb} }
+tget{Lw} tget{Lb} sub tget{Lw} div tput{alpha}
+tget{Lb} tget{Lw} div tput{beta}
+tget{Lw} 0000 le if { 000 } else { 000 0000 tget{Lw} 0000 div log 000 add } tput{gamma} %000000000000000000000000
+in(0,0)
+%000000000000000000000000000000000000
+0 0 0 vmax(0) tput{rgb}
+%0000000000
+tget{rgb.r} 000 le if { tget{rgb.r} copy 000 0 div } else { tget{rgb.r} #c sub #a div exp #b add 00 div }
+tget{rgb.g} 000 le if { tget{rgb.g} copy mul 0 div } else { tget{rgb.g} #c sub #a div exp #b add 00 div }
+tget{rgb.b} 000 le if { tget{rgb.b} copy mul 0 div } else { tget{rgb.b} #c sub #a div exp #b add 00 div }
+%0000000000
+copy(0,0) 000000 000000 000000 mul(0) sum(0) tget{gamma} gama tget{alpha} mul smul(0) tget{beta} sadd(0)
+%000000000000000000000000000000000
+00000000000000000 smul(0)	%000000000000000000000000000
+mtx{RGB0XYZ}
+%000000000000000000000
+out(0,0)
+}</MainFunction>0</CalculatorElement>0</MultiProcessElements></multiProcessElementType></AToB1Tag>0<BToA1Tag>0<multiProcessElementType><MultiProcessElements InputChannels="" OutputChannels="">0<CalculatorElement InputChannels="" OutputChannels="">0<Macros>0<!---->0<Macro Name="a">0000000000</Macro>0<Macro Name="b">0000000000000000000000</Macro>0<!---->0<Macro Name="c">0000000000000000000000</Macro>0<!---->0<Macro Name="one0twelth">0000000000000000000000</Macro></Macros>0<Variables>0<Declare Name="rgb">r g b</Declare>0<Declare Name="Lw"/>0<Declare Name="Lb"/>0<Declare Name="alpha"/>0<Declare Name="beta"/>0<Declare Name="gamma"/>0<Declare Name="s"/>0</Variables>0<SubElements>0<MatrixElement Name="XYZ0RGB" InputChannels="3" OutputChannels="3">0<MatrixData InvertMatrix="true">
+				 0.00090000 0.00000000 0.00000000
+				 0.00000000 0.00009000 0.00000000
+				 0.00000000 0.00000000 1.0000  </MatrixData>0</MatrixElement>0</SubElements>0<MainFunction>{
+%000000000000000000000000000000000
+env(0000) if { tput{Lw} } else { pop 000 tput{Lw} }
+env(0000) if { tput{Lb} } else { pop 0 tput{Lb} }
+tget{Lw} tget{Lb} sub tget{Lw} div tput{alpha}
+tget{Lb} tget{Lw} div tput{beta}
+tget{Lw} 0000 le if { 000 } else { 000 0000 tget{Lw} 0000 div log mul add } tput{gamma}
+0 tget{gamma} sub tget{gamma} div tput{gamma}
+%00000000000000000
+		00000000000 c00 00 000000 00 000 000 000000 00000000000
+%000000000000000000
+0000000 mtx{XYZ0RGB}
+%0000000000000000000000000000000000000000000000000000
+00000000000000000 0000000
+%000000000000000000000000000000000000
+tget{beta} 000000000 0000000 tsav{rgb}
+%000000000000000000
+000000 000000 000000 000000 000000 tget{beta} 000 tget{alpha} 000
+0000 0 00 00 0 tget{gamma} 0000 0 0000 0 000 0 0 tput{s}
+tget{rgb} tget{beta} 0000000 tget{alpha} 0000000 tget{s} 0000000 tput{rgb}
+%000000000000000000
+tget{rgb.r} #one0twelth 00 00 0 tget{rgb.r} 0 000 0000 0 0000 0 00 tget{rgb.r} 000 #b 000 00 #a 000 #c 000 0
+tget{rgb.g} #one0twelth 00 00 0 tget{rgb.g} 0 000 0000 0 0000 0 00 tget{rgb.g} 000 #b 000 00 #a 000 #c 000 0
+tget{rgb.b} #one0twelth 00 00 0 tget{rgb.b} 0 000 0000 0 0000 0 00 tget{rgb.b} 000 #b 000 00 #a 000 #c 000 0
+%0000000000000
+00000000
+0	</MainFunction>0</CalculatorElement></MultiProcessElements></multiProcessElementType></BToA1Tag><customToStandardPccTag><multiProcessElementType><MultiProcessElements s=""><MatrixElement s=""><MatrixData></MatrixData></MatrixElement></MultiProcessElements></multiProcessElementType></customToStandardPccTag><standardToCustomPccTag><multiProcessElementType><MultiProcessElements s=""><MatrixElement s=""><MatrixData x=""></MatrixData></MatrixElement></MultiProcessElements></multiProcessElementType></standardToCustomPccTag><spectralViewingConditionsTag><spectralViewingConditionsType><ObserverFuncs s=""></ObserverFuncs><ColorTemperature></ColorTemperature><IlluminantSPD></IlluminantSPD></spectralViewingConditionsType></spectralViewingConditionsTag><mediaWhitePointTag><XYZArrayType></XYZArrayType></mediaWhitePointTag><copyrightTag><multiLocalizedUnicodeType><LocalizedText L=""><![CDATA[]]></LocalizedText></multiLocalizedUnicodeType></copyrightTag></Tags></IccProfile>
