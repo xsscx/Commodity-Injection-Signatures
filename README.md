@@ -1,5 +1,4 @@
 # XSS.Cx Public Repo
-<img src="https://xss.cx/2024/05/20/img/xnu-videotoolbox-fuzzer-objective-c-code-project-example.webp" alt="XNU VideoToolbox Fuzzer OSS Project" style="height:1024px; width:1024px;"/>
 
 ## whoami
 I am David Hoyt.
@@ -7,7 +6,9 @@ I am David Hoyt.
   - https://srd.cx
   - https://xss.cx
     
-## Last Update: 22 JUNE 2024
+## Last Update: 05 APRIL 2025
+- Added ICC Profile XML Crasher PoC via AFL
+  - Added AFL Minimized Corpus of XML Crashers   
 - Added CVE-2024-38427 ICC Color Profile Sample PoC's
 - Added CVE-2022-26730 ICC Color Profile Sample PoC's
 - Added CVE Color Profile samples known to Crash many OS 
