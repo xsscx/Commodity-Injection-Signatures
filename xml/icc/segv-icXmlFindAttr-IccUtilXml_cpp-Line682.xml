@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IccProfile>
+  <Header>
+    <PreferredCMMType></PreferredCMMType>
+    <ProfileVersion>5.00</ProfileVersion>
+    <ProfileDeviceClass>mid </ProfileDeviceClass>
+    <ProfileDeviceSubClass>nink</ProfileDeviceSubClass>
+    <DataColourSpace>nc0004</DataColourSpace>
+    <PCS></PCS>
+    <CreationDateTime>2025-12-24T00:08:43</CreationDateTime>
+    <ProfileFlags EmbeddedInFile="true" UseWithEmbeddedDataOnly="false" MCSNeedsSubset="false"/>
+    <DeviceAttributes ReflectiveOrTransparency="reflective" GlossyOrMatte="glossy" MediaPolarity="positive" MediaColour="colour"/>
+    <RenderingIntent>Relative</RenderingIntent>
+    <PCSIlluminant>
+      <XYZNumber X="0.000000000000" Y="0.000000000000" Z="0.000000000000"/>
+    </PCSIlluminant>
+    <ProfileCreator></ProfileCreator>
+    <ProfileID>C22F67C671FF25D6A85E0ED41599C936</ProfileID>
+    <MCS>6D630004h</MCS>
+  </Header>
+  <Tags>
+    <profileDescriptionTag> <multiLocalizedUnicodeType>
+      <LocalizedText LanguageCountry="enUS"><![CDATA[Channel selection for Photoshop CMYK image using MCS]]></LocalizedText>
+    </multiLocalizedUnicodeType> </profileDescriptionTag>
+
+    <AToM0Tag> <multiProcessElementType>
+      <MultiProcessElements InputChannels="4" OutputChannels="4">
+      </MultiProcessElements>
+    </multiProcessElementType> </AToM0Tag>
+
+    <materialTypeArrayTag> <tagArrayType>
+      <UTF8TextArray> <ArrayTags>
+         <utf8Type>
+         <TextData><![CDATA[Process Cyan]]></TextData>
+         </utf8Type>
+
+         <utf8Type>
+         <TextData><![CDATA[Process Magenta]]></TextData>
+         </utf8Type>
+
+         <utf8Type>
+         <TextData><![CDATA[Process Yellow]]></TextData>
+         </utf8Type>
+
+         <utf8Type>
+         <TextData><![CDATA[Process Black]]></TextData>
+         </utf8Type>
+
+      </ArrayTags> </UTF8TextArray>
+    </tagArrayType> </materialTypeArrayTag>
+
+    <copyrightTag> <multiLocalizedUnicodeType>
+      <LocalizedText LanguageCountry="enUS"><![CDATA[Copyright 2016 International Color Consortium]]></LocalizedText>
+    </multiLocalizedUnicodeType> </copyrightTag>
+
+  </Tags>
+</IccProfile>
