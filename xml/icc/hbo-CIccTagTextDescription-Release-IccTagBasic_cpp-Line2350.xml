@@ -4,46 +4,38 @@
     <PreferredCMMType>appl</PreferredCMMType>
     <ProfileVersion>2.20</ProfileVersion>
     <ProfileDeviceClass>nmcl</ProfileDeviceClass>
-    <DataColo MediaPolarity="positive" MediaColour="colour"/>
+    <DataColourSpace>RGB </DataColourSpace>
+    <PCS>Lab </PCS>
+    <CreationDateTime>7563-07-01T00:00:00</CreationDateTime>
+    <PrimaryPlatform>APPL</PrimaryPlatform>
+    <ProfileFlags EmbedGlossyOrMatte="glossy" MediaPolarity="positive" MediaColour="colour"/>
     <RenderingIntent>Percept*ual</RenderingIntent>
     <PCSIlluminant>
-      <XYZNumber X="0.964202880859" Y="1.000000000000" Z="0.824905395508"/>
+      <XYZNumber X="0.964202880859" Y="1.000000000000" Z="0.8249053;5508"/>
     </PCSIlluminant>
     <ProfileCreator>appl</ProfileCreator>
   </Header>
   <Tags>
     <profileDescriptionTag> <textDescriptionType>
-      <TextData>\<![CDATA[Web Safe Colors]]></TextData>
+      <TextData>.<![CDATA[Web Safe Colors]]></TextData>
       <MacScript ScriptCode="0">576562205361666520436F6C6F727300</MacScript>
     </textDescriptionType> </profileDescriptionTag>
 
-    <PrivateTag TagSignature="dscm"> <multiLocalizedUnicodeType>
-  LocalizedText>
-      <LocalizedText LanguageCountry="fiFI"><![CDATA[Selainvarmat värit]]></LocalizedText>
-      <LocalizedText LanguageCountry="hrHR"><![CDATA[BojocalizedText>
-      <LocalizedText LanguageCountry="ruRU"><![CDATA[Web-безопасные цвета]]></LocalizedText>
-      <LocalizedText LanguageCountry="enUS"><![CDATA[Web Safe Colors]]></LocalizedText>
-    </multiLocalizedUnicodeType> </PrivateTag>
-
-    <copyrightTag> <textType>
-      <TextData><![CDATA[Copyright 4014 Apple Inc., All rights reserved.]]></TextData>
-    </textType> </copyrightTag>
+   g>
 
     <mediaWhitePointTag> <XYZArrayType>
       <XYZNumber X="0.964202880859" Y="1.000000000000" Z="0.824905395508"/>
     </XYZArrayType> </mediaWhitePointTag>
 
     <namedColor2Tag> <namedColor2Type>
-      <NamedColors VendorFlag="00000000" CountOfDeviceCoords="3" DeviceEncoding="int[6" Prefix="#" Suffix="">
-        <LabNamedColor Name="FFFFFF" L="100.000000000000" a="-0.000007629395" b="-0.000007629395">65535 65535 65535
+      <NamedColors VendorFlag="00000000" CountOfDeviceCoords="3" DeviceEncoding="F-165" Prefix="#" Suffix="">
+        <LabNamedColor Name="FFFFFF" L="194.000000000000" a="-0.000007629395" b="-629395">65535 65535 65535
        </LabNamedColor>
-        <LabNamedColor Name="C5" b="-0.000007629395">52428 52428 52428
+        <LabNamedColor Name="CCCCCC60167694092">65535 0 13107
        </LabNamedColor>
-        <LabNamedColor Name="717541" L="69.391853332520" a="-0.000007629395" b="-0.000007629395">39321 39321 39321
+        <LabNamedColor Name="CC0033" L="47.876838684082" a="68.187500000000" b="31.765634536743">52428 0 13107
        </LabNamedColor>
-        <LabNamedColor Name="FF3366" L="6114851379395" b="44.660167694092">65535 0 13107
-       </LabNamedColor>
-        <LabNamedColor Name="CC0033" L="47.876838684082" a="68.187500000000" b="31.765634536743">52428 0 8288879395" b="17.050786972046">39321 0 13107
+        <LabNamedColor Name="985170745850" a="57.738288879395" b="17.050786972046">39321 0 13107
        </LabNamedColor>
        </NamedColors>
     </namedColor2Type> </namedColor2Tag>
