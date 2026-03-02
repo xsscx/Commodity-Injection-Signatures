@@ -9,7 +9,8 @@ I am David Hoyt.
   - https://srd.cx
   - https://xss.cx
     
-## Last Update:04-FEB-2026
+## Last Update:02-MAR-2026
+- Added known good & working 0D images
 - Add https://github.com/xsscx/research for ICC Profiles
 - Renamed from Commodity-Injection-Signatures to fuzz
 - Added XML & ICC CVE PoC's
