@@ -1,0 +1,699 @@
+###############################################################
+# Copyright (c) 2026 David H Hoyt LLC
+#
+# Intent: Sanitizer scan of fuzz/ corpus against iccDEV tools
+#         - Build iccanalyzer-lite (ASAN + UBSAN + Coverage)
+#         - Build colorbleed_tools (iccToXml_unsafe, iccFromXml_unsafe)
+#         - Run all ICC profiles through iccanalyzer-lite (-a, -nf, -r)
+#         - Run all ICC profiles through iccToXml_unsafe
+#         - Run all ICC XML files through iccFromXml_unsafe
+#         - Collect ASAN/UBSAN findings, coverage, and summary
+#
+# Last Updated: 2026-03-07
+###############################################################
+
+name: Sanitizer Corpus Scan
+
+permissions:
+  contents: read
+
+on:
+  push:
+    paths:
+      - 'graphics/icc/**'
+      - 'xml/icc/**'
+      - '.github/workflows/sanitizer-corpus-scan.yml'
+  pull_request:
+    paths:
+      - 'graphics/icc/**'
+      - 'xml/icc/**'
+  workflow_dispatch:
+
+concurrency:
+  group: sanitizer-scan-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  RESEARCH_REF: "main"
+  RESEARCH_REPO: "xsscx/research"
+  ASAN_OPTIONS: "detect_leaks=0:halt_on_error=0:print_stats=1"
+  UBSAN_OPTIONS: "halt_on_error=0:print_stacktrace=1"
+  LLVM_PROFILE_FILE: "/tmp/profraw/fuzz_corpus_%m_%p.profraw"
+
+jobs:
+  build-tools:
+    name: "Build • iccanalyzer-lite + colorbleed_tools"
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash --noprofile --norc {0}
+
+    steps:
+      - name: Checkout fuzz corpus
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          persist-credentials: false
+          path: fuzz
+
+      - name: Checkout research repo (tools)
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          repository: ${{ env.RESEARCH_REPO }}
+          ref: ${{ env.RESEARCH_REF }}
+          persist-credentials: false
+          path: research
+
+      - name: Install build dependencies
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            build-essential cmake clang \
+            libxml2-dev libtiff-dev libjpeg-dev libpng-dev \
+            zlib1g-dev liblzma-dev nlohmann-json3-dev libssl-dev \
+            python3 llvm
+
+      - name: Clone and patch iccDEV
+        run: |
+          set -euo pipefail
+          cd research/iccanalyzer-lite
+          if [ ! -d "iccDEV" ]; then
+            git clone --depth=1 https://github.com/InternationalColorConsortium/iccDEV.git
+          fi
+          echo "Applying CFL patches..."
+          for p in ../cfl/patches/*.patch; do
+            if patch -p1 -d iccDEV --forward -s < "$p" 2>/dev/null; then
+              echo "  [OK] $(basename "$p")"
+            else
+              echo "  [SKIP] $(basename "$p")"
+            fi
+          done
+          # Strip stray U+FE0F
+          SIGUTILS="iccDEV/IccProfLib/IccSignatureUtils.h"
+          if grep -qP '\xef\xb8\x8f' "$SIGUTILS" 2>/dev/null; then
+            sed -i 's/\xef\xb8\x8f//g' "$SIGUTILS"
+          fi
+
+      - name: Build iccDEV libraries
+        env:
+          CXX: clang++
+        run: |
+          set -euo pipefail
+          cd research/iccanalyzer-lite/iccDEV/Build
+          cmake Cmake \
+            -DCMAKE_BUILD_TYPE=Debug \
+            -DENABLE_ASAN=ON \
+            -DENABLE_UBSAN=ON \
+            -DENABLE_COVERAGE=ON \
+            -DENABLE_TOOLS=OFF \
+            -DICC_LOG_SAFE=ON \
+            -Wno-dev
+          make -j$(nproc)
+          echo "Libraries built:"
+          ls -lh IccProfLib/libIccProfLib2-static.a IccXML/libIccXML2-static.a
+
+      - name: Build iccanalyzer-lite
+        run: |
+          set -euo pipefail
+          cd research/iccanalyzer-lite
+          chmod +x build.sh
+          ./build.sh
+          ls -lh iccanalyzer-lite
+          file iccanalyzer-lite
+
+      - name: Build colorbleed_tools
+        env:
+          CXX: clang++
+          CC: clang
+        run: |
+          set -euo pipefail
+          cd research/colorbleed_tools
+          # Build with sanitizers using same iccDEV
+          ICCDEV_DIR="../iccanalyzer-lite/iccDEV"
+          ICCDEV_BUILD="${ICCDEV_DIR}/Build"
+
+          for tool in iccToXml iccFromXml; do
+            src_dir="${ICCDEV_DIR}/IccXML/CmdLine/IccToXml"
+            if [ "$tool" = "iccFromXml" ]; then
+              src_dir="${ICCDEV_DIR}/IccXML/CmdLine/IccFromXml"
+            fi
+            echo "Building ${tool}_unsafe..."
+            clang++ -g -O1 -fno-omit-frame-pointer \
+              -fsanitize=address,undefined \
+              -fprofile-instr-generate -fcoverage-mapping \
+              -I "${ICCDEV_DIR}/IccProfLib" \
+              -I "${ICCDEV_DIR}/IccXML/IccLibXML" \
+              -I /usr/include/libxml2 \
+              "${src_dir}/${tool}.cpp" \
+              -Wl,--whole-archive \
+              "${ICCDEV_BUILD}/IccXML/libIccXML2-static.a" \
+              "${ICCDEV_BUILD}/IccProfLib/libIccProfLib2-static.a" \
+              -Wl,--no-whole-archive \
+              -lxml2 -ltiff -lz -lpng -ljpeg \
+              -o "${tool}_unsafe"
+          done
+          ls -lh iccToXml_unsafe iccFromXml_unsafe
+
+      - name: Upload tool artifacts
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: sanitizer-tools
+          path: |
+            research/iccanalyzer-lite/iccanalyzer-lite
+            research/colorbleed_tools/iccToXml_unsafe
+            research/colorbleed_tools/iccFromXml_unsafe
+          retention-days: 1
+
+  scan-icc-profiles:
+    name: "Scan • ICC Profiles (ASAN+UBSAN)"
+    needs: build-tools
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    defaults:
+      run:
+        shell: bash --noprofile --norc {0}
+
+    steps:
+      - name: Checkout fuzz corpus
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          persist-credentials: false
+
+      - name: Install runtime dependencies
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            libxml2 libtiff6 libjpeg-turbo8 libpng16-16 zlib1g llvm
+
+      - name: Download tools
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: sanitizer-tools
+          path: tools
+
+      - name: Setup tools
+        run: |
+          set -euo pipefail
+          chmod +x tools/research/iccanalyzer-lite/iccanalyzer-lite
+          chmod +x tools/research/colorbleed_tools/iccToXml_unsafe
+          chmod +x tools/research/colorbleed_tools/iccFromXml_unsafe
+          ln -sf tools/research/iccanalyzer-lite/iccanalyzer-lite ./iccanalyzer-lite
+          ln -sf tools/research/colorbleed_tools/iccToXml_unsafe ./iccToXml_unsafe
+          ln -sf tools/research/colorbleed_tools/iccFromXml_unsafe ./iccFromXml_unsafe
+          mkdir -p /tmp/profraw /tmp/xml-out results
+
+      - name: Scan ICC profiles with iccanalyzer-lite
+        env:
+          ASAN_OPTIONS: "detect_leaks=0:halt_on_error=0:print_stats=1"
+          UBSAN_OPTIONS: "halt_on_error=0:print_stacktrace=1"
+          LLVM_PROFILE_FILE: "/tmp/profraw/analyzer_%m_%p.profraw"
+        run: |
+          set -euo pipefail
+
+          total=0
+          passed=0
+          asan_findings=0
+          ubsan_findings=0
+          crashes=0
+          timeouts=0
+
+          echo "| File | Exit | ASAN | UBSAN | Status |" > results/icc-analyzer-results.md
+          echo "|------|------|------|-------|--------|" >> results/icc-analyzer-results.md
+
+          for icc in graphics/icc/*.icc; do
+            [ -f "$icc" ] || continue
+            total=$((total + 1))
+            basename_f=$(basename "$icc")
+
+            # Run with 30-second timeout
+            stderr_file="/tmp/stderr_${total}.txt"
+            set +e
+            timeout 30 ./iccanalyzer-lite -a "$icc" > /dev/null 2>"$stderr_file"
+            exit_code=$?
+            set -e
+
+            has_asan="no"
+            has_ubsan="no"
+            status="✅"
+
+            if [ $exit_code -ge 128 ]; then
+              crashes=$((crashes + 1))
+              status="💥 CRASH (signal $((exit_code - 128)))"
+            elif [ $exit_code -eq 124 ]; then
+              timeouts=$((timeouts + 1))
+              status="⏱️ TIMEOUT"
+            elif [ $exit_code -ne 0 ]; then
+              status="⚠️ exit=$exit_code"
+            else
+              passed=$((passed + 1))
+            fi
+
+            if grep -q "ERROR: AddressSanitizer" "$stderr_file" 2>/dev/null; then
+              has_asan="yes"
+              asan_findings=$((asan_findings + 1))
+              status="🔴 ASAN"
+              # Save full ASAN report
+              cp "$stderr_file" "results/asan_${basename_f}.txt"
+            fi
+
+            if grep -q "runtime error:" "$stderr_file" 2>/dev/null; then
+              has_ubsan="yes"
+              ubsan_findings=$((ubsan_findings + 1))
+              if [ "$status" = "✅" ] || [ "$status" = "⚠️ exit=$exit_code" ]; then
+                status="🟡 UBSAN"
+              fi
+              cp "$stderr_file" "results/ubsan_${basename_f}.txt"
+            fi
+
+            echo "| \`${basename_f}\` | ${exit_code} | ${has_asan} | ${has_ubsan} | ${status} |" >> results/icc-analyzer-results.md
+            rm -f "$stderr_file"
+          done
+
+          # Summary
+          cat >> results/icc-analyzer-results.md <<EOF
+
+          ## Summary
+          - **Total profiles scanned:** ${total}
+          - **Clean (exit 0, no sanitizer):** ${passed}
+          - **ASAN findings:** ${asan_findings}
+          - **UBSAN findings:** ${ubsan_findings}
+          - **Crashes (signal):** ${crashes}
+          - **Timeouts (>30s):** ${timeouts}
+          EOF
+
+          echo "total=${total}" >> "$GITHUB_ENV"
+          echo "passed=${passed}" >> "$GITHUB_ENV"
+          echo "asan_findings=${asan_findings}" >> "$GITHUB_ENV"
+          echo "ubsan_findings=${ubsan_findings}" >> "$GITHUB_ENV"
+          echo "crashes=${crashes}" >> "$GITHUB_ENV"
+          echo "timeouts=${timeouts}" >> "$GITHUB_ENV"
+
+          echo "=== ICC Profile Scan Complete ==="
+          echo "Total: ${total} | Clean: ${passed} | ASAN: ${asan_findings} | UBSAN: ${ubsan_findings} | Crash: ${crashes} | Timeout: ${timeouts}"
+
+      - name: Scan ICC profiles with iccToXml_unsafe
+        env:
+          ASAN_OPTIONS: "detect_leaks=0:halt_on_error=0:print_stats=1"
+          UBSAN_OPTIONS: "halt_on_error=0:print_stacktrace=1"
+          LLVM_PROFILE_FILE: "/tmp/profraw/toxml_%m_%p.profraw"
+        run: |
+          set -euo pipefail
+
+          toxml_total=0
+          toxml_passed=0
+          toxml_asan=0
+          toxml_ubsan=0
+          toxml_crashes=0
+
+          echo "| File | Exit | ASAN | UBSAN | Status |" > results/icc-toxml-results.md
+          echo "|------|------|------|-------|--------|" >> results/icc-toxml-results.md
+
+          for icc in graphics/icc/*.icc; do
+            [ -f "$icc" ] || continue
+            toxml_total=$((toxml_total + 1))
+            basename_f=$(basename "$icc")
+            xml_out="/tmp/xml-out/${basename_f%.icc}.xml"
+
+            stderr_file="/tmp/stderr_toxml_${toxml_total}.txt"
+            set +e
+            timeout 30 ./iccToXml_unsafe "$icc" "$xml_out" > /dev/null 2>"$stderr_file"
+            exit_code=$?
+            set -e
+
+            has_asan="no"
+            has_ubsan="no"
+            status="✅"
+
+            if [ $exit_code -ge 128 ]; then
+              toxml_crashes=$((toxml_crashes + 1))
+              status="💥 CRASH"
+            elif [ $exit_code -ne 0 ] && [ $exit_code -ne 124 ]; then
+              status="⚠️ exit=$exit_code"
+            elif [ $exit_code -eq 0 ]; then
+              toxml_passed=$((toxml_passed + 1))
+            fi
+
+            if grep -q "ERROR: AddressSanitizer" "$stderr_file" 2>/dev/null; then
+              has_asan="yes"
+              toxml_asan=$((toxml_asan + 1))
+              status="🔴 ASAN"
+              cp "$stderr_file" "results/toxml_asan_${basename_f}.txt"
+            fi
+
+            if grep -q "runtime error:" "$stderr_file" 2>/dev/null; then
+              has_ubsan="yes"
+              toxml_ubsan=$((toxml_ubsan + 1))
+              if [ "$status" = "✅" ] || [ "$status" = "⚠️ exit=$exit_code" ]; then
+                status="🟡 UBSAN"
+              fi
+              cp "$stderr_file" "results/toxml_ubsan_${basename_f}.txt"
+            fi
+
+            echo "| \`${basename_f}\` | ${exit_code} | ${has_asan} | ${has_ubsan} | ${status} |" >> results/icc-toxml-results.md
+            rm -f "$stderr_file"
+          done
+
+          cat >> results/icc-toxml-results.md <<EOF
+
+          ## iccToXml Summary
+          - **Total:** ${toxml_total}
+          - **Clean:** ${toxml_passed}
+          - **ASAN:** ${toxml_asan}
+          - **UBSAN:** ${toxml_ubsan}
+          - **Crashes:** ${toxml_crashes}
+          EOF
+
+          echo "toxml_total=${toxml_total}" >> "$GITHUB_ENV"
+          echo "toxml_asan=${toxml_asan}" >> "$GITHUB_ENV"
+          echo "toxml_ubsan=${toxml_ubsan}" >> "$GITHUB_ENV"
+
+      - name: Generate coverage report
+        run: |
+          set -euo pipefail
+          profraw_count=$(find /tmp/profraw -name '*.profraw' -size +0 2>/dev/null | wc -l)
+          echo "Found ${profraw_count} profraw files"
+
+          if [ "$profraw_count" -gt 0 ]; then
+            llvm-profdata merge -sparse /tmp/profraw/*.profraw -o /tmp/merged.profdata 2>/dev/null || true
+            if [ -f /tmp/merged.profdata ]; then
+              echo "### Coverage Report (iccanalyzer-lite)" > results/coverage-report.txt
+              llvm-cov report ./iccanalyzer-lite -instr-profile=/tmp/merged.profdata 2>/dev/null \
+                >> results/coverage-report.txt || echo "Coverage report generation failed" >> results/coverage-report.txt
+            fi
+          else
+            echo "No profraw files collected" > results/coverage-report.txt
+          fi
+
+      - name: Upload scan results
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: icc-scan-results
+          path: results/
+          retention-days: 30
+
+      - name: Generate summary
+        if: always()
+        run: |
+          set -euo pipefail
+
+          {
+            echo "## Sanitizer Corpus Scan — ICC Profiles"
+            echo ""
+            echo "### iccanalyzer-lite Results"
+            echo ""
+            echo "| Metric | Value |"
+            echo "|--------|-------|"
+            echo "| Total profiles | ${total:-0} |"
+            echo "| Clean (exit 0) | ${passed:-0} |"
+            echo "| ASAN findings | ${asan_findings:-0} |"
+            echo "| UBSAN findings | ${ubsan_findings:-0} |"
+            echo "| Crashes | ${crashes:-0} |"
+            echo "| Timeouts | ${timeouts:-0} |"
+            echo ""
+            echo "### iccToXml Results"
+            echo ""
+            echo "| Metric | Value |"
+            echo "|--------|-------|"
+            echo "| Total profiles | ${toxml_total:-0} |"
+            echo "| ASAN findings | ${toxml_asan:-0} |"
+            echo "| UBSAN findings | ${toxml_ubsan:-0} |"
+            echo ""
+            if [ "${asan_findings:-0}" -gt 0 ] || [ "${crashes:-0}" -gt 0 ]; then
+              echo "### ⚠️ Action Required"
+              echo ""
+              echo "ASAN findings or crashes detected. Review the \`icc-scan-results\` artifact for details."
+            else
+              echo "### ✅ No Critical Findings"
+              echo ""
+              echo "All profiles processed without ASAN errors or crashes."
+            fi
+            echo ""
+            if [ -f results/coverage-report.txt ]; then
+              echo "### Coverage"
+              echo ""
+              echo '```'
+              cat results/coverage-report.txt
+              echo '```'
+            fi
+          } >> $GITHUB_STEP_SUMMARY
+
+  scan-icc-xml:
+    name: "Scan • ICC XML (ASAN+UBSAN)"
+    needs: build-tools
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash --noprofile --norc {0}
+
+    steps:
+      - name: Checkout fuzz corpus
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          persist-credentials: false
+
+      - name: Install runtime dependencies
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            libxml2 libtiff6 libjpeg-turbo8 libpng16-16 zlib1g
+
+      - name: Download tools
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: sanitizer-tools
+          path: tools
+
+      - name: Setup tools
+        run: |
+          set -euo pipefail
+          chmod +x tools/research/colorbleed_tools/iccFromXml_unsafe
+          chmod +x tools/research/colorbleed_tools/iccToXml_unsafe
+          ln -sf tools/research/colorbleed_tools/iccFromXml_unsafe ./iccFromXml_unsafe
+          ln -sf tools/research/colorbleed_tools/iccToXml_unsafe ./iccToXml_unsafe
+          mkdir -p /tmp/icc-out results
+
+      - name: Scan ICC XML with iccFromXml_unsafe
+        env:
+          ASAN_OPTIONS: "detect_leaks=0:halt_on_error=0:print_stats=1"
+          UBSAN_OPTIONS: "halt_on_error=0:print_stacktrace=1"
+          LLVM_PROFILE_FILE: "/dev/null"
+        run: |
+          set -euo pipefail
+
+          total=0
+          passed=0
+          asan_findings=0
+          ubsan_findings=0
+          crashes=0
+
+          echo "| File | Exit | ASAN | UBSAN | Status |" > results/xml-fromxml-results.md
+          echo "|------|------|------|-------|--------|" >> results/xml-fromxml-results.md
+
+          # Process named XML files
+          for xml in xml/icc/*.xml; do
+            [ -f "$xml" ] || continue
+            total=$((total + 1))
+            basename_f=$(basename "$xml")
+            icc_out="/tmp/icc-out/${basename_f%.xml}.icc"
+
+            stderr_file="/tmp/stderr_xml_${total}.txt"
+            set +e
+            timeout 30 ./iccFromXml_unsafe "$xml" "$icc_out" > /dev/null 2>"$stderr_file"
+            exit_code=$?
+            set -e
+
+            has_asan="no"
+            has_ubsan="no"
+            status="✅"
+
+            if [ $exit_code -ge 128 ]; then
+              crashes=$((crashes + 1))
+              status="💥 CRASH"
+            elif [ $exit_code -eq 0 ]; then
+              passed=$((passed + 1))
+            else
+              status="⚠️ exit=$exit_code"
+            fi
+
+            if grep -q "ERROR: AddressSanitizer" "$stderr_file" 2>/dev/null; then
+              has_asan="yes"
+              asan_findings=$((asan_findings + 1))
+              status="🔴 ASAN"
+              cp "$stderr_file" "results/fromxml_asan_${basename_f}.txt"
+            fi
+
+            if grep -q "runtime error:" "$stderr_file" 2>/dev/null; then
+              has_ubsan="yes"
+              ubsan_findings=$((ubsan_findings + 1))
+              if [ "$status" = "✅" ] || [ "$status" = "⚠️ exit=$exit_code" ]; then
+                status="🟡 UBSAN"
+              fi
+              cp "$stderr_file" "results/fromxml_ubsan_${basename_f}.txt"
+            fi
+
+            echo "| \`${basename_f}\` | ${exit_code} | ${has_asan} | ${has_ubsan} | ${status} |" >> results/xml-fromxml-results.md
+            rm -f "$stderr_file"
+          done
+
+          # Process AFL-minimized files
+          for min_f in xml/icc/minimized/*; do
+            [ -f "$min_f" ] || continue
+            total=$((total + 1))
+            basename_f=$(basename "$min_f")
+            icc_out="/tmp/icc-out/min_${basename_f}.icc"
+
+            stderr_file="/tmp/stderr_min_${total}.txt"
+            set +e
+            timeout 30 ./iccFromXml_unsafe "$min_f" "$icc_out" > /dev/null 2>"$stderr_file"
+            exit_code=$?
+            set -e
+
+            has_asan="no"
+            has_ubsan="no"
+
+            if grep -q "ERROR: AddressSanitizer" "$stderr_file" 2>/dev/null; then
+              has_asan="yes"
+              asan_findings=$((asan_findings + 1))
+              cp "$stderr_file" "results/fromxml_min_asan_${basename_f}.txt"
+            fi
+
+            if grep -q "runtime error:" "$stderr_file" 2>/dev/null; then
+              has_ubsan="yes"
+              ubsan_findings=$((ubsan_findings + 1))
+              cp "$stderr_file" "results/fromxml_min_ubsan_${basename_f}.txt"
+            fi
+
+            if [ $exit_code -ge 128 ]; then
+              crashes=$((crashes + 1))
+            elif [ $exit_code -eq 0 ]; then
+              passed=$((passed + 1))
+            fi
+
+            rm -f "$stderr_file"
+          done
+
+          cat >> results/xml-fromxml-results.md <<EOF
+
+          ## iccFromXml Summary
+          - **Total XML files:** ${total}
+          - **Clean:** ${passed}
+          - **ASAN:** ${asan_findings}
+          - **UBSAN:** ${ubsan_findings}
+          - **Crashes:** ${crashes}
+          EOF
+
+          echo "xml_total=${total}" >> "$GITHUB_ENV"
+          echo "xml_passed=${passed}" >> "$GITHUB_ENV"
+          echo "xml_asan=${asan_findings}" >> "$GITHUB_ENV"
+          echo "xml_ubsan=${ubsan_findings}" >> "$GITHUB_ENV"
+          echo "xml_crashes=${crashes}" >> "$GITHUB_ENV"
+
+          echo "=== ICC XML Scan Complete ==="
+          echo "Total: ${total} | Clean: ${passed} | ASAN: ${asan_findings} | UBSAN: ${ubsan_findings} | Crash: ${crashes}"
+
+      - name: Round-trip validation (XML → ICC → XML)
+        env:
+          ASAN_OPTIONS: "detect_leaks=0:halt_on_error=0:print_stats=1"
+          UBSAN_OPTIONS: "halt_on_error=0:print_stacktrace=1"
+          LLVM_PROFILE_FILE: "/dev/null"
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/rt-out
+
+          rt_total=0
+          rt_passed=0
+          rt_diffs=0
+
+          echo "### Round-Trip Validation" > results/roundtrip-results.md
+          echo "" >> results/roundtrip-results.md
+
+          for xml in xml/icc/*.xml; do
+            [ -f "$xml" ] || continue
+            basename_f=$(basename "$xml")
+            icc_tmp="/tmp/rt-out/${basename_f%.xml}.icc"
+            xml_rt="/tmp/rt-out/${basename_f%.xml}_rt.xml"
+
+            # XML → ICC
+            set +e
+            timeout 15 ./iccFromXml_unsafe "$xml" "$icc_tmp" > /dev/null 2>/dev/null
+            rc1=$?
+            set -e
+            [ $rc1 -ne 0 ] && continue
+            [ ! -f "$icc_tmp" ] && continue
+
+            rt_total=$((rt_total + 1))
+
+            # ICC → XML
+            set +e
+            timeout 15 ./iccToXml_unsafe "$icc_tmp" "$xml_rt" > /dev/null 2>/dev/null
+            rc2=$?
+            set -e
+
+            if [ $rc2 -eq 0 ] && [ -f "$xml_rt" ]; then
+              rt_passed=$((rt_passed + 1))
+            else
+              rt_diffs=$((rt_diffs + 1))
+              echo "- **${basename_f}**: Round-trip failed (iccToXml exit=$rc2)" >> results/roundtrip-results.md
+            fi
+          done
+
+          cat >> results/roundtrip-results.md <<EOF
+
+          **Round-trip total:** ${rt_total} | **Passed:** ${rt_passed} | **Failed:** ${rt_diffs}
+          EOF
+
+          echo "rt_total=${rt_total}" >> "$GITHUB_ENV"
+          echo "rt_passed=${rt_passed}" >> "$GITHUB_ENV"
+
+      - name: Upload XML scan results
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: xml-scan-results
+          path: results/
+          retention-days: 30
+
+      - name: Generate summary
+        if: always()
+        run: |
+          set -euo pipefail
+
+          {
+            echo "## Sanitizer Corpus Scan — ICC XML"
+            echo ""
+            echo "### iccFromXml Results"
+            echo ""
+            echo "| Metric | Value |"
+            echo "|--------|-------|"
+            echo "| Total XML files | ${xml_total:-0} |"
+            echo "| Clean (exit 0) | ${xml_passed:-0} |"
+            echo "| ASAN findings | ${xml_asan:-0} |"
+            echo "| UBSAN findings | ${xml_ubsan:-0} |"
+            echo "| Crashes | ${xml_crashes:-0} |"
+            echo ""
+            echo "### Round-Trip Validation"
+            echo ""
+            echo "| Metric | Value |"
+            echo "|--------|-------|"
+            echo "| Attempted | ${rt_total:-0} |"
+            echo "| Passed | ${rt_passed:-0} |"
+            echo ""
+            if [ "${xml_asan:-0}" -gt 0 ] || [ "${xml_crashes:-0}" -gt 0 ]; then
+              echo "### ⚠️ Action Required"
+              echo ""
+              echo "ASAN findings or crashes detected in XML processing. Review the \`xml-scan-results\` artifact."
+            else
+              echo "### ✅ No Critical Findings"
+            fi
+          } >> $GITHUB_STEP_SUMMARY

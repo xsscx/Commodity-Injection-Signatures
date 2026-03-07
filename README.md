@@ -1,47 +1,83 @@
-# XSS.Cx Public Repo
-- Commodity Injection Signatures
-- CVE PoC's
-- User Controllable Input
+# Fuzz Corpus — Commodity Injection Signatures & CVE PoCs
 
-## whoami
-I am David Hoyt.
-  - https://hoyt.net
-  - https://srd.cx
-  - https://xss.cx
-    
-## Last Update:02-MAR-2026
-- Added known good & working 0D images
-- Add https://github.com/xsscx/research for ICC Profiles
-- Renamed from Commodity-Injection-Signatures to fuzz
-- Added XML & ICC CVE PoC's
-- Added ICC Profile XML Crasher PoC via AFL
-  - Added AFL Minimized Corpus of XML Crashers   
-- Added CVE-2024-38427 ICC Color Profile Sample PoC's
-- Added CVE-2022-26730 ICC Color Profile Sample PoC's
-- Added CVE Color Profile samples known to Crash many OS 
+Curated corpus of 1,139 malicious input files (201 MB) for security testing.
+Originally created as "Commodity-Injection-Signatures" by David Hoyt
+([hoyt.net](https://hoyt.net), [srd.cx](https://srd.cx), [xss.cx](https://xss.cx)),
+maintained since 2015.
+
+## Contents
+
+| Category | Files | Size | Description |
+|----------|------:|-----:|-------------|
+| `graphics/icc/` | 95 | 6 MB | ICC CVE PoCs (CVE-2022-26730, CVE-2023-46602, CVE-2024-38427) |
+| `graphics/jpg/` | 208 | 42 MB | Malformed JPEG files |
+| `graphics/png/` | 200 | 34 MB | Malformed PNG files |
+| `graphics/tif/` | 267 | 45 MB | Malformed TIFF files |
+| `graphics/gif/` | 35 | — | Malformed GIF files |
+| `graphics/heic/` | 9 | — | Malformed HEIC files |
+| `graphics/bmp/` | 10 | — | Malformed BMP files |
+| `graphics/exr/` | 4 | — | Malformed OpenEXR files |
+| `xml/icc/` | 42 | — | ICC XML crash PoCs |
+| `xml/icc/minimized/` | 74 | — | AFL-minimized ICC XML crashes |
+| `xml/xxe/` | 10+ | — | XXE entity injection PoCs |
+| Web injection | 80+ | — | XSS, SQLi, SSI, LFI, SSRF, XSLT signatures |
+
+## ICC Profile CVE Coverage
+
+| CVE | Files | CWE | Affected Software |
+|-----|------:|-----|-------------------|
+| CVE-2022-26730 | 11 | CWE-787 | Apple ColorSync |
+| CVE-2023-32443 | 2 | CWE-125 | Apple ColorSync |
+| CVE-2023-46602 | 1 | CWE-122 | DemoIccMAX |
+| CVE-2023-46867 | 1 | CWE-126 | ArgyllCMS |
+| CVE-2024-38427 | 1 | CWE-122 | DemoIccMAX |
+
+References:
 - https://srd.cx/cve-2022-26730/
 - https://srd.cx/cve-2023-32443/
-- Added PoC's from my CVE's in DemoMaxICC Reference Implementation [https://github.com/InternationalColorConsortium/DemoIccMAX]
-  - Functionality in Skia, WebKit, Windows etc....
-  - The color() function and custom color profiles are part of the CSS Colors Module Level 4, which is still a draft and not widely supported.
+- [DemoIccMAX](https://github.com/InternationalColorConsortium/DemoIccMAX)
 
-## About
-- Commodity Injection Signatures
-- Scraped Fresh from the Internet since 2015
-- My PoC's from CVE's & Crashes 
+## Integration with CFL Fuzzers
 
-## Suggested Use 
-- Include with Burp Intruder or Custom Scripts
-- Manual Injection Testing with Well-Known Signatures
-- Automated Fuzzing with a Wide-Range with Malicious Inputs
-- Abusing XNU, Windows or Linux   
+ICC profiles seed the [CFL LibFuzzer harnesses](../cfl/):
 
-### Recent Additions
-- regex files to aid with apple security research device log analysis
-- RBL focused on AD CDN's
-- RBL focused on App Titles 
-- XNU Crash Helpers for Apple Security Research Device circa 2023
+```bash
+# Seed binary ICC fuzzers
+cp fuzz/graphics/icc/*.icc cfl/corpus-icc_profile_fuzzer/
 
-### Pull Requests Welcome
+# Seed XML fuzzer
+cp fuzz/xml/icc/*.xml cfl/corpus-icc_fromxml_fuzzer/
+cp fuzz/xml/icc/minimized/* cfl/corpus-icc_fromxml_fuzzer/
+```
+
+See [CFL instructions](../.github/instructions/cfl.instructions.md) for full fuzzing workflow.
+
+## Suggested Use
+
+- **CFL fuzzer seeding** — Primary ICC PoC source for LibFuzzer harnesses
+- **iccanalyzer-lite testing** — Security heuristic validation against known-bad profiles
+- **Burp Intruder payloads** — Web injection signature files
+- **Manual injection testing** — Well-known XSS/SQLi/XXE signatures
+- **Image decoder fuzzing** — Malformed graphics files for ImageIO/Skia/WebKit
+- **XNU/Windows/Linux testing** — Platform-specific crash vectors
+
+## File Naming Convention
+
+ICC PoCs: `{crash_type}-{Class}-{Method}-{File}_cpp-Line{N}.icc`
+- Crash types: `hbo` (heap overflow), `sbo` (stack overflow), `segv` (SIGSEGV),
+  `oom` (out-of-memory), `ub` (undefined behavior), `npd` (null deref)
+
+CVE PoCs: `cve-{YYYY}-{NNNNN}-{description}-variant-{NNN}.icc`
+
+## Recent Additions
+
+- CFL-discovered crash samples (repo root `crash-*`, `oom-*`, `slow-unit-*`)
+- CVE-2024-38427 ICC Color Profile PoCs
+- AFL-minimized ICC XML crash corpus (74 samples)
+- XNU Crash Helpers for Apple Security Research Device
+
+## Contributing
+
+Setup a PR. All malicious input accepted.
 
 __Happy Hunting!!__
