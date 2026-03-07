@@ -197,12 +197,13 @@ jobs:
       - name: Setup tools
         run: |
           set -euo pipefail
-          chmod +x tools/research/iccanalyzer-lite/iccanalyzer-lite
-          chmod +x tools/research/colorbleed_tools/IccToXml_unsafe
-          chmod +x tools/research/colorbleed_tools/IccFromXml_unsafe
-          ln -sf tools/research/iccanalyzer-lite/iccanalyzer-lite ./iccanalyzer-lite
-          ln -sf tools/research/colorbleed_tools/IccToXml_unsafe ./iccToXml_unsafe
-          ln -sf tools/research/colorbleed_tools/IccFromXml_unsafe ./iccFromXml_unsafe
+          find tools/ -type f | head -20
+          chmod +x tools/iccanalyzer-lite/iccanalyzer-lite
+          chmod +x tools/colorbleed_tools/IccToXml_unsafe
+          chmod +x tools/colorbleed_tools/IccFromXml_unsafe
+          ln -sf tools/iccanalyzer-lite/iccanalyzer-lite ./iccanalyzer-lite
+          ln -sf tools/colorbleed_tools/IccToXml_unsafe ./iccToXml_unsafe
+          ln -sf tools/colorbleed_tools/IccFromXml_unsafe ./iccFromXml_unsafe
           mkdir -p /tmp/profraw /tmp/xml-out results
 
       - name: Scan ICC profiles with iccanalyzer-lite
@@ -474,10 +475,11 @@ jobs:
       - name: Setup tools
         run: |
           set -euo pipefail
-          chmod +x tools/research/colorbleed_tools/IccFromXml_unsafe
-          chmod +x tools/research/colorbleed_tools/IccToXml_unsafe
-          ln -sf tools/research/colorbleed_tools/IccFromXml_unsafe ./iccFromXml_unsafe
-          ln -sf tools/research/colorbleed_tools/IccToXml_unsafe ./iccToXml_unsafe
+          find tools/ -type f | head -10
+          chmod +x tools/colorbleed_tools/IccFromXml_unsafe
+          chmod +x tools/colorbleed_tools/IccToXml_unsafe
+          ln -sf tools/colorbleed_tools/IccFromXml_unsafe ./iccFromXml_unsafe
+          ln -sf tools/colorbleed_tools/IccToXml_unsafe ./iccToXml_unsafe
           mkdir -p /tmp/icc-out results
 
       - name: Scan ICC XML with iccFromXml_unsafe
