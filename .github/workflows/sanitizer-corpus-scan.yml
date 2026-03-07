@@ -135,11 +135,8 @@ jobs:
           ICCDEV_DIR="../iccanalyzer-lite/iccDEV"
           ICCDEV_BUILD="${ICCDEV_DIR}/Build"
 
-          for tool in iccToXml iccFromXml; do
-            src_dir="${ICCDEV_DIR}/IccXML/CmdLine/IccToXml"
-            if [ "$tool" = "iccFromXml" ]; then
-              src_dir="${ICCDEV_DIR}/IccXML/CmdLine/IccFromXml"
-            fi
+          for tool in IccToXml IccFromXml; do
+            src_dir="${ICCDEV_DIR}/IccXML/CmdLine/${tool}"
             echo "Building ${tool}_unsafe..."
             clang++ -g -O1 -fno-omit-frame-pointer \
               -fsanitize=address,undefined \
@@ -155,7 +152,7 @@ jobs:
               -lxml2 -ltiff -lz -lpng -ljpeg \
               -o "${tool}_unsafe"
           done
-          ls -lh iccToXml_unsafe iccFromXml_unsafe
+          ls -lh IccToXml_unsafe IccFromXml_unsafe
 
       - name: Upload tool artifacts
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
@@ -163,8 +160,8 @@ jobs:
           name: sanitizer-tools
           path: |
             research/iccanalyzer-lite/iccanalyzer-lite
-            research/colorbleed_tools/iccToXml_unsafe
-            research/colorbleed_tools/iccFromXml_unsafe
+            research/colorbleed_tools/IccToXml_unsafe
+            research/colorbleed_tools/IccFromXml_unsafe
           retention-days: 1
 
   scan-icc-profiles:
@@ -201,11 +198,11 @@ jobs:
         run: |
           set -euo pipefail
           chmod +x tools/research/iccanalyzer-lite/iccanalyzer-lite
-          chmod +x tools/research/colorbleed_tools/iccToXml_unsafe
-          chmod +x tools/research/colorbleed_tools/iccFromXml_unsafe
+          chmod +x tools/research/colorbleed_tools/IccToXml_unsafe
+          chmod +x tools/research/colorbleed_tools/IccFromXml_unsafe
           ln -sf tools/research/iccanalyzer-lite/iccanalyzer-lite ./iccanalyzer-lite
-          ln -sf tools/research/colorbleed_tools/iccToXml_unsafe ./iccToXml_unsafe
-          ln -sf tools/research/colorbleed_tools/iccFromXml_unsafe ./iccFromXml_unsafe
+          ln -sf tools/research/colorbleed_tools/IccToXml_unsafe ./iccToXml_unsafe
+          ln -sf tools/research/colorbleed_tools/IccFromXml_unsafe ./iccFromXml_unsafe
           mkdir -p /tmp/profraw /tmp/xml-out results
 
       - name: Scan ICC profiles with iccanalyzer-lite
@@ -477,10 +474,10 @@ jobs:
       - name: Setup tools
         run: |
           set -euo pipefail
-          chmod +x tools/research/colorbleed_tools/iccFromXml_unsafe
-          chmod +x tools/research/colorbleed_tools/iccToXml_unsafe
-          ln -sf tools/research/colorbleed_tools/iccFromXml_unsafe ./iccFromXml_unsafe
-          ln -sf tools/research/colorbleed_tools/iccToXml_unsafe ./iccToXml_unsafe
+          chmod +x tools/research/colorbleed_tools/IccFromXml_unsafe
+          chmod +x tools/research/colorbleed_tools/IccToXml_unsafe
+          ln -sf tools/research/colorbleed_tools/IccFromXml_unsafe ./iccFromXml_unsafe
+          ln -sf tools/research/colorbleed_tools/IccToXml_unsafe ./iccToXml_unsafe
           mkdir -p /tmp/icc-out results
 
       - name: Scan ICC XML with iccFromXml_unsafe
