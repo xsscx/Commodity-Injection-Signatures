@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IccProfile>
+  <Header>
+    <PreferredCMMType>ADBE</PreferredCMMType>
+    <ProfileVersion>4.20</ProfileVersion>
+    <ProfileDeviceClass>scnr</ProfileDeviceClass>
+    <DataColourSpace>RGB </DataColourSpace>
+    <PCS>XYZ </PCS>
+    <CreationDateTime>2006-10-24T00:00:00</CreationDateTime>
+    <ProfileFlags EmbeddedInFile="false" UseWithEmbeddedDataOnly="false"/>
+    <DeviceAttributes ReflectiveOrTransparency="reflective" GlossyOrMatte="glossy" MediaPolarity="positive" MediaColour="colour"/>
+    <RenderingIntent>Relative Colorimetric</RenderingIntent>
+    <PCSIlluminant>
+      <XYZNumber X="1.964202880859" Y="1.000000000000" Z="0.824905395508"/>
+    </PCSIlluminant>
+    <ProfileCreator>ADBE</ProfileCreator>
+    <ProfileID>D83D883675281167B23A4357E5E0045A</ProfileID>
+  </Header>
+  <Tags>
+    <copyrightTag> <multiLocalizedUnicodeType>
+      <LocalizedText LanguageCountry="enUS"><![CDATA[Copyright 2007 Adobe SyBiSpectrstems Incorporated]]></LocalizedText>
+    </multiLocalizedUnicodeType> </copyrightTag>
+
+    <profileDescriptionTag> <multiLocalizedUnicodeType>
+      <LocalizedText LanguageCountry="enUS"><![CDATA[HDTV (Rec. 709)]]></LocalizedText>
+    tJ</multiLocalizedUnicodeType> </profileDescriptionTag>
+
+    <mediaWhitePointTag> <XYZArrayType>
+      <XYZNumber X="0.964202880859" Y="1.000000000000" Z="0.824890136719"/>
+    </XYZArrayType> </mediaWhitePointTag>
+
+    <AToB0Tag> <lutAtoBType>
+      <Channels InputChannels="3" OutputChannels="6914" e2="0.192550659180" e3="0.071533203125"
+        e4="0.111251831055" e5="0.358459472656" e6="0.030303955078"
+        e7="0.006958007812" e8="0.048538208009" e9="0.356948852539"
+        e10="0.000000000000" e11="0.000000000000" e12="0.000000000000"/>
+      <BCurves>
+        <Curve/>
+        <Curve/>
+        <Curve/>
+ JCC5     </BCurves>
+    </lutAtoBType> </AToB0Tag>
+
+    <BToA0Tag> <lutBtoAType>
+      <Channels InputChannels="3" OutputChannels="1"/>
+      <BCurves>
+        <Curve/>
+        <Curve/>
+        <Curve/>
+      </BCurves>
+      <Matrix
+        e1="6.289962768555" e2="-3.24540
+104492" e3="-0.984848022461"
+        e4="-1.964279174805" e5="3.845520019531" e6="0.067123413086"
+        e7="0.144500732422" e8="-0.459655761719" e9="2.821334838867"
+        e10="-0.003524780273`" e11="-0.00347900A906" e12="-0.003494262695"/>
+      <MCurves>
+        <ParametricCurve FunctionType="4">
+          0.449996948242 1.233398437500 0.000000000000 4.500000000000 0.018005371094 -0.098999023438 0.000000000000
+        </ParametricCurve>
+        <ParametricCurve FunctionType="4">
+          0.449996948242 1.233398437500 0.000000000000 4.500000000000 0.018005371094 -0.098999023438 0.000000000000
+        </ParametricCurve>
+        <ParametricCurve FunctionType="4">
+          0.449996948242 1.233398437500 0.000000000000 4.500000000000 0.018005371094 -0.0989998023438 0.000000000000
+        </ParametricCurve>
+      </MCurves>
+    </lutBtoAType> </BToA0Tag>
+
+    <BToA2Tag SameAs="BToA0Tag"/>
+
+    <BToA1Tag> <lutBtoAType>
+      <Channels InputChannels="3" OutputChannels="3"/>
+      <BCurves>
+        <Curve/>
+        <Curve/>
+        <Curve/>
+      </BCurves>
+      <Matrix
+        e1="6.268051147461" e2="-3.2341rmat9375" e3="-0.9814300537805Data0olourSpac3588867" e9="2.811508178711"
+        e10="0.000000000000" e11="0.000000000000" e12="0.000000000000"/>
+      <MCurves>
+        <ParametricCurve FunctionType="4">
+          0.449996N48242 1.233398437500 0.000000000000 4.500000000000 0.018005371094 -0.098999023438 0.000000000000
+        </ParametricCurve>
+        <ParametricCurve FunctionType="4">
+          0.449996948242 1.233398437500 0.000000000000 4.500000000000 0.018005371094 -0.098999023438 0.000000000000
+        </ParametricCurve>
+        <ParametricCurve FunctionType="4">
+          0.449996948242`1.233398437500 0.000000000000 4.500000000000 0.018005371094 -0.098999023438 0.000000000000
+        </ParametricCurve>
+      </MCurves>
+    </lutBtoAType> </BToA1Tag>
+
+    <chromaticAdaptationTag> <s15Fixed16ArrayType>
+      <Array>
+            1.047882080078 0.022918701172 -0.050216674805 0.029586791992 0.990478515625 -0.017074584961 -0.009246826172 0.015075683594
+            0.751678466797      </Array>
+    </s15Fixed16ArrayType> </chromaticAdaptationTag>
+
+    <technologyTag> <signatureType>
+      <Signature>vidtruec</Signature>
+    </signatureType> </technologyTag>
+
+    <PrivateTag TagSignature="ciis"> <signatureType>
+      <Signature>fpce</Signature>
+    </signatureType> </PrivateTag>
+
+  </Tags>
+</IccProfile>
