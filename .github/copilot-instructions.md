@@ -70,9 +70,9 @@ fuzz/
 |-----|------:|-----|-------------------|-------|
 | CVE-2022-26730 | 11 | CWE-787 (OOB Write) | Apple ColorSync | `cve-2022-26730-*.icc` |
 | CVE-2023-32443 | 2 | CWE-125 (OOB Read) | Apple ColorSync | `cve-2023-32443*.icc` |
-| CVE-2023-46602 | 1 | CWE-122 (Heap BOF) | DemoIccMAX | `cve-2023-46602.icc` |
+| CVE-2023-46602 | 1 | CWE-122 (Heap BOF) | iccDEV (formerly DemoIccMAX) | `cve-2023-46602.icc` |
 | CVE-2023-46867 | 1 | CWE-126 (Buffer Over-read) | ArgyllCMS | `Argyll_V302_*.icc` |
-| CVE-2024-38427 | 1 | CWE-122 (Heap BOF) | DemoIccMAX | `cve-2024-38427.icc` |
+| CVE-2024-38427 | 1 | CWE-122 (Heap BOF) | iccDEV (formerly DemoIccMAX) | `cve-2024-38427.icc` |
 
 ## ICC Profile Crash Type Taxonomy
 
@@ -184,3 +184,16 @@ This repo is consumed in two contexts:
 - Gitignored in research repo (ephemeral, synced from ramdisk)
 - Seeds propagated via `ramdisk-seed.sh`
 - Research repo has its own copy of the workflow: `fuzz-sanitizer-corpus-scan.yml`
+
+## Multi-Agent Collaboration
+
+This corpus feeds both CFL fuzzers (WSL-2 agent) and xnuimagefuzzer (macOS agent).
+
+- **macOS agent** stages new seeds in `graphics/icc/ios-gen-*`, `graphics/tif/xig-*`,
+  `xnuimagegenerator/`, and `xnuimagefuzzer/`
+- **WSL-2 agent** pulls and copies seeds into `cfl/corpus-*/` for LibFuzzer campaigns
+- **Cloud agent** runs CI sanitizer scans when seeds are pushed
+- **Remote analysis**: Use `ghcr.io/xsscx/icc-profile-demo api` Docker image to analyze
+  ICC profiles via REST API without git commit round-trips
+- **Coordination**: See `research/.github/instructions/multi-agent.instructions.md`
+- **This repo is on branch `master`** (not `main`) — commit/push directly
