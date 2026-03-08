@@ -28,14 +28,14 @@ maintained since 2015.
 |-----|------:|-----|-------------------|
 | CVE-2022-26730 | 11 | CWE-787 | Apple ColorSync |
 | CVE-2023-32443 | 2 | CWE-125 | Apple ColorSync |
-| CVE-2023-46602 | 1 | CWE-122 | DemoIccMAX |
+| CVE-2023-46602 | 1 | CWE-122 | iccDEV (formerly DemoIccMAX) |
 | CVE-2023-46867 | 1 | CWE-126 | ArgyllCMS |
-| CVE-2024-38427 | 1 | CWE-122 | DemoIccMAX |
+| CVE-2024-38427 | 1 | CWE-122 | iccDEV (formerly DemoIccMAX) |
 
 References:
 - https://srd.cx/cve-2022-26730/
 - https://srd.cx/cve-2023-32443/
-- [DemoIccMAX](https://github.com/InternationalColorConsortium/DemoIccMAX)
+- [iccDEV](https://github.com/InternationalColorConsortium/iccDEV)
 
 ## Integration with CFL Fuzzers
 

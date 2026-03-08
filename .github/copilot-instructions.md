@@ -193,7 +193,7 @@ This corpus feeds both CFL fuzzers (WSL-2 agent) and xnuimagefuzzer (macOS agent
   `xnuimagegenerator/`, and `xnuimagefuzzer/`
 - **WSL-2 agent** pulls and copies seeds into `cfl/corpus-*/` for LibFuzzer campaigns
 - **Cloud agent** runs CI sanitizer scans when seeds are pushed
-- **Remote analysis**: Use `ghcr.io/xsscx/icc-profile-demo api` Docker image to analyze
+- **Remote analysis**: Use `ghcr.io/xsscx/icc-profile-mcp web` Docker image to analyze
   ICC profiles via REST API without git commit round-trips
 - **Coordination**: See `research/.github/instructions/multi-agent.instructions.md`
 - **This repo is on branch `master`** (not `main`) — commit/push directly

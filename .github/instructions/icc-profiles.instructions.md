@@ -64,8 +64,8 @@ cp graphics/icc/*.icc ../cfl/corpus-icc_calculator_fuzzer/
 ### CVE PoCs (16 files)
 - `cve-2022-26730-*` — 11 variants, Apple ColorSync OOB write
 - `cve-2023-32443*` — 2 files, Apple ColorSync OOB read
-- `cve-2023-46602.icc` — DemoIccMAX heap buffer overflow
-- `cve-2024-38427.icc` — DemoIccMAX heap buffer overflow
+- `cve-2023-46602.icc` — iccDEV heap buffer overflow
+- `cve-2024-38427.icc` — iccDEV heap buffer overflow
 
 ### High-Value Crash Samples
 - `oom-120Gb-CIccTagDict-Read-*` — 120GB allocation request (504 bytes input)

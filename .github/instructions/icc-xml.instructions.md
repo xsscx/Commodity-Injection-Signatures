@@ -6,7 +6,7 @@
 ## What These Are
 
 116 XML files that trigger crashes in ICC XML parsers (specifically `IccFromXml`
-from the DemoIccMAX reference implementation). Two categories:
+from the iccDEV reference implementation). Two categories:
 
 ### Named Crash XMLs (`xml/icc/*.xml` — 42 files)
 Descriptive filenames encoding the crash site:
