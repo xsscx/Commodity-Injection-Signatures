@@ -1,2 +1,9 @@
 
 .DS_Store
+
+# Fuzzer crash artifacts (kept on disk for local testing)
+graphics/icc/oom-*
+graphics/icc/crash-*
+graphics/icc/slow-unit-*
+graphics/icc/timeout-*
+graphics/icc/Crash-*
