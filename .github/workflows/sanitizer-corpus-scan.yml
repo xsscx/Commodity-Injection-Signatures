@@ -112,8 +112,16 @@ jobs:
             -DICC_LOG_SAFE=ON \
             -Wno-dev
           make -j$(nproc)
+          ICC_PROFLIB_STATIC=$(find IccProfLib -maxdepth 1 -name 'libIccProfLib2-static*.a' -print -quit)
+          ICC_XML_STATIC=$(find IccXML -maxdepth 1 -name 'libIccXML2-static*.a' -print -quit)
+          test -n "$ICC_PROFLIB_STATIC"
+          test -n "$ICC_XML_STATIC"
+          ICC_PROFLIB_STATIC=$(realpath "$ICC_PROFLIB_STATIC")
+          ICC_XML_STATIC=$(realpath "$ICC_XML_STATIC")
+          echo "ICC_PROFLIB_STATIC=${ICC_PROFLIB_STATIC}" >> "$GITHUB_ENV"
+          echo "ICC_XML_STATIC=${ICC_XML_STATIC}" >> "$GITHUB_ENV"
           echo "Libraries built:"
-          ls -lh IccProfLib/libIccProfLib2-static.a IccXML/libIccXML2-static.a
+          ls -lh "$ICC_PROFLIB_STATIC" "$ICC_XML_STATIC"
 
       - name: Build iccanalyzer-lite
         run: |
@@ -146,8 +154,8 @@ jobs:
               -I /usr/include/libxml2 \
               "${src_dir}/${tool}.cpp" \
               -Wl,--whole-archive \
-              "${ICCDEV_BUILD}/IccXML/libIccXML2-static.a" \
-              "${ICCDEV_BUILD}/IccProfLib/libIccProfLib2-static.a" \
+              "${ICC_XML_STATIC}" \
+              "${ICC_PROFLIB_STATIC}" \
               -Wl,--no-whole-archive \
               -lxml2 -ltiff -lz -lpng -ljpeg \
               -o "${tool}_unsafe"
