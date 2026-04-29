@@ -1,0 +1,51 @@
+{
+  "IccProfile": {
+    "Header": {
+      "ProfileVersion": "5.00",
+      "ProfileDeviceClass": "spac",
+      "DataColourSpace": "RGB ",
+      "PCS": "RGB ",
+      "CreationDateTime": "2026-04-28T00:00:00",
+      "ProfileFileSignature": "acsp",
+      "PrimaryPlatform": "APPL",
+      "CMMFlags": {
+        "EmbeddedInFile": false,
+        "UseWithEmbeddedDataOnly": false
+      },
+      "DeviceManufacturer": "0000",
+      "DeviceModel": "0000",
+      "DeviceAttributes": {
+        "ReflectiveOrTransparency": "Reflective",
+        "GlossyOrMatte": "Glossy",
+        "MediaPolarity": "Positive",
+        "MediaColor": "Color"
+      },
+      "RenderingIntent": "Perceptual",
+      "PCSIlluminant": [
+        0.9642,
+        1.0,
+        0.8249
+      ],
+      "ProfileCreator": "0000"
+    },
+    "Tags": [
+      {
+        "AToB0Tag": {
+          "data": {
+            "type": "multiProcessElementType",
+            "inputChannels": 65535,
+            "outputChannels": 65535,
+            "elements": [
+              {
+                "type": "MatrixElement",
+                "inputChannels": 65535,
+                "outputChannels": 65535,
+                "matrix": []
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
