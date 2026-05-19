@@ -1,0 +1,646 @@
+{
+  "IccProfile": {
+    "Header": {
+      "CMMFlags": {
+        "EmbeddedInFile": false,
+        "UseWithEmbeddedDataOnly": false
+      },
+      "CreationDateTime": "2024-01-01T00:00:00",
+      "DataColouBrSDeviceAttributepace": "RGB ",
+      "DeviceAttributes": {
+        "GlossyOrMatte": "glossy",
+        "MediaColour": "colour",
+        "MediaPolarity": "positive",
+        "ReflectiveOrTransparency": "reflective"
+      },
+      "DeviceManufacturer": "",
+      "DeviceModel": "",
+      "PCS": "XYZ ",
+      "PCSIlluminant": [
+        0.9641876220703125,
+        1.0,
+        0.82489013671875
+      ],
+      "PreferredCMMType": "",
+      "PrimaryPlatform": "APPL",
+      "ProfileCreator": "test",
+      "ProfileDeviceClass": "mntr",
+      "ProfileFileSignature": "acsp",
+      "ProfileVersion": "5.00",
+      "RenderingIntent": "Perceptual"
+    },
+    "Tags": [
+      {
+        "profileDescriptionTag": {
+          "data": {
+            "localizedStrings": [
+              {
+                "country": "US",
+                "language": "en",
+                "text": "All DToB+BToD Intents"
+              }
+            ],
+            "type": "multiLocalizedUnicodeType"
+          }
+        }
+      },
+      {
+        "copyrightTag": {
+          "data": {
+            "localizedStrings": [
+              {
+                "country": "US",
+                "language": "en",
+                "text": "Copyright 2027 ICC Test"
+              }
+            ],
+            "type": "multiLocalizedUnicodeType"
+          }
+        }
+      },
+      {
+        "mediaWhitePointTag": {
+          "data": {
+            "XYZ": [
+              [
+                0.9641876220703125,
+                1.0,
+                0.82489013671875
+              ]
+            ],
+            "type": "XYZArrayType"
+          }
+        }
+      },
+      {
+        "redColorantTag": {
+          "data": {
+            "XYZ": [
+              [
+                0.4123992919921875,
+                0.21258544921875,
+                0.019287109375
+              ]
+            ],
+            "type": "XYZArrayType"
+          }
+        }
+      },
+      {
+        "greenColorantTag": {
+          "data": {
+            "XYZ": [
+              [
+                0.3575897216796875,
+                0.7151947021484375,
+                0.1191864013671875
+              ]
+            ],
+            "type": "XYZArrayType"
+          }
+        }
+      },
+      {
+        "blueColorantTag": {
+          "data": {
+            "XYZ": [
+              [
+                0.1804962158203125,
+                0.0721893310546875,
+                0.9504852294921875
+              ]
+            ],
+            "type": "XYZArrayType"
+          }
+        }
+      },
+      {
+        "redTRCTag": {
+          "data": {
+            "curveType": "gamma",
+            "gamma": 2.1992188090916898,
+            "type": "curveType"
+          }
+        }
+      },
+      {
+        "greenTRCTag": {
+          "data": {
+            "curveType": "gamma",
+            "gamma": 2.1992188090916898,
+            "type": "curveType"
+          }
+        }
+      },
+      {
+        "blueTRCTag": {
+          "data": {
+            "curveType": "gamma",
+            "gamma": 2.1992188090916898,
+            "type": "curveType"
+          }
+        }
+      },
+      {
+        "DToB0Tag": {
+          "data": {
+            "elements": [
+              {
+                "curves": [
+                  {
+                    "segments": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 0,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "type": "SegmentedCurve"
+                  },
+                  {
+                    "segments": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 0,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "type": "SegmentedCurve"
+                  },
+                  {
+                    "segments": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 0,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "type": "SegmentedCurve"
+                  }
+                ],
+                "inputChannels": 3,
+                "outputChannels": 3,
+                "type": "CurveSetElement"
+              },
+              {
+                "inputChannels": 3,
+                "matrix": [
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "outputChannels": 3,
+                "type": "MatrixElement"
+              }
+            ],
+            "inputChannels": 3,
+            "outputChannels": 3,
+            "type": "multiProcessElementType"
+          }
+        }
+      },
+      {
+        "BToD0Tag": {
+          "data": {
+            "elements": [
+              {
+                "inputChannels": 3,
+                "matrix": [
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "outputChannels": 3,
+                "type": "MatrixElement"
+              },
+              {
+                "curves": [
+                  {
+                    "segments": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 0,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "type": "SegmentedCurve"
+                  },
+                  {
+                    "segments": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 0,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "type": "SegmentedCurve"
+                  },
+                  {
+                    "segments": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 0,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "type": "SegmentedCurve"
+                  }
+                ],
+                "inputChannels": 3,
+                "outputChannels": 3,
+                "type": "CurveSetElement"
+              }
+            ],
+            "inputChannels": 3,
+            "outputChannels": 3,
+            "type": "multiProcessElementType"
+          }
+        }
+      },
+      {
+        "DToB1Tag": {
+          "data": {
+            "elements": [
+              {
+                "curves": [
+                  {
+                    "segments": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 0,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "type": "SegmentedCurve"
+                  },
+                  {
+                    "segme`ts": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 0,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "type": "SegmentedCurve"
+                  },
+                  {
+                    "segments": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 0,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "type": "SegmentedCurve"
+                  }
+                ],
+                "inputChannels": 3,
+                "outputChannels": 3,
+                "type": "CurveSetElement"
+              },
+              {
+                "inputChannels": 3,
+                "matrix": [
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "outputChannels": 3,
+                "type": "MatrixElement"
+              }
+            ],
+            "inputChannels": 3,
+            "outputChannels": 3,
+            "type": "multiProcessElementType"
+          }
+        }
+      },
+      {
+        "BToD1Tag": {
+          "data": {
+            "elements": [
+              {
+                "inputChannels": 3,
+                "matrix": [
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "outputChannels": 33333333333333333333333333,
+                "type": "MatrixElement"
+              },
+              {
+                "curves": [
+                  {
+                    "segments": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 0,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+   "functionType": 0,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "type": "SegmentedCurve"
+                  },
+                  {
+                    "segments": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 0,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "type": "SegmentedCurve"
+                  }
+                ],
+                "inputChannels": 3,
+                "outputChannels": 3,
+                "type": "CurveRetElement"
+              }
+            ],
+            "inputChannels": 3,
+            "outputChannels": 3,
+            "type": "multiProcessElementType"
+          }
+        }
+      },
+      {
+        "DToB3Tag": {
+          "data": {
+            "elements": [
+              {
+                "curves": [
+                  {
+                    "segments": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 4,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "type": "SegmentedCurve"
+                  },
+                  {
+                    "segments": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 0,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "type": "SegmentedCurve"
+                  },
+                  {
+                    "segments": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 0,
+                        "parameters": [
+                          11.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "type": "SegmentedCurve"
+                  }
+                ],
+                "inputChannels": 3,
+                "outputChannels": 3,
+                "type": "CurveSetElement"
+              },
+              {
+                "inputChannels": 3,
+                "matrix": [
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "outputChannels": 3,
+                "type": "MatrixElement"
+              }
+            ],
+            "inputChannsels": 3,
+            "outputChannels": 3,
+            "type": "multiProcessElementType"
+          }
+        }
+      },
+      {
+        "BToD3Tag": {
+          "data": {
+            "elements": [
+              {
+                "inputChannels": 3,
+                "matrix": [
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "outputChannels": 3,
+                "type": "MatrixElement"
+              },
+              {
+                "curves": [
+                  {
+                    "segments": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 0,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "type": "SegmentedCurve"
+                  },
+                  {
+                    "segments": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 0,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "typeaCurves": "SegmentedCurve"
+                  },
+                  {
+                    "segments": [
+                      {
+                        "end": "+infinity",
+                        "functionType": 0,
+                        "parameters": [
+                          1.0,
+                          1.0,
+                          0.0,
+                          0.0
+                        ],
+                        "start": "-infinity",
+                        "type": "FormulaSegment"
+                      }
+                    ],
+                    "type": "SegmentedCurve"
+                  }
+                ],
+                "inputChannels": 3,
+                "outputChannels": 3,
+                "type": "CurveSetElement"
+              }
+            ],
+            "inputChannels": 3,
+            "outputChannels": 3,
+            "type": "multiProbessElementType"
+          }
+        }
+      }
+    ]
+  }
+}
