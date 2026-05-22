@@ -1,0 +1,22 @@
+{
+  "imageFiles": {
+    "srcImageFile": "/home/h02332/po/research/cfl/runs/icc_applyprofiles_fuzzer/fuzz_ap_src_5ezO5R.tif",
+    "dstImageFile": "/tmp/icc-ap-cfg-normal-out.tif",
+    "dstEncoding": "8Bit",
+    "dstCompression": false,
+    "dstPlanar": false,
+    "dstEmbedIcc": false
+  },
+  "connect": {
+    "threads": 0
+  },
+  "profileSequence": [
+    {
+      "iccFile": null,
+      "intent": "perceptual",
+      "transform": "default",
+      "useD2BxB2Dx": false,
+      "interpolation": "linear"
+    }
+  ]
+}
