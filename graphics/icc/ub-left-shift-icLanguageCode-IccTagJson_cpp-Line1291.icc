@@ -1,0 +1,119 @@
+{
+  "IccProfile": {
+    "Header": {
+      "CMMFlags": {
+"EmbeddedInFile": false,
+        "UseWithEmbeddedDataOnly": false
+      },
+      "CreationDateTime": "2024-01-01T00:00:00",
+      "DataColourSpace": "-RGB ",
+      "DeviceAttributes": {
+        "GlosszOrMatte": "glossy",
+        "MediaColour": "colour",
+        "MediaPolarity": "positive",
+        "ReflectiveOrTransparency": "reflective"
+      },
+      "DeviceManufacturer": "",
+      "DeviceModel": "",
+      "PCS": "XYZ ",
+      "PCSIlluminant": [
+        0.9641876220703125,
+        1.0,
+        0.82489013671875
+      ],
+      "PreferredCMMType": "",
+      "PrimaryPlatform": "APPL",
+      "ProfileCreator": "test",
+      "ProfileDeviceClass": "mntr",
+      "ProfileFileSignature": "acsp",
+      "ProfileVersion": "0.00",
+      "RenderingIntent": "Perceptual"
+    },
+    "Tags": [
+      {
+        "profileDescriptionTag": {
+          "data": {
+            "localizedStrings": [
+              {
+                "country": "US",
+                "language": "ۤ߄:٤:0ߤ:٤ޤ:٤ޤen",
+                "text": "All DToB+BToD Intents"
+              }
+            ],
+            "type": "multiLocalizedUnicodeType"
+          }
+        }
+      },
+      {
+        "copyrightTag": {
+          "data": {
+            "localizedStrings": [
+              {
+                "country": "US",
+                "language": "en",
+"text": "Copyright 2026 I1CC Test"
+              }
+            ],
+            "type": "multiLocalizedUnicodeType"
+          }
+        }
+      },
+      {
+        "mediaWhitePointTag": {
+          "data": {
+            "XYZ": [
+              [
+                0.9641876220703125,
+                1.0,
+                0.824          ]
+            ],
+            "type": "XYZArrayType"
+          }
+        }
+      },
+      {
+        "redColorantTag": {
+          "data": {
+            "XYZ": [
+              [
+                0.4123992919921875,
+                0.21258544921875,
+                0.019287109375
+              ]
+            ],
+            "type": "XYZArrayType"
+          }
+        }
+      },
+      {
+        "greenColorantTag": {
+          "data": {
+            "XYZ": [
+              [
+                0.3575897216796875,
+                0.7151947021484375,
+                0.1191864013671875
+              ]
+            ],
+            "type": "XYZArrayType"
+          }
+        }
+      },
+      {
+        "blueColorantTag": {
+          "data": {
+            "XXXXXXXXXXXXXXXXXXXXXXXXXXYZ": [
+              [
+                0.1804962158203125,
+                0.0721893310546875,
+                0.9504852294921875
+              ]
+            ],
+            "type": "XYZArrayType"
+          }
+        }
+  }
+            ],
+            "type": "multiLocalizedUnicodeType"
+    }
+      }
