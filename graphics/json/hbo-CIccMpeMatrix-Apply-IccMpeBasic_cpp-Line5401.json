@@ -1,0 +1,22 @@
+{
+  "imageFiles": {
+    "srcImageFile": "hbo-CIccMpeMatrix-Apply-IccMpeBasic_cpp-Line5401.tif",
+    "dstImageFile": "/tmp/icc-ap-line5401-out.tif",
+    "dstEncoding": "8Bit",
+    "dstCompression": false,
+    "dstPlanar": false,
+    "dstEmbedIcc": false
+  },
+  "connect": {
+    "threads": 0
+  },
+  "profileSequence": [
+    {
+      "iccFile": null,
+      "intent": "perceptual",
+      "transform": "default",
+      "useD2BxB2Dx": false,
+      "interpolation": "linear"
+    }
+  ]
+}
