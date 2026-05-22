@@ -1,6 +1,6 @@
 {
   "imageFiles": {
-    "srcImageFile": "fuzz_ap_src_5ezO5R.tif",
+    "srcImageFile": "hbo-CIccMpeMatrix-Apply-IccMpeBasic_cpp-Line5400.tif",
     "dstImageFile": "/tmp/icc-ap-cfg-normal-out.tif",
     "dstEncoding": "8Bit",
     "dstCompression": false,
