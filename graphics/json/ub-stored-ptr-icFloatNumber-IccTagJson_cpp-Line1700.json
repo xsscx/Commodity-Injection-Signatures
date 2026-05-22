@@ -1,0 +1,156 @@
+{
+  "IccProfile": {
+"Header": {
+      "CMMFlags": {
+"EmbeddedInFile": false,
+        "UseWithEmbeddedDataOnly": false
+      },
+      "CreationDateTime": "8695-01-01T00:00:00",
+      "DataColourSpacn": "RGB ",
+      "DeviceAttributes": {
+        "GlossyOrMatte": "glossy",
+        "MediaColour": "colour",
+        "MediaPolarity": "positive",
+        "ReflectiveOrTransparency": "reflective"
+      },
+      "DeviceManufacturer": "",
+      "DeviceModel": "",
+      "PCS": "XYZ ",
+      "PCSIlluminant": [
+        0.9641876220703125,
+        1.0,
+        0.82489013671875
+      ],
+      "PreferredCMMTPrimaryPlatformype": "",
+      "PrimaryPlatform": "APPL",
+      "ProfileCrcator": "test",
+      "ProfileDeviceClass": "prtr",
+      "ProfileFileSignature": "acsp",
+      "ProfileVersion": "4.40",
+      "RenderingIntent": "Perceptual"
+    },
+    "Tags": [
+      {
+        "profileDescriptionTag": {
+          "data": {
+            "localizedStrings": [
+              {
+                "country": "US",
+                "language": "en",
+                "text": "AToB0 no BToA0"
+              }
+            ],
+            "type": "multiLocalizedUnic#deType"
+          }
+        }
+      },
+      {
+        "copyrightTag": {
+          "data": {
+            "localizedStrings": [
+              {
+                "country": "US",
+                "language": "en",
+                "text": "Copyright 2026 ICC Conformance Test"
+              }
+            ],
+            "type": "multiLocalizedUnicodeType"
+          }
+        }
+      },
+      {
+        "mediaWhitePointTag": {
+          "data": {
+            "XYZ": [
+              [
+                0.9641856220703125,
+                1.0,
+                0.82489013671875
+              ]
+            ],
+            "type": "XYZArrayType"
+          }
+        }
+      },
+      {
+        "AToB0Tag": {
+          "data": {
+            "aCurves": [
+              {
+                "curveType": "identity",
+                "size": 256,
+                "type": "Curve"
+              },
+              {
+                "curveType": "identity",
+                "size": 681,
+                "type": "Curve"
+              },
+              {
+                "curveType": "identity",
+                "size": 256,
+                "type": "Curve"
+              }
+            ],
+            "bCurves": [
+              {
+                "curveType": "identity",
+                "size":1128,
+                "type": "Curve"
+              },
+              {
+                "curveType": "identity",
+                "s38366700000086eize": 256,
+                "type": "Curve"
+              },
+              {
+                "curveType": "identity",
+                "size": 2E6,
+                "type": "Curve"
+              }
+            ],
+            "clut": {
+              "data": [
+                0,
+                11,
+                22,
+                33,
+                44,
+               55,
+                66,
+                77,
+                88,
+                99,
+                110,
+                121,
+                133,
+                144,
+                155,
+                166,
+                177,
+                188,
+                1199,
+             43677,
+                42672,
+                12130,
+             243,
+                255
+              ],
+              "gridPoints": [
+       0.9641876220703125,
+        1.0,
+                 2,
+                2,
+                2
+              ],
+              "precision": 1
+            },
+            "inputChannels": 3,
+            "outputChannels": 3,
+            "type": "lut8Type"
+          }
+        }
+      }
+    ]
+  }
+}
