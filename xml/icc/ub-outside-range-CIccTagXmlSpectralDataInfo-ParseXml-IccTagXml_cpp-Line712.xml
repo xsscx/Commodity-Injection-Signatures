@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IccProfile>
+  <Header>
+    <PreferredCMMType>NULL</PreferredCMMType>
+    <ProfileVersion>5.00</ProfileVersion>
+    <ProfileSubClassVersion>1.00</ProfileSubClassVersion>
+    <ProfileDeviceClass>spac</ProfileDeviceClass>
+    <ProfileDeviceSubClass>pcc </ProfileDeviceSubClass>
+    <DataColourSpace>Lab </DataColourSpace>
+    <PCS>Lib </PCS>
+    <CreationDateTime>2025-11-19T09:47:12</CreationDateTime>
+    <ProfileFlags EmbeddedInFile="true" UseWithEmbeddedDataOnly="false"/>
+    <DeviceAttributes ReflectiveOrTransparency="reflective" GlossyOrMatte="glossy" MediaPolarity="positive" MediaColour="colour"/>
+    <RenderingIntent>Relative</RenderingIntent>
+    <PCSIlluminant>
+      <XYZNumber X="0.952850341797" Y="1.000000000000" Z="1.101226806641"/>
+    </PCSIlluminant>
+    <ProfileCreator>DICC</ProfileCreator>
+    <ProfileID>6E4530B83E31F26868FCB26D13C7A19A</ProfileID>
+  </Header>
+  <Tags>
+    <profileDescriptionTag> <multiLocalizedUnicodeType>
+      <LocalizedText LanguageCountry="enUS"><![CDATA[Lab colorimetry using D65 illuminant for Categorical Observar 8 based on PhD by Yu]]></LocalizedText>
+    </multiLocalizedUnicodeType> </profileDescriptionTag>
+
+    <copyrightTag> <PrivateType type="rRGB">
+      <UnknownData>
+       204c61622007d300070097979797979797616373709797979797979797609797
+       41f0ad97979797b797979797979797970000000097979797000100000000d32d
+       6170706c00010000000000000d00000000000000000000000000400000000000
+       00000108000300000074908e000001580000
+      </UnknownData>
+    </PrivateType> </copyrightTag>
+
+    <AToB1Tag> <spectralDataInfoType reserved="0000016c">
+      <SpectralSpace>00000004h</SpectralSpace>
+      <SpectralRange>
+        <Wavelengths start="0.00000000" end="0.00000000" steps="0"/>
+      </SpectralRange>
+      <BiSpectralRange>
+        <Wavelengths start="0.00001216" end="-19.18750000" steps="52428"/>
+      </BiSpectralRange>
+    </spectralDataInfoType> </AToB1Tag>
+
+    <BToA1Tag> <PrivateType type="NULL">
+      <UnknownData>
+       0000000000010000706172610000ffff76756564ffffffffffffffffffff0000
+       7fff0af482b0ffffffffffffffffffffffffffffffffffffffffffffffffffff
+       ffffff0c00000000000000ff
+      </UnknownData>
+    </PrivateType> </BToA1Tag>
+
+    <customToStandardPccTag> <PrivateType type="FFFFFFFFh">
+      <UnknownData>
+       ffffffffff9fffffffffffffffffffffffffffffffffffffffff00147364696e
+       0000016c0b3638380000002c413442ffffffffffffffffffffffffffffffffff
+       ffff00147364696e0000016c0b4d0000
+      </UnknownData>
+    </PrivateType> </customToStandardPccTag>
+
+    <standardToCustomPccTag> <PrivateType type="00363838h">
+      <UnknownData>
+       0000002c41344240000000cc0000ffa426befc7f0000000000000071faff002c
+       4232413200ffffffff080000004e7774908e00000158000000147364696e0000
+       016c00000044feffffffffff3fcc0000
+      </UnknownData>
+    </PrivateType> </standardToCustomPccTag>
+
+    <spectralViewingConditionsTag> <PrivateType type="00000004h">
+      <UnknownData>
+       00710000012c4231413200ffff4d0000002c6d00000400000000ff3000ff7c3c
+       858f9d3d31a0573de3575b3e77b6543ee3dd7e3f2e7beb3f627c403f8b145d3f
+       a3a4673fb9c2833fbd63d63fb8623e3fa64b663f9845fd3f9172123f80186e3f
+       4adcfe3f13defe3ed0f2a43e906c983e566b4a3e37a27f3e2c5edb3e4b497d3e
+       95331c3ed785973f1ab3173f5275543f8663a33fa9f69c3fd0cab73ff666fc40
+       1013aa40275a08403fb029405a35274073acf84084ef7a4090db524099b74a40
+       9efe1b40a03753409e978b4098046e408dd4a24080ff644066843d4045a11d40
+       250e4d400833e23fddf07c3fadea0a3f84be9e3f4771c93f13b4d43ed7ddd93e
+       9b95c73e5d07923e1ac43e3dd4c29d3d93f7883d4e1a123d0f17d43cc4570f3c
+       8651ed3c3968193c0023a73bb24fbc3b78b2d13b2d15033af3cbcf3aaba4f43a
+       72d02d3a2cb5c439f6042139b05f3f397c898b3936655f00000000000000003a
+       0854553abd6c433b7923723c1885ed3ca20e1b3d1310033d647f393d9cc9153d
+       d02b1b3e09b93e3e2de8993e4b269a3e67d7653e81aed13e9999923ec414883e
+       f4f8433f12e1103f2c054b3f47899a3f67d0853f8d55913fb210813fe2930740
+       0f187940306a52405107db406b44f940808b024088b52440906a384094e4f340
+       960647409769006d00650074007200790020007500730069006e006700200044
+       0036003500200069006c006c0075006d0069006e0061006e007400200066006f
+       0072002000430061007400650067006f0072006900630061006c0020004f0062
+       007300650072007600610072002000380020006200610073006500640020006f
+       006e002000500068004400200062007900200059007500000001f86170706c02
+       2000006b636e72524742204c61622007d3000700979797979797976163737097
+       9797979797979760979797979797b79797979797979797000000009797979700
+       0100000000d32d6170706c00010000000000000d0000000066843d4045a11d40
+       250e4d400833e23fddf07c3fadea0a3f84be9e3f4771c93f13b4d43ed7ddd93e
+       9b95c73e5d07923e1ac43e3dd4c29d3d93f7883d4e1a123d0f17d43cc4570f3c
+       8651ed3c3968193c0023a73bb24fbc3b78b2d13b2d15033af3cbcf3aaba4f43a
+       72d02d3a2cb5c439f6042139b05f3f397c898b3936655f00000000000000003a
+       0854553abd6c433b7923723c1885ed3ca20e1b3d1310033d647f393d9cc9153d
+       d02b1b3e09b93e3e2de8993e4b269a3e67d7653e81aed13e9999923ec414883e
+       f4f8433f12e1103f2c054b3f47899a3f67d0853f8d55913fb210813fe2930740
+       0f187940306a52405107db406b44f940808b024088b52440906a384094e4f340
+       96064740973ccb4096104740945db24090d06d408b20b84082e1e140771b4a40
+       66b5c840539026403ed04b402a6f3a4015b3534001be233fdd8e223fbb5ea33f
+       9a4ac23f7963c93f47d1373f1e63fd3ef474123e95b8247e3e889cad3e484a64
+       3e116e9f3dd0b17b3d93c3c63d4e76663d0dbb043cc4fcd13c892ac73c3e738d
+       3c02b3ba3bb305fc3b7763d83b2b34783aee98e23aa6a4ed3a686dd73a2418b3
+       39e79c3d39a439e3396a3b7939273def38f05c3438ac80623879e36700000000
+       000000003d03ba3d3db20b183e6da8493f18e6cc3fa76590401b2592406f5ad7
+       409c9afd40c1d3ce40e624324103abdf4107809b41053c6940f333ae40e292b5
+       40dccd5a40c7c39040a42a0d407c71c1403e3edf400d23923fdb34323fae44d8
+       3f83ca863f3c736b3f0a28273ec29dc63e84c7713e3130073de919553d96ee77
+       3d42f3cf3cfcafa93ca571d23c5ce9223c176a833bd3f4943b96887a3b55849a
+       3b164ce83ace1477
+      </UnknownData>
+    </PrivateType> </spectralViewingConditionsTag>
+
+    <mediaWhitePointTag> <PrivateType type="3A8372BCh">
+      <UnknownData>
+       3a116a0239590c48b82b07b9b9565f79
+      </UnknownData>
+    </PrivateType> </mediaWhitePointTag>
+
+    <metaDataTag> <PrivateType type="B9BCC5B3h">
+      <UnknownData>
+       b9ce5e76b9c78649b9b579aab9a064c3b98a8725b95fd57db92f3257b906ae04
+       b8cb2539b89617c7b85a0aceb81bb8feb7dae985b796cc1db752037fb7124e4f
+       b6cb2e53b68b51e1b63e4801b6031422b5b4c75eb57aeca8b52e8940b4f216ca
+       b4a9c880b46e192fb427b0a0b3ed77f1b3a863b2b3706f9cb32b61a5b2f64cd2
+       0000000245cb20005df06218005100004247e6e942513f48425a97c24289672b
+       42a5828242ae3da542b6f8d542b8eaf542badd1542b41d2f42ad5d5642bf8c15
+       42d1bae142dddf3b42ea041942ead1ec42eb9fbe42e8ac0842e5b8d542e6c8b4
+       42e7d89342e0bbe742d99f3b42da29fc42dab53f42d927f042d79aa042d4978d
+       42d1947b42d47a5e42d760c542d4181042d0cf5c42d0733342d0178d42cc0bc7
+       42c8000042c4558e42c0ab1c42c01f4842bf937542b8793e42b15f0742b2b11a
+       42b4032d
+      </UnknownData>
+    </PrivateType> </metaDataTag>
+
+  </Tags>
+</IccProfile>
