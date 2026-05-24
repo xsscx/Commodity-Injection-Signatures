@@ -1,0 +1,25 @@
+{
+  "imageFiles": {
+    "srcImageFile": "hbo-CIccXform-AdjustPCS-IccCmm_cpp-Line1597.tiff",
+    "dstImageFile": "foo.bar",
+    "dstEncoding": "sameAsSource",
+    "dstCompression": true,
+    "dstPlanar": true,
+    "dstEmbedIcc": false
+  },
+  "connect": {
+    "threads": 0
+  },
+  "profileSequence": [
+    {
+      "iccFile": null,
+      "intent": "perceptual",
+      "transform": "default",
+      "useD2BxB2Dx": false,
+      "adjustPcsLuminance": false,
+      "useBPC": true,
+      "useV5SubProfile": true,
+      "interpolation": "linear"
+    }
+  ]
+}
