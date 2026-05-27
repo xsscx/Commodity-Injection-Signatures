@@ -1,0 +1,28 @@
+{
+  "dataFiles": {
+    "srcType": "colorData",
+    "srcSpace": "RGB ",
+    "dstType": "colorData",
+    "dstEncoding": "float"
+  },
+  "profileSequence": [
+    {
+      "iccFile": "dbz-CIccCamConverter-HyperbolicInv-IccCAM_cpp-Line214.icc",
+      "intent": "relative",
+      "transform": "default",
+      "interpolation": "linear"
+    }
+  ],
+  "colorData": {
+    "space": "RGB ",
+    "encoding": "float",
+    "srcSpace": "RGB ",
+    "srcEncoding": "float",
+    "data": [
+      {
+        "n": "Jab_100_0_0",
+        "v": [100.0, 0.0, 0.0]
+      }
+    ]
+  }
+}
