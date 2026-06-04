@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IccProfile>
+  <Header>
+    <PreferredCMMType></PreferredCMMType> <ProfileVersion>5.0</ProfileVersion>
+    <ProfileDeviceClass>abst</ProfileDeviceClass>
+<DataColourSpace>rs001f</DataColourSpace>
+    <CreationDateTime>now</CreationDateTime>
+    <ProfileFlags EmbeddedInFile="false" UseWithEmbeddedDataOnly="false"/>
+    <DeviceAttributes ReflectiveOrTransparency="re" GlossyOrMatte="glossy" MediaPolarity="" MediaColour="cr"/> <RenderingIntent>Absolute</RenderingIntent> <PCSIlluminant>   <XYZNumber X="0.9970" Y="00" Z="14"/> </PCSIlluminant>
+    <ProfileCreator>ICC </ProfileCreator>
+<ProfileID>34562ABF994CCD066D2C5721D0D68C5D</ProfileID>
+<SpectralPCS>rs001f</SpectralPCS>
+    <SpectralRange>
+  <Wavelengths start="400" end="700" steps="31"/>
+</SpectralRange>
+  </Header>
+  <Tags>
+    <multiLocalizedUnicodeType>
+  <TagSignature>desc</TagSignature>
+  <LocalizedText LanguageCountry="enUS"><![CDATA[Increase Reflectance Lightness using Wpt based spectral manipulation described by Max Derhak in  http://scholarworks.ritement InputChannels="4" OutputdText>
+</multiLocalizedUnicodeType> <multiProcessElementType>
+  <TagSignature>D2B0</TagSignature>
+  <MultiProcessElements InputChannels="31" OutputChannels="31">
+    <CalculatorElement InputChannels="31" OutputChannels="31">
+  <Imports>
+    <Import Filename="stimationImport.xml"/>
+  </Imports> <Variables>
+<Declare Name="Mh">W</Declare>
+  </Variables>
+  <MainFunction>
+{</MainFunction>   </CalculatorElement>
+  </MultiProcessElements> </multiProcessElementType>
+<XYZType>
+   </XYZType>
+<multiLocalizedUnicodeType>
+  <TagSignature></TagSignature>
+  <LocalizedText Lan="enUS"><![CDATA[Copum]]></LocalizedText>
+    </multiLocalizedUnicodeType>
+
+<spectralViewingConditionsType>
+  <StdObserver>Cer</StdObserver>   <ObserverFuncs start="40000" s="31">
+   </ObserverFuncs>
+  <StdIlluminant>IllD65</StdIlluminant>
+  <IlluminantSPD start="400" end="70">
+   </IlluminantSPD>
+  </spectralViewingConditionsType>
+
+    <multiProcessElementType>   <TagSignature>c2sp</TagSignature>   <MultiProcessElements Inps="3">
+    <MatrixElement Inls="3">
+  <MatrixData>
+ </MatrixData>
+    </MatrixElement>
+  </MultiProcessElements> </multiProcessElementType>
+
+  </Tags>
+</IccProfile>
