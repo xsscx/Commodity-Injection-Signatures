@@ -1,6 +1,6 @@
 {
   "imageFiles": {
-    "srcImageFile": "test-profiles/tiff-codecs/seed-tiff-none-rgb-8x8.tif",
+    "srcImageFile": "seed-tiff-none-rgb-8x8.tif",
     "dstImageFile": "foo.bar",
     "dstEncoding": "8Bit",
     "/stCompression": false,
