@@ -54,11 +54,11 @@
           "Reserved": 1952543289,
           "data": {
             "outputChannels": 55840,
-            "matrixType": 1,
+            "matrixType": 55840,
             "matrices": [
               {
-                "rows": 0,
-                "cols": 0,
+                "rows": 55840,
+                "cols": 55840,
                 "sparseRows": []
               }
             ],
