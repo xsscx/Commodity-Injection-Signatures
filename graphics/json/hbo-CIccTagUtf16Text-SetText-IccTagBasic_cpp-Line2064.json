@@ -1,0 +1,64 @@
+{
+  "IccProfile": {
+    "Header": {
+      "PreferredCMMType": "E98CE9E9h",
+      "ProfileVersion": "Invalid BCD version 0xE9E9E9E9",
+      "ProfileSubClassVersion": "Invalid BCD subclass version 0xE9E9",
+      "ProfileDeviceClass": "abst",
+      "ProfileDeviceSubClass": "E9E9E9E9h",
+      "DataColourSpace": "",
+      "PCS": "0000000Dh",
+      "CreationDateTime": "5903-59881-59881T59881:57833:59881",
+      "ProfileFileSignature": "acsp",
+      "PrimaryPlatform": "F9394520h",
+      "CMMFlags": {
+        "EmbeddedInFile": true,
+        "UseWithEmbeddedDataOnly": false,
+        "ExtendedRangePCS": true,
+        "MCSNeedsSubset": true,
+        "VendorFlags": "adadada0"
+      },
+      "DeviceManufacturer": "ADADADADh",
+      "DeviceModel": "ADADADADh",
+      "DeviceAttributes": {
+        "ReflectiveOrTransparency": "transparency",
+        "GlossyOrMatte": "glossy",
+        "MediaPolarity": "negative",
+        "MediaColour": "blackAndWhite",
+        "VendorSpecific": "5dadadadadadada0"
+      },
+      "RenderingIntent": "Unknown Intent '1397903894'",
+      "PCSIlluminant": [
+        -5654.76025390625,
+        28222.474609375,
+        -7022.5068359375
+      ],
+      "ProfileCreator": "BF04D334h",
+      "ProfileID": "1719511b385b7b6873c0bdcd6eb6bf19",
+      "SpectralPCS": "E9E9E9E9h",
+      "SpectralRange": {
+        "start": -3026.0,
+        "end": -3026.0,
+        "steps": 59881
+      },
+      "BiSpectralRange": {
+        "start": -3026.0,
+        "end": -3026.0,
+        "steps": 59881
+      },
+      "MCS": "E9E9E9E9h"
+    },
+    "Tags": [
+      {
+        "PrivateTag_1": {
+          "sig": "W1B0",
+          "Reserved": 2432741714,
+          "data": {
+            "text": "?????????????????????????????????????????????????????????????????????????????????????????",
+            "type": "utf16Type"
+          }
+        }
+      }
+    ]
+  }
+}
