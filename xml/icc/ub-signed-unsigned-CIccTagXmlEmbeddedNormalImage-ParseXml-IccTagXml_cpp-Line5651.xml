@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IccProfile>
+  <Header>
+    <PreferredCMMType>E98CE9E9h</PreferredCMMType>
+    <ProfileVersion>0.00</ProfileVersion>
+    <ProfileSubClassVersion>61.63</ProfileSubClassVersion>
+    <ProfileDeviceClass>7370F9F9h</ProfileDeviceClass>
+    <ProfileDeviceSubClass>E9E9E9E9h</ProfileDeviceSubClass>
+    <DataColourSpace>B9F9F9FFh</DataColourSpace>
+    <PCS>FFFFE9E9h</PCS>
+    <CreationDateTime>59881-59-00T00:00:00</CreationDateTime>
+    <PrimaryPlatform>F9380020h</PrimaryPlatform>
+    <ProfileFlags EmbeddedInFile="true" UseWithEmbeddedDataOnly="false" ExtendedRangePCS="true" MCSNeedsSubset="true" VendorFlags="adadada0"/>
+    <DeviceManufacturer>ADADADADh</DeviceManufacturer>
+    <DeviceModel>ADADADADh</DeviceModel>
+    <DeviceAttributes ReflectiveOrTransparency="reflective" GlossyOrMatte="matte" MediaPolarity="positive" MediaColour="colour" VendorSpecific="adadadadadade950"/>
+    <RenderingIntent>Unknown Intent '16318208'</RenderingIntent>
+    <PCSIlluminant>
+      <XYZNumber X="-5714.565429687500" Y="-28354.525390625000" Z="-6986.506835937500"/>
+    </PCSIlluminant>
+    <ProfileCreator>BF04D334h</ProfileCreator>
+    <ProfileID>BBB350F092AAAF6BC31332C414A873D1</ProfileID>
+    <SpectralPCS>E9E9E9E9h</SpectralPCS>
+    <SpectralRange>
+     <Wavelengths start="-3026.00000000" end="-3026.00000000" steps="59881"/>
+    </SpectralRange>
+    <BiSpectralRange>
+     <Wavelengths start="-3026.00000000" end="-3026.00000000" steps="59881"/>
+)    </BiSpectralRange>
+    <MCS>E9E9E9E9h</MCS>
+  </Header>
+  <Tags>
+    <PrivateTag TagSignature="2B2A"> <embeddedNormalImageType reserved="6568f9ff">
+      <NormalImage SeamlessIndicator="-5655" EncodingFormat="-370606021">
+       <Image>
+        0000000000000000
+       </Image>
+      </NormalImage>
+    </embeddedNormalImageType> </PrivateTag>
+
+  </Tags>
+</IccProfile>
