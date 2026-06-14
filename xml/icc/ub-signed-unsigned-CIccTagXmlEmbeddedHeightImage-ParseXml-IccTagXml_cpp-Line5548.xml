@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IccProfile>
+  <Header>
+    <PreferredCMMType>E98CE9E9h</PreferredCMMType>
+    <ProfileVersion>Invalid BCD version 0xE9E9E9E9</ProfileVersion>
+    <ProfileSubClassVersion>Invalid BCD subclass version 0xE9E9</ProfileSubClassVersion>
+    <ProfileDeviceClass>6393919Ch</ProfileDeviceClass>
+    <ProfileDeviceSubClass>E9E9F9E9h</ProfileDeviceSubClass>
+    <DataColourSpace>16161616h</DataColourSpace>
+    <PCS>1649E9F1h</PCS>
+    <CreationDateTime>59881-59881-59881T59881:57833:59881</CreationDateTime>
+    <PrimaryPlatform>F1380020h</PrimaryPlatform>
+    <ProfileFlags EmbeddedInFile="false" UseWithEmbeddedDataOnly="false" MCSNeedsSubset="false" VendorFlags="01000000"/>
+    <DeviceManufacturer>0000095Ch</DeviceManufacturer>
+    <DeviceModel>ADADADADh</DeviceModel>
+    <DeviceAttributes ReflectiveOrTransparency="transparency" GlossyOrMatte="glossy" MediaPolarity="negative" MediaColour="blackAndwhite" VendorSpecific="adadadadadadada0"/>
+    <RenderingIntent>Unknown Intent '1397903885'</RenderingIntent>
+    <PCSIlluminant>
+      <XYZNumber X="-5654.760253906250" Y="28222.892578125000" Z="-19195.751953125000"/>
+    </PCSIlluminant>
+    <ProfileCreator>9179D334h</ProfileCreator>
+    <ProfileID>FFE9E9E9E9E9E9E9E9E9E9E9DAE9E9E9</ProfileID>
+    <SpectralPCS>E9000051h</SpectralPCS>
+    <SpectralRange>
+     <Wavelengths start="-0.00048828" end="0.01029968" steps="46569"/>
+    </SpectralRange>
+    <BiSpectralRange>
+     <Wavelengths start="-3026.00000000" end="-3026.00000000" steps="59881"/>
+)    </BiSpectralRange>
+    <MCS>E9E9E9E9h</MCS>
+    <Reserved>FFFFFF2F</Reserved>
+  </Header>
+  <Tags>
+    <AToB0Tag> <embeddedHeightImageType reserved="aaffffff">
+      <HeightImage SeamlessIndicator="-98" EncodingFormat="-12623518" MetersMinPixelValue="16967925094473982598447104.000000000000" MetersMaxPixelValue="-0.000000000000">
+       <Image>
+        919191919191919191adadad53525216e9e93d6f6e3e000003ff00fcffffe9e9
+        e9e9e9e9e9e9e9e9e9e9e9e9e9e9
+       </Image>
+      </HeightImage>
+    </embeddedHeightImageType> </AToB0Tag>
+
+  </Tags>
+</IccProfile>
