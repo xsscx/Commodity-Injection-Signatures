@@ -1,0 +1,3 @@
+'6CLR'
+icEncodeFloat
+0 0 0 0 0 nan
