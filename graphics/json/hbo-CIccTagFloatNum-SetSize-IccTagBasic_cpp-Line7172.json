@@ -1,0 +1,23 @@
+{
+  "colorData": {
+    "data": [
+      { "v": [50.0, 0.0, 0.0] }
+    ],
+    "encoding": "float",
+    "srcEncoding": "value",
+    "srcSpace": "Lab "
+  },
+  "dataFiles": {
+    "dstEncoding": "value",
+    "dstType": "legacy",
+    "srcFile": null,
+    "srcType": "colorData"
+  },
+  "profileSequence": [
+    {
+      "iccFile": "hbo-CIccTagFloatNum-SetSize-IccTagBasic_cpp-Line7172.icc",
+      "intent": "absolute",
+      "transform": "namedColorimetric"
+    }
+  ]
+}
