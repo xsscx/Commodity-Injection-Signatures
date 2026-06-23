@@ -1,0 +1,112 @@
+{
+  "IccProfile": {
+    "Tags": [
+      {
+        "profileDescriptionTag": {
+          "data": {
+            "type": "multiLocalizedUnicodeType",
+            "localizedStrings": [
+              {
+                "text": "issue-1552 spectral PCS without spectral transforms",
+                "country": "US",
+                "language": "en"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "copyrightTag": {
+          "data": {
+            "type": "multiLocalizedUnicodeType",
+            "localizedStrings": [
+              {
+                "text": "Local issue 1552 validation repro",
+                "country": "US",
+                "language": "en"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "spectralWhitePointTag": {
+          "data": {
+            "type": "float16ArrayType",
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      }
+    ],
+    "Header": {
+      "SpectralRange": {
+        "steps": 31,
+        "end": 700.0,
+        "start": 400.0
+      },
+      "SpectralPCS": "rs001F",
+      "ProfileID": "86dab87f9c3ab1a1695e5939edc9a8c0",
+      "PCSIlluminant": [
+        0.9642486572265625,
+        1.0,
+        0.824676513671875
+      ],
+      "CMMFlags": {
+        "UseWithEmbeddedDataOnly": false,
+        "EmbeddedInFile": true
+      },
+      "ProfileSubClassVersion": "1.00",
+      "ProfileCreator": "RICC",
+      "PreferredCMMType": "RICC",
+      "ProfileDeviceClass": "spac",
+      "DeviceManufacturer": "",
+      "DataColourSpace": "6E63001Fh",
+      "ProfileDeviceSubClass": "sref",
+      "ProfileFileSignature": "acsp",
+      "RenderingIntent": "Absolute",
+      "CreationDateTime": "2026-06-23T19:11:14",
+      "PCS": "",
+      "PrimaryPlatform": "",
+      "DeviceAttributes": {
+        "MediaColour": "colour",
+        "MediaPolarity": "positive",
+        "GlossyOrMatte": "glossy",
+        "ReflectiveOrTransparency": "reflective"
+      },
+      "ProfileVersion": "5.00",
+      "DeviceModel": ""
+    }
+  }
+}
