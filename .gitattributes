@@ -1,0 +1,34 @@
+# Text documentation and repository metadata
+*.md text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.xml text eol=lf
+*.svg text eol=lf
+*.cube text eol=lf
+
+# Binary corpus formats
+*.icc binary
+*.icm binary
+*.tif binary
+*.tiff binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.bmp binary
+*.heic binary
+*.heif binary
+*.exr binary
+*.pf binary
+*.pdf binary
+
+# Archives and generated package outputs
+*.zip binary
+*.tar binary
+*.gz binary
+*.7z binary

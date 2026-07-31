@@ -42,7 +42,7 @@ env:
 
 jobs:
   build-tools:
-    name: "Build • iccanalyzer-lite + colorbleed_tools"
+    name: "Build - iccanalyzer-lite + colorbleed_tools"
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     defaults:
@@ -173,7 +173,7 @@ jobs:
           retention-days: 1
 
   scan-icc-profiles:
-    name: "Scan • ICC Profiles (ASAN+UBSAN)"
+    name: "Scan - ICC Profiles (ASAN+UBSAN)"
     needs: build-tools
     runs-on: ubuntu-24.04
     timeout-minutes: 45
@@ -246,16 +246,16 @@ jobs:
 
             has_asan="no"
             has_ubsan="no"
-            status="✅"
+            status="[OK]"
 
             if [ $exit_code -ge 128 ]; then
               crashes=$((crashes + 1))
-              status="💥 CRASH (signal $((exit_code - 128)))"
+              status="[CRASH] signal $((exit_code - 128))"
             elif [ $exit_code -eq 124 ]; then
               timeouts=$((timeouts + 1))
-              status="⏱️ TIMEOUT"
+              status="[TIMEOUT]"
             elif [ $exit_code -ne 0 ]; then
-              status="⚠️ exit=$exit_code"
+              status="[WARN] exit=$exit_code"
             else
               passed=$((passed + 1))
             fi
@@ -263,7 +263,7 @@ jobs:
             if grep -q "ERROR: AddressSanitizer" "$stderr_file" 2>/dev/null; then
               has_asan="yes"
               asan_findings=$((asan_findings + 1))
-              status="🔴 ASAN"
+              status="[ASAN]"
               # Save full ASAN report
               cp "$stderr_file" "results/asan_${basename_f}.txt"
             fi
@@ -271,8 +271,8 @@ jobs:
             if grep -q "runtime error:" "$stderr_file" 2>/dev/null; then
               has_ubsan="yes"
               ubsan_findings=$((ubsan_findings + 1))
-              if [ "$status" = "✅" ] || [ "$status" = "⚠️ exit=$exit_code" ]; then
-                status="🟡 UBSAN"
+              if [ "$status" = "[OK]" ] || [ "$status" = "[WARN] exit=$exit_code" ]; then
+                status="[UBSAN]"
               fi
               cp "$stderr_file" "results/ubsan_${basename_f}.txt"
             fi
@@ -334,13 +334,13 @@ jobs:
 
             has_asan="no"
             has_ubsan="no"
-            status="✅"
+            status="[OK]"
 
             if [ $exit_code -ge 128 ]; then
               toxml_crashes=$((toxml_crashes + 1))
-              status="💥 CRASH"
+              status="[CRASH]"
             elif [ $exit_code -ne 0 ] && [ $exit_code -ne 124 ]; then
-              status="⚠️ exit=$exit_code"
+              status="[WARN] exit=$exit_code"
             elif [ $exit_code -eq 0 ]; then
               toxml_passed=$((toxml_passed + 1))
             fi
@@ -348,15 +348,15 @@ jobs:
             if grep -q "ERROR: AddressSanitizer" "$stderr_file" 2>/dev/null; then
               has_asan="yes"
               toxml_asan=$((toxml_asan + 1))
-              status="🔴 ASAN"
+              status="[ASAN]"
               cp "$stderr_file" "results/toxml_asan_${basename_f}.txt"
             fi
 
             if grep -q "runtime error:" "$stderr_file" 2>/dev/null; then
               has_ubsan="yes"
               toxml_ubsan=$((toxml_ubsan + 1))
-              if [ "$status" = "✅" ] || [ "$status" = "⚠️ exit=$exit_code" ]; then
-                status="🟡 UBSAN"
+              if [ "$status" = "[OK]" ] || [ "$status" = "[WARN] exit=$exit_code" ]; then
+                status="[UBSAN]"
               fi
               cp "$stderr_file" "results/toxml_ubsan_${basename_f}.txt"
             fi
@@ -410,7 +410,7 @@ jobs:
           set -euo pipefail
 
           {
-            echo "## Sanitizer Corpus Scan — ICC Profiles"
+            echo "## Sanitizer Corpus Scan - ICC Profiles"
             echo ""
             echo "### iccanalyzer-lite Results"
             echo ""
@@ -432,11 +432,11 @@ jobs:
             echo "| UBSAN findings | ${toxml_ubsan:-0} |"
             echo ""
             if [ "${asan_findings:-0}" -gt 0 ] || [ "${crashes:-0}" -gt 0 ]; then
-              echo "### ⚠️ Action Required"
+              echo "### [WARN] Action Required"
               echo ""
               echo "ASAN findings or crashes detected. Review the \`icc-scan-results\` artifact for details."
             else
-              echo "### ✅ No Critical Findings"
+              echo "### [OK] No Critical Findings"
               echo ""
               echo "All profiles processed without ASAN errors or crashes."
             fi
@@ -451,7 +451,7 @@ jobs:
           } >> $GITHUB_STEP_SUMMARY
 
   scan-icc-xml:
-    name: "Scan • ICC XML (ASAN+UBSAN)"
+    name: "Scan - ICC XML (ASAN+UBSAN)"
     needs: build-tools
     runs-on: ubuntu-24.04
     timeout-minutes: 30
@@ -522,29 +522,29 @@ jobs:
 
             has_asan="no"
             has_ubsan="no"
-            status="✅"
+            status="[OK]"
 
             if [ $exit_code -ge 128 ]; then
               crashes=$((crashes + 1))
-              status="💥 CRASH"
+              status="[CRASH]"
             elif [ $exit_code -eq 0 ]; then
               passed=$((passed + 1))
             else
-              status="⚠️ exit=$exit_code"
+              status="[WARN] exit=$exit_code"
             fi
 
             if grep -q "ERROR: AddressSanitizer" "$stderr_file" 2>/dev/null; then
               has_asan="yes"
               asan_findings=$((asan_findings + 1))
-              status="🔴 ASAN"
+              status="[ASAN]"
               cp "$stderr_file" "results/fromxml_asan_${basename_f}.txt"
             fi
 
             if grep -q "runtime error:" "$stderr_file" 2>/dev/null; then
               has_ubsan="yes"
               ubsan_findings=$((ubsan_findings + 1))
-              if [ "$status" = "✅" ] || [ "$status" = "⚠️ exit=$exit_code" ]; then
-                status="🟡 UBSAN"
+              if [ "$status" = "[OK]" ] || [ "$status" = "[WARN] exit=$exit_code" ]; then
+                status="[UBSAN]"
               fi
               cp "$stderr_file" "results/fromxml_ubsan_${basename_f}.txt"
             fi
@@ -609,7 +609,7 @@ jobs:
           echo "=== ICC XML Scan Complete ==="
           echo "Total: ${total} | Clean: ${passed} | ASAN: ${asan_findings} | UBSAN: ${ubsan_findings} | Crash: ${crashes}"
 
-      - name: Round-trip validation (XML → ICC → XML)
+      - name: Round-trip validation (XML -> ICC -> XML)
         env:
           ASAN_OPTIONS: "detect_leaks=0:halt_on_error=0:print_stats=1"
           UBSAN_OPTIONS: "halt_on_error=0:print_stacktrace=1"
@@ -631,7 +631,7 @@ jobs:
             icc_tmp="/tmp/rt-out/${basename_f%.xml}.icc"
             xml_rt="/tmp/rt-out/${basename_f%.xml}_rt.xml"
 
-            # XML → ICC
+            # XML -> ICC
             set +e
             timeout 15 ./iccFromXml_unsafe "$xml" "$icc_tmp" > /dev/null 2>/dev/null
             rc1=$?
@@ -641,7 +641,7 @@ jobs:
 
             rt_total=$((rt_total + 1))
 
-            # ICC → XML
+            # ICC -> XML
             set +e
             timeout 15 ./iccToXml_unsafe "$icc_tmp" "$xml_rt" > /dev/null 2>/dev/null
             rc2=$?
@@ -677,7 +677,7 @@ jobs:
           set -euo pipefail
 
           {
-            echo "## Sanitizer Corpus Scan — ICC XML"
+            echo "## Sanitizer Corpus Scan - ICC XML"
             echo ""
             echo "### iccFromXml Results"
             echo ""
@@ -697,10 +697,10 @@ jobs:
             echo "| Passed | ${rt_passed:-0} |"
             echo ""
             if [ "${xml_asan:-0}" -gt 0 ] || [ "${xml_crashes:-0}" -gt 0 ]; then
-              echo "### ⚠️ Action Required"
+              echo "### [WARN] Action Required"
               echo ""
               echo "ASAN findings or crashes detected in XML processing. Review the \`xml-scan-results\` artifact."
             else
-              echo "### ✅ No Critical Findings"
+              echo "### [OK] No Critical Findings"
             fi
           } >> $GITHUB_STEP_SUMMARY
