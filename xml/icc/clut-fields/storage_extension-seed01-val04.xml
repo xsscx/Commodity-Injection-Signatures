@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IccProfile>
+  <Header>
+    <PreferredCMMType></PreferredCMMType>
+    <ProfileVersion>5.10</ProfileVersion>
+    <ProfileDeviceClass>mntr</ProfileDeviceClass>
+    <DataColourSpace>RGB </DataColourSpace>
+    <PCS>XYZ </PCS>
+    <CreationDateTime>now</CreationDateTime>
+    <ProfileFlags EmbeddedInFile="true" UseWithEmbeddedDataOnly="false" ExtendedRangePCS="true"/>
+    <DeviceAttributes ReflectiveOrTransparency="reflective" GlossyOrMatte="glossy" MediaPolarity="positive" MediaColour="colour"/>
+    <RenderingIntent>Relative Colorimetric</RenderingIntent>
+    <PCSIlluminant>
+      <XYZNumber X="0.9504222269" Y="1.0000000000" Z="1.0884541014"/>
+    </PCSIlluminant>
+    <ProfileCreator></ProfileCreator>
+    <ProfileID>1</ProfileID>
+  </Header>
+  <Tags>
+    <profileDescriptionTag> <multiLocalizedUnicodeType>
+      <LocalizedText LanguageCountry="enUS"><![CDATA[BT.2100 HLG Narrow Range RGB to/from Scene Light]]></LocalizedText>
+    </multiLocalizedUnicodeType> </profileDescriptionTag>
+	
+	<AToB1Tag> <multiProcessElementType>
+	  <MultiProcessElements InputChannels="3" OutputChannels="3">
+		  <!-- From Narrow range mapping -->
+		  <CurveSetElement InputChannels="3" OutputChannels="3">
+			  <SingleSampledCurve FirstEntry="0.06251526251526251526251526251526" LastEntry="0.91819291819291819291819291819292" StorageType="1" ExtensionType="1" Filename="/mnt/e/codex/scratch/xml-issue-check/poc-u8-4gplus1.bin" Format="binary" Endian="little"/>
+			  <DuplicateCurve Index="0"/>
+			  <DuplicateCurve Index="0"/>
+			</CurveSetElement>
+
+		  <!-- Apply PQ EOTF -->
+		  <CurveSetElement InputChannels="3" OutputChannels="3">
+			  <SegmentedCurve>
+				  <FormulaSegment Start="-infinity" End="0.0" FunctionType="0">1 0 0 0</FormulaSegment>
+				  <FormulaSegment Start="0" End="+infinity" FunctionType="6">0.1593017578125 0.01268331351565597 0.8359375 18.8515625 18.6875 10000 1.0</FormulaSegment>
+				</SegmentedCurve>
+			  <DuplicateCurve Index="0"/>
+			  <DuplicateCurve Index="0"/>
+			</CurveSetElement>
+			
+		  <!-- Apply Inverse PQ OOTF Part 1 -->
+		  <CurveSetElement InputChannels="3" OutputChannels="3">
+			  <SegmentedCurve>
+				  <FormulaSegment Start="-infinity" End="0.0" FunctionType="0">1 0 0 0</FormulaSegment>
+				  <FormulaSegment Start="0" End="+infinity" FunctionType="0">0.416666666666667 0.01 0 0 </FormulaSegment>
+				</SegmentedCurve>
+			  <DuplicateCurve Index="0"/>
+			  <DuplicateCurve Index="0"/>
+			</CurveSetElement>
+			
+		  <!-- Apply Inverse PQ OOTF Part 2 -->
+		  <CurveSetElement InputChannels="3" OutputChannels="3">
+			  <SegmentedCurve>
+				  <FormulaSegment Start="-infinity" End="0.0" FunctionType="0">1 0 0 0</FormulaSegment>
+				  <FormulaSegment Start="0" End="0.408996170511594" FunctionType="0">1 0.03733572281959379 0 0 </FormulaSegment>
+				  <FormulaSegment Start="0.408996170511594" End="+infinity" FunctionType="3">2.222222222222222 0.01680084945094824 0.909918107370337 0.09008189262966333 0 </FormulaSegment>
+				</SegmentedCurve>
+			  <DuplicateCurve Index="0"/>
+			  <DuplicateCurve Index="0"/>
+			</CurveSetElement>
+			
+      <!-- Scale so that 203cd/m^2 becomes Media White Point -->
+			<MatrixElement InputChannels="3" OutputChannels="3">
+			  <MatrixData InvertMatrix="true">
+				  203 0 0
+          0 203 0
+          0 0 203
+				</MatrixData>
+			</MatrixElement>
+		
+			<!-- Convert RGB to XYZ -->
+			<MatrixElement InputChannels="3" OutputChannels="3">
+			  <MatrixData>
+				  0.63695805 0.14461690 0.16888098
+          0.26270021 0.67799807 0.05930172
+          0.00000000 0.02807269 1.06098506
+				</MatrixData>
+			</MatrixElement>
+	  </MultiProcessElements>
+	</multiProcessElementType> </AToB1Tag>
+	
+	<BToA1Tag> <multiProcessElementType>
+      <MultiProcessElements InputChannels="3" OutputChannels="3">
+			<!-- Convert XYZ to RGB -->
+			<MatrixElement InputChannels="3" OutputChannels="3">
+			  <MatrixData InvertMatrix="true">
+				  0.63695805 0.14461690 0.16888098
+          0.26270021 0.67799807 0.05930172
+          0.00000000 0.02807269 1.06098506
+				</MatrixData>
+			</MatrixElement>
+
+      <!-- Invert scaling of 75% media white point -->
+			<MatrixElement InputChannels="3" OutputChannels="3">
+			  <MatrixData InvertMatrix="true">
+				  4.804804804804805 0 0
+          0 4.804804804804805 0
+          0 0 4.804804804804805
+				</MatrixData>
+			</MatrixElement>
+
+		  <!-- Apply PQ OOTF / 10000 -->
+		  <CurveSetElement InputChannels="3" OutputChannels="3">
+			  <SegmentedCurve>
+				  <FormulaSegment Start="-infinity" End="0.0" FunctionType="0">1 0 0 0</FormulaSegment>
+				  <FormulaSegment Start="0" End="0.0003024" FunctionType="0">1 0.026784 0 0</FormulaSegment>
+				  <FormulaSegment Start="0.0003024" End="+infinity" FunctionType="3">0.45 0.0001099 59.5208 0 -0.0000099 </FormulaSegment>
+				</SegmentedCurve>
+			  <DuplicateCurve Index="0"/>
+			  <DuplicateCurve Index="0"/>
+			</CurveSetElement>
+
+		  <!-- Apply Inverse PQ EOTF -->
+		  <CurveSetElement InputChannels="3" OutputChannels="3">
+			  <SegmentedCurve>
+				  <FormulaSegment Start="-infinity" End="0.0" FunctionType="0">1 0 0 0</FormulaSegment>
+				  <FormulaSegment Start="0.08333333333333333" End="+infinity" FunctionType="7">78.84375 0.1593017578125 0.8359375 18.8515625 18.6875 1.0</FormulaSegment>
+				</SegmentedCurve>
+			  <DuplicateCurve Index="0"/>
+			  <DuplicateCurve Index="0"/>
+			</CurveSetElement>
+
+		  <!-- To Narrow range mapping -->
+		  <CurveSetElement InputChannels="3" OutputChannels="3">
+			  <SingleSampledCurve FirstEntry="0" LastEntry="1.0" StorageType="1" ExtensionType="1">0.06251526251526251526251526251526 0.91819291819291819291819291819292</SingleSampledCurve>
+			  <DuplicateCurve Index="0"/>
+			  <DuplicateCurve Index="0"/>
+			</CurveSetElement>
+			
+    </MultiProcessElements>
+  </multiProcessElementType> </BToA1Tag>
+	
+	<HToS1Tag> <multiProcessElementType>
+      <MultiProcessElements InputChannels="3" OutputChannels="3">
+			<!-- Convert XYZ to RGB -->
+			<MatrixElement InputChannels="3" OutputChannels="3">
+			  <MatrixData InvertMatrix="true">
+				  0.63695805 0.14461690 0.16888098
+          0.26270021 0.67799807 0.05930172
+          0.00000000 0.02807269 1.06098506
+				</MatrixData>
+			</MatrixElement>
+
+      <!-- Invert scaling of 75% media white point -->
+			<MatrixElement InputChannels="3" OutputChannels="3">
+			  <MatrixData InvertMatrix="true">
+				  4.804804804804805 0 0
+          0 4.804804804804805 0
+          0 0 4.804804804804805
+				</MatrixData>
+			</MatrixElement>
+
+		  <!-- Apply SDR OOTF -->
+			<MatrixElement InputChannels="3" OutputChannels="4">
+			  <MatrixData>
+				  1 0 0
+					0 1 0
+					0 0 1
+					0.2627 0.6780 0.0593
+				</MatrixData>
+			</MatrixElement>
+			
+			<ToneMapElement InputChannels="4" OutputChannels="3">
+			  <!-- Based on note 2 of page 8 in Rec. ITU-R BT.2100-2 document gamma for SDR should be 0.9419.
+					Subtracting 1 from this in curve below results in -0.058070-->
+			  <LuminanceCurve>
+				  <SegmentedCurve>
+				  <FormulaSegment Start="-infinity" End="0.0" FunctionType="0">1 0 0 0</FormulaSegment>
+				  <FormulaSegment Start="0" End="1" FunctionType="0">-0.058070 1 0 0</FormulaSegment>
+					<FormulaSegment Start="1" End="+infinity" FunctionType="0">1 0 0 1</FormulaSegment>
+					</SegmentedCurve>
+				</LuminanceCurve>
+				<ToneMapFunctions>
+				  <ToneMapFunction FunctionType="0">1 0.0 0</ToneMapFunction>
+				  <DuplicateFunction Index="0"/>
+				  <DuplicateFunction Index="0"/>
+				</ToneMapFunctions>
+			</ToneMapElement>
+
+			<!-- Convert RGB to XYZ -->
+			<MatrixElement InputChannels="3" OutputChannels="3">
+			  <MatrixData>
+				  0.63695805 0.14461690 0.16888098
+          0.26270021 0.67799807 0.05930172
+          0.00000000 0.02807269 1.06098506
+				</MatrixData>
+			</MatrixElement>
+
+      </MultiProcessElements>
+    </multiProcessElementType> </HToS1Tag>
+
+	  <!-- D65 to D50 MAT -->
+    <customToStandardPccTag> <multiProcessElementType>
+	  <MultiProcessElements InputChannels="3" OutputChannels="3">
+	    <MatrixElement InputChannels="3" OutputChannels="3">
+		  <MatrixData>
+		    1.15213478 -0.06226214 -0.06292737
+		    0.09892068 0.93407047 -0.02579682
+		   -0.02836701 0.03469112 0.75031996
+		  </MatrixData>
+	    </MatrixElement>
+	  </MultiProcessElements>
+    </multiProcessElementType> </customToStandardPccTag>
+
+    <!-- D50 to D65 MAT -->
+    <standardToCustomPccTag> <multiProcessElementType>
+	  <MultiProcessElements InputChannels="3" OutputChannels="3">
+	    <MatrixElement InputChannels="3" OutputChannels="3">
+		  <MatrixData InvertMatrix="true">
+		    1.15213478 -0.06226214 -0.06292737
+		    0.09892068 0.93407047 -0.02579682
+		   -0.02836701 0.03469112 0.75031996
+		  </MatrixData>
+	    </MatrixElement>
+	  </MultiProcessElements>
+    </multiProcessElementType> </standardToCustomPccTag>
+	
+	<!-- Abreviated D65 spectral viewing conditions -->
+	<spectralViewingConditionsTag> <spectralViewingConditionsType>
+	  <StdObserver>CIE 1931 (two degree) standard observer</StdObserver>
+	  <IlluminantXYZ X="192.9372214083083" Y="203.00000000" Z="221.0265153142868"/>
+	  <StdIlluminant>Illuminant D65</StdIlluminant>
+	  <ColorTemperature>6500.00000000</ColorTemperature>
+	  <SurroundXYZ X="4.752148310549465" Y="5.00000000" Z="5.444002840253368"/>
+	</spectralViewingConditionsType> </spectralViewingConditionsTag>
+
+  <!-- D65 White point indicating extended PCS range -->
+	<mediaWhitePointTag> <XYZArrayType>
+	  <XYZNumber X="0.197822914481250" Y="0.208125" Z="0.226668119568750"/>
+	</XYZArrayType> </mediaWhitePointTag>
+
+    <cicpTag> <cicpType>
+      <cicpFields ColorPrimaries="9" TransferCharacteristics="18" MatrixCoefficients="0" VideoFullRangeFlag="0"/>
+    </cicpType> </cicpTag>
+
+	<copyrightTag> <multiLocalizedUnicodeType>
+	  <LocalizedText LanguageCountry="enUS"><![CDATA[Copyright 2022 International Color Consortium]]></LocalizedText>
+	</multiLocalizedUnicodeType> </copyrightTag>
+
+  </Tags>
+</IccProfile>
