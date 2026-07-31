@@ -1,9 +1,57 @@
 
 .DS_Store
 
+# Editor and OS metadata
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Local build and test output
+build/
+dist/
+out/
+tmp/
+temp/
+.tmp-*/
+runs/
+artifacts/
+coverage/
+htmlcov/
+.coverage
+.coverage.*
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*.profraw
+*.profdata
+*.gcda
+*.gcno
+
+# Local CI / QA reports
+ci-results/
+qa-results/
+test-results/
+reports/
+*.log
+*.out
+*.err
+*.tmp
+
+# Debugger and sanitizer byproducts
+core
+core.*
+vgcore.*
+*.dSYM/
+asan.*
+ubsan.*
+
 # Fuzzer crash artifacts (kept on disk for local testing)
 graphics/icc/oom-*
 graphics/icc/crash-*
 graphics/icc/slow-unit-*
 graphics/icc/timeout-*
 graphics/icc/Crash-*
+
+# Local report/conversion output
+graphics/cube/*.cube.cube.icc
