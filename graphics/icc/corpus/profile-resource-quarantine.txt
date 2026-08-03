@@ -1,0 +1,12 @@
+# Known resource-bomb profiles excluded from routine local/CI sampling.
+# These stay covered by dedicated timeout/OOM workflows and targeted runs.
+
+test-profiles/cwe-400/*
+extended-test-profiles/cwe-400/*
+
+oom-*
+seed_oom-*
+timeout-*
+xsscx-icRealloc-*.icc
+*stack-overflow*.icc
+*stackoverflow*.icc
